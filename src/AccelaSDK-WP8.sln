@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accela.WindowsPhoneSDK", "AccelaSDK-WP8\Accela.WindowsPhoneSDK.csproj", "{760E3944-E851-4BE1-9810-B9DCEE9AD371}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Native|Any CPU = Debug_Native|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release_Native|Any CPU = Release_Native|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{760E3944-E851-4BE1-9810-B9DCEE9AD371}.Debug_Native|Any CPU.ActiveCfg = Debug_Native|Any CPU
+		{760E3944-E851-4BE1-9810-B9DCEE9AD371}.Debug_Native|Any CPU.Build.0 = Debug_Native|Any CPU
+		{760E3944-E851-4BE1-9810-B9DCEE9AD371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760E3944-E851-4BE1-9810-B9DCEE9AD371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760E3944-E851-4BE1-9810-B9DCEE9AD371}.Release_Native|Any CPU.ActiveCfg = Release_Native|Any CPU
+		{760E3944-E851-4BE1-9810-B9DCEE9AD371}.Release_Native|Any CPU.Build.0 = Release_Native|Any CPU
+		{760E3944-E851-4BE1-9810-B9DCEE9AD371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760E3944-E851-4BE1-9810-B9DCEE9AD371}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

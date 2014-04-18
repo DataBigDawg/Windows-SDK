@@ -1,0 +1,27 @@
+﻿<Application
+    x:Class="RecordsViewer.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:portable="clr-namespace:RecordsViewer.Portable;assembly=RecordsViewer.Portable"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+
+    <!--应用程序资源-->
+    <Application.Resources>
+    	<ResourceDictionary>
+            <portable:PortableStrings xmlns:portable="clr-namespace:RecordsViewer.Portable;assembly=RecordsViewer.Portable" x:Key="PortableStrings"/>
+            <ResourceDictionary.MergedDictionaries>
+    			<ResourceDictionary Source="Themes/Default/StandardStyles.xaml"/>
+    		</ResourceDictionary.MergedDictionaries>
+    	</ResourceDictionary>
+
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--处理应用程序的生存期事件所需的对象-->
+        <shell:PhoneApplicationService
+            Launching="Application_Launching" Closing="Application_Closing"
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

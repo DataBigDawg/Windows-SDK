@@ -1,0 +1,27 @@
+﻿<UserControl
+    x:Class="RecordsViewer.CalloutControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="52"
+    d:DesignWidth="180">
+    <Grid>
+        <Image Source="/Assets/bg_callout.png" Width="180" Height="42" Margin="0,0,0,8"/>
+        <Grid Background="Transparent" Width="180">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="txtAddress" MaxHeight="35" FontSize="11" FontFamily="Segoe UI" Margin="10,0,0,0" Text="Unknown address" HorizontalAlignment="Left" VerticalAlignment="Center" TextTrimming="WordEllipsis" TextWrapping="Wrap"/>
+            <Button x:Name="btnShowInspectionDetail" Grid.Column="1" Click="btnShowInspectionDetail_Click_1" BorderBrush="Transparent" Style="{StaticResource ButtonStyle3}">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <Image Stretch="None" Source="/Assets/arrow_to_right.png" Width="26" Height="26"/>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

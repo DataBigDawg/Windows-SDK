@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <GenerateLibraryLayout>True</GenerateLibraryLayout>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83B19A61-981E-416D-B889-11CAA12C3029}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accela.WindowsStoreSDK</RootNamespace>
+    <AssemblyName>AccelaSDK</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;FLUENTHTTP_URLENCODING;SIMPLE_JSON_INTERNAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;FLUENTHTTP_URLENCODING;SIMPLE_JSON_INTERNAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\AccelaSDK\AccelaMobile.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Native|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Native\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;SIMPLE_JSON_INTERNAL;FLUENTHTTP_URLENCODING;SIMPLE_JSON_DYNAMIC;NATIVE;</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Native|AnyCPU'">
+    <OutputPath>bin\Release_Native\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;SIMPLE_JSON_INTERNAL;FLUENTHTTP_URLENCODING;SIMPLE_JSON_DYNAMIC;NATIVE;</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\AccelaSDK\AccelaMobile.Adjust.cs">
+      <Link>AccelaMobile.Adjust.cs</Link>
+      <DependentUpon>AccelaMobile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\AccelaSDK\AccelaMobile.Async.cs">
+      <Link>AccelaMobile.Async.cs</Link>
+      <DependentUpon>AccelaMobile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\AccelaSDK\AccelaMobile.Async.Tasks.cs">
+      <Link>AccelaMobile.Async.Tasks.cs</Link>
+      <DependentUpon>AccelaMobile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\AccelaSDK\AccelaMobile.cs">
+      <Link>AccelaMobile.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\AccelaMobileLogger.cs">
+      <Link>AccelaMobileLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\AccelaMobileOAuthResult.cs">
+      <Link>Entites\AccelaMobileOAuthResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\AccelaMobileSettings.cs">
+      <Link>AccelaMobileSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\CombinationStream.cs">
+      <Link>CombinationStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\DateTimeConvertor.cs">
+      <Link>DateTimeConvertor.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Entites\AccelaMobileMediaObject.cs">
+      <Link>Entites\AccelaMobileMediaObject.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Entites\AccelaMobileMediaStream.cs">
+      <Link>Entites\AccelaMobileMediaStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Entites\AccelaMobileProgressStream.cs">
+      <Link>Entites\AccelaMobileProgressStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Entites\ErrorResult.cs">
+      <Link>Entites\ErrorResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Entites\TokenResult.cs">
+      <Link>Entites\TokenResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\EventArgs\AccelaMobileApiEventArgs.cs">
+      <Link>EventArgs\AccelaMobileApiEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\EventArgs\AccelaMobileDownloadProgressChangedEventArgs.cs">
+      <Link>EventArgs\AccelaMobileDownloadProgressChangedEventArgs.cs</Link>
+      <DependentUpon>AccelaMobileApiEventArgs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\AccelaSDK\EventArgs\AccelaMobileSessionEventArgs.cs">
+      <Link>EventArgs\AccelaMobileSessionEventArgs.cs</Link>
+      <DependentUpon>AccelaMobileApiEventArgs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\AccelaSDK\EventArgs\AccelaMobileUploadProgressChangedEventArgs.cs">
+      <Link>EventArgs\AccelaMobileUploadProgressChangedEventArgs.cs</Link>
+      <DependentUpon>AccelaMobileApiEventArgs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\AccelaSDK\EventArgs\HttpWebRequestCreatedEventArgs.cs">
+      <Link>EventArgs\HttpWebRequestCreatedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Exception\AccelaMobileApiException.cs">
+      <Link>Exception\AccelaMobileApiException.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Exception\AccelaMobileOAuthException.cs">
+      <Link>Exception\AccelaMobileOAuthException.cs</Link>
+      <DependentUpon>AccelaMobileApiException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Extensions\ObjectExtensions.cs">
+      <Link>Extensions\ObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Extensions\TaskExtensions.cs">
+      <Link>Extensions\TaskExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Helper\HttpHelper.cs">
+      <Link>Helper\HttpHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Helper\SimpleJson.cs">
+      <Link>Helper\SimpleJson.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\Helper\UrlHelper.cs">
+      <Link>Helper\UrlHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\AccelaSDK\HttpMethod.cs">
+      <Link>HttpMethod.cs</Link>
+    </Compile>
+    <Compile Include="Design\AgencyNativeControl.cs" />
+    <Compile Include="Design\BindableBase.cs" />
+    <Compile Include="Design\DelegateCommand.cs" />
+    <Compile Include="Design\Model\NativeUserInfo.cs" />
+    <Compile Include="Design\PopControl.cs" />
+    <Compile Include="Design\ViewModel\AgencyNativeViewModel.cs" />
+    <Compile Include="Helper\DeviceInfoHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\AccelaSDK\AccelaMobile.pfx">
+      <Link>AccelaMobile.pfx</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

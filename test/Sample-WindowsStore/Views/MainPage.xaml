@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="Accela.WindowsStore.Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Accela.WindowsStore.Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Citizen App" Width="200" Height="60" Margin="0,5" 
+                    Command="{Binding CitizenAppCommand, Mode=OneWay}"/>
+            <Button Content="Agency App" Width="200" Height="60" Margin="0,5" 
+                    Command="{Binding AgencyAppCommand, Mode=OneWay}" />
+        </StackPanel>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.RowSpan="2" Orientation="Vertical" Grid.Column="0"  Margin="10,10,0,0">
+            <Button x:Name="btnWebLogin" Content="Authenticate(Agency Web browse)" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnLogin_Click" />
+            <Button x:Name="btnCitizenWebLogin" Content="Authenticate(Citizen Web browse)" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnWebLogin_Click_1" />
+            <Button x:Name="btnLogin" Content="Authenticate(Agency Native Login)" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnNativeLogin_Click_1" />
+            <Button x:Name="btnGetRecords" Content="Get Records" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnGetRecords_Click" />
+            <Button x:Name="btnCreateRecord" Content="Create Record" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnCreateRecord_Click" />
+            <Button x:Name="btnUploadRecordDoc" Content="Upload Record Document" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnUploadRecordDoc_Click" />
+            <Button x:Name="btnGetRecordDocs" Content="Get Record's Documents" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnGetRecordDocs_Click" />
+            <Button x:Name="btnDownloadRecordDoc" Content="Download Record Document" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnDownloadRecordDoc_Click" />
+            <Button x:Name="btnGetReportsDefinition" Content="Get Reports Definition" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnGetReportsDefinition_Click" />
+            <Button x:Name="btnLogout" Content="Log out" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="266" Click="btnLogout_Click" />
+        </StackPanel>
+
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtOutput" TextWrapping="Wrap" Margin="0,0,50,0" />
+        <TextBlock Grid.Column="1" Margin="0" TextWrapping="Wrap" Text="Output：" FontSize="24" FontFamily="Global User Interface" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+
+        <Popup x:Name="popupImg" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+        <ProgressBar Background="{StaticResource ApplicationPageBackgroundThemeBrush}" x:Name="progressBar"  Grid.ColumnSpan="2" Grid.Row="0"/>-->
+
+    </Grid>
+</Page>

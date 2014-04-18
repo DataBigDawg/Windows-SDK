@@ -1,0 +1,179 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Accela.WindowsPhone8.Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Main, Source={StaticResource Locator}}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Main Page-->
+        <!--<phone:Pivot Title="Accela SDK for Windows Phone 8 Sample"
+                     Name="myPivot">
+            <phone:PivotItem Header="Agency Record">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <StackPanel>
+                        <Button x:Name="btnCheckSession" 
+                                Content="Check Session"
+                                Click="Agency_CheckSession"/>
+                        <Button x:Name="btnLogin" 
+                                Content="Sign in" 
+                                Click="Login_Click"/>
+                        <Button x:Name="btnLoginNative" 
+                                Content="Native Sign in" 
+                                Click="btnLoginNative_Click"/>
+                        <Button x:Name="btnGetRecords" 
+                                Content="Get Records"
+                                Click="Agency_GetRecords"/>
+                        <Button x:Name="btnCreateRecord" 
+                                Content="Create Record" 
+                                Click="Agency_CreateRecord"/>
+                        <Button x:Name="btnUpdateRecord" 
+                                Content="Update Record"
+                                Click="Agency_UpdateRecord"/>
+                        <Button x:Name="btnUploadDocuments" 
+                                Content="Upload Documents"
+                                Click="Agency_UploadDocuments"/>
+                        <Button x:Name="btnGetDocuments" 
+                                Content="Get Documents" 
+                                Click="Agency_GetDocuments"/>
+                        <Button x:Name="btnDownloadDocument" 
+                                Content="Download Document"
+                                Click="Agency_DownloadDocument"/>
+                        <Button x:Name="btnLogout" 
+                                Content="Log out" 
+                                Click="Agency_Logout"/>
+                    </StackPanel>
+                </ScrollViewer >
+            </phone:PivotItem>
+            <phone:PivotItem Header="Agency Inspection">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <StackPanel>
+                        <Button x:Name="btn_CheckSession_Insp" 
+                                Content="Check Session" 
+                                Click="btn_CheckSession_Insp_Click"/>
+                        <Button x:Name="btn_Login_Insp" 
+                                Content="Sign in"
+                                Click="btn_Login_Insp_Click"/>
+                        <Button x:Name="btnGet_Insp" 
+                                Content="Get Inspections"
+                                Click="btnGet_Insp_Click"/>
+                        <Button x:Name="btnCreate_Insp" 
+                                Content="Create Inspection" 
+                                Click="btnCreate_Insp_Click"/>
+                        <Button x:Name="btnUpdate_Insp" 
+                                Content="Update Inspection"
+                                Click="btnUpdate_Insp_Click"/>
+                        <Button x:Name="btnUploadDocuments_Insp" 
+                                Content="Upload Inspection Documents"
+                                Click="btnUploadDocuments_Insp_Click"/>
+                        <Button x:Name="btnGetDocuments_Insp" 
+                                Content="Get Inspection Documents"
+                                Click="btnGetDocuments_Insp_Click"/>
+                        <Button x:Name="btnDownloadDocument_Insp" 
+                                Content="Download Inspection Document"
+                                Click="btnDownloadDocument_Insp_Click"/>
+                        <Button x:Name="btnLogout_Insp" 
+                                Content="Log out"
+                                Click="btnLogout_Insp_Click"/>
+                    </StackPanel>
+                </ScrollViewer >
+            </phone:PivotItem>
+            <phone:PivotItem Header="A311 Citizen">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <StackPanel>
+                        <Button x:Name="btn_CheckSession" 
+                                Content="Check Session" 
+                                Click="btn_CheckSession_Click"/>
+                        <Button x:Name="btn_Login" 
+                                Content="Sign in"
+                                Click="btn_Login_Click"/>
+                        <Button x:Name="btn_CreateRecord" 
+                                Content="Create Record" 
+                                Click="btn_CreateRecord_Click"/>
+                        <Button x:Name="btn_AddUserComment" 
+                                Content="Add User Comment" 
+                                Click="btn_AddUserComment_Click"/>
+                        <Button x:Name="btn_FollowRecord" 
+                                Content="Follow Record" 
+                                Click="btn_FollowRecord_Click"/>
+                        <Button x:Name="btn_GetMyRecords" 
+                                Content="Get My Records" 
+                                Click="btn_GetMyRecords_Click"/>
+                        <Button x:Name="btn_GetRecordById" 
+                                Content="Get Record Details By Id" 
+                                Click="btn_GetRecordById_Click"/>
+                        <Button x:Name="btn_GetUserComments" 
+                                Content="Get User Comments" 
+                                Click="btn_GetUserComments_Click"/>
+                        <Button x:Name="btn_SearchRecords" 
+                                Content="Search Records" 
+                                Click="btn_SearchRecords_Click"/>
+                        <Button x:Name="btn_UnFollowRecord" 
+                                Content="Un Follow Record" 
+                                Click="btn_UnFollowRecord_Click"/>
+                        <Button x:Name="btn_Logout" 
+                                Content="Log out" 
+                                Click="btn_Logout_Click"/>
+                    </StackPanel>
+                </ScrollViewer >
+            </phone:PivotItem>
+
+            <phone:PivotItem Header="Perview Photo">
+                <Image x:Name="imgPhoto" 
+                    RenderTransformOrigin="0.5,0.5"
+                    Opacity="0.5" 
+                    CacheMode="BitmapCache" 
+                    Tap="OnTap" 
+                    DoubleTap="OnDoubleTap" 
+                    Hold="OnHold" 
+                    ManipulationStarted="OnManipulationStarted" 
+                    ManipulationDelta="OnManipulationDelta" 
+                    ManipulationCompleted="OnManipulationCompleted">
+                    <Image.RenderTransform>
+                        <CompositeTransform x:Name="transform" />
+                    </Image.RenderTransform>
+                </Image>
+            </phone:PivotItem>
+        </phone:Pivot>-->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Citizen App" Width="200" 
+                    Command="{Binding CitizenAppCommand, Mode=OneWay}"/>
+            <Button Content="Agency App" Width="200" 
+                    Command="{Binding AgencyAppCommand, Mode=OneWay}" />
+        </StackPanel>
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+        <!--PerviewPhoto-->
+
+    </Grid>
+</phone:PhoneApplicationPage>

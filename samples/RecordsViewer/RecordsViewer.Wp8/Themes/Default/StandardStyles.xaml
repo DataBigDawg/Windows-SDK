@@ -1,0 +1,62 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maptk="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:localControls="clr-namespace:RecordsViewer.LocalControls">
+	<Style x:Key="TextBoxStyle" TargetType="TextBox">
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="FontSize" Value="26.667"/>
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="LineHeight" Value="30"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform X="-1" Y="6"/>
+            </Setter.Value>
+        </Setter>
+	</Style>
+    <Style x:Key="TableComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="Width" Value="350"/>
+        <Setter Property="Margin" Value="10,10,0,10"/>
+    </Style>
+    <Style x:Key="HyperlinkEmptyStyle" TargetType="HyperlinkButton">
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="HyperlinkButton">
+                    <ContentPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="MultilineHyperlinkStyle" TargetType="localControls:HeaderedContentControl">
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="0,0,0,24"/>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}"
+                                   Text="{Binding}"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Style="{StaticResource PhoneTextNormalStyle}"
+                                   Opacity=".5"
+                                   Text="{Binding}"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <ControlTemplate x:Key="RecordPushpinControlTemplate" TargetType="maptk:Pushpin">
+        <Grid Background="Black" Height="30">
+            <TextBlock Text="{Binding RecordName}"/>
+            <TextBlock Text="{Binding RecordId}"/>
+        </Grid>
+    </ControlTemplate>
+    <!-- Resource dictionary entries should be defined here. -->
+</ResourceDictionary>
