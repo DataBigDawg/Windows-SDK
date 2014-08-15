@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Markup;
@@ -236,11 +236,9 @@ namespace RecordsViewer
 
         private void InitializeSDK()
         {
-            string appid = "635331259526036859";
-            string appsecret = "e26cca2018b44bb6836be0a04d719688";
+            string appid = "635436839797855367";
+            string appsecret = "761e60d9e9224b278d99cf27c99de1f8";
             SharedSDK = new AccelaSDK(appid, appsecret);
-            SharedSDK.ApiHost = "apps-apis.dev.accela.com";
-            SharedSDK.OAuthHost = "apps-auth.dev.accela.com";
             SharedSDK.SessionChanged += SharedSDK_SessionChanged;
         }
 
