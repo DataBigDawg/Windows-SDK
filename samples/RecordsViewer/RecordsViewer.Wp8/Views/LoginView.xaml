@@ -30,7 +30,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
 
             <StackPanel Margin="0" VerticalAlignment="Center">
-                <toolkit:PhoneTextBox Text="{Binding AgencyName, Mode=TwoWay}" Hint="{Binding Path=Strings.Login_Agency, Source={StaticResource PortableStrings}}" />
+                <!--<toolkit:PhoneTextBox Text="{Binding AgencyName, Mode=TwoWay}" Hint="{Binding Path=Strings.Login_Agency, Source={StaticResource PortableStrings}}" />
                 <toolkit:PhoneTextBox Text="{Binding UserName, Mode=TwoWay}" Hint="{Binding Path=Strings.Login_Username, Source={StaticResource PortableStrings}}" />
                 <PasswordBox Password="{Binding PassWord, Mode=TwoWay}"/>
                 <toolkit:ListPicker ItemsSource="{Binding EnvList, Mode=TwoWay}" SelectedItem="{Binding Environment}">
@@ -39,8 +39,8 @@
                             <TextBlock Text="{Binding}"></TextBlock>
                         </DataTemplate>
                     </toolkit:ListPicker.ItemTemplate>
-                </toolkit:ListPicker>
-                <Button x:Name="btnLogin" Content="{Binding Path=Strings.Login_SignIn, Source={StaticResource PortableStrings}}" Width="150" HorizontalAlignment="Right" Click="btnLogin_Click_1"/>
+                </toolkit:ListPicker>-->
+                <Button x:Name="btnLogin" Content="{Binding Path=Strings.Login_SignIn, Source={StaticResource PortableStrings}}" Width="150" HorizontalAlignment="Center" Click="btnLogin_Click_1"/>
 
             </StackPanel>
         </Grid>

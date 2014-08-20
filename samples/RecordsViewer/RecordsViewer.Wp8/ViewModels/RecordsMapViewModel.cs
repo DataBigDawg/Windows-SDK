@@ -16,9 +16,9 @@ namespace RecordsViewer.ViewModels
 {
     public class RecordsMapViewModel : NotifyPropertyBase
     {
-        public RecordsMapViewModel(IDictionary<string, WSRecordLocation> recordLocations)
+        public RecordsMapViewModel(IList<WSRecord> records)
         {
-            this.InitViewModel(recordLocations);
+            this.InitViewModel(records);
         }
 
         private ObservableCollection<RecordCoordinate> _coordinates;
@@ -29,25 +29,24 @@ namespace RecordsViewer.ViewModels
             set { SetProperty<ObservableCollection<RecordCoordinate>>(ref _coordinates, value); }
         }
 
-        public void InitViewModel(IDictionary<string, WSRecordLocation> recordLocations)
+        public void InitViewModel(IList<WSRecord> records)
         {
             _coordinates = new ObservableCollection<RecordCoordinate>();
 
-            if (recordLocations != null && recordLocations.Any())
+            if (records != null && records.Any())
             {
-                foreach (var r in recordLocations)
+                foreach (var r in records)
                 {
-                    var recordId = r.Key;
-                    var location = r.Value;
+                    var recordId = r.Id;
+                    var address = r.Addresses != null ? r.Addresses.FirstOrDefault() : null;
 
-                    if (location != null && location.GeometryPoint != null)
+                    if (address != null && address != null)
                     {
-                        var address = location.GeometryPoint;
-                        if (string.IsNullOrEmpty(address.X) ||
-                            string.IsNullOrEmpty(address.Y))
+                        if (string.IsNullOrEmpty(address.XCoordinate) ||
+                            string.IsNullOrEmpty(address.YCoordinate))
                             continue;
-                        var latitude = Double.Parse(address.Y);
-                        var longitude = Double.Parse(address.X);
+                        var latitude = Double.Parse(address.YCoordinate);
+                        var longitude = Double.Parse(address.XCoordinate);
                         if (-180.0 > longitude || longitude > 180.0)
                             continue;
                         if (longitude > 90.0)

@@ -12,7 +12,5 @@ namespace RecordsViewer.Portable
         Task<List<WSRecord>> GetRecordsAsync(string servicePath, IDictionary<string, object> @params);
 
         Task<WSRecord> GetRecordAsync(string recordId);
-
-        Task<WSRecordLocation> GetRecordLocation(string recordId);
     }
 }

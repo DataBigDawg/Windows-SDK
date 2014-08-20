@@ -38,24 +38,5 @@ namespace RecordsViewer.ViewModels
                 return records;
             });
         }
-
-
-        public Task<WSRecordLocation> GetRecordLocation(string recordId)
-        {
-            return Task.Run(() =>
-            {
-                WSRecordLocation location = null;
-                try
-                {
-                    return App.SharedSDK.GetAsync<WSRecordLocation>(String.Format("/v4/records/{0}/location", recordId)).Result;
-                }
-                catch (AggregateException ex)
-                {
-                    if (ex.InnerException != null)
-                        throw ex.InnerException;
-                }
-                return location;
-            });
-        }
     }
 }

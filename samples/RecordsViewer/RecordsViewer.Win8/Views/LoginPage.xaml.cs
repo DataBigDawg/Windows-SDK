@@ -31,45 +31,78 @@ namespace RecordsViewer
             this.InitializeComponent();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
             _loginViewModel = new LoginViewModel(App.LoginService);
             this.DataContext = _loginViewModel;
+            App.SharedSDK.SessionChanged += SharedSDK_SessionChanged;
+            await _loginViewModel.SSOAuthorization();
         }
 
-        private async void btnLogin_Click_1(object sender, RoutedEventArgs e)
+        void SharedSDK_SessionChanged(object sender, Accela.WindowsStoreSDK.AccelaSessionEventArgs e)
         {
-            MessageDialog md = null;
-            progressBar.IsIndeterminate = true;
-            btnLogin.IsEnabled = false;
-            try
+            switch (e.SessionStatus)
             {
-                await _loginViewModel.AuthorizationAsync();
-                var rootFrame = new Frame();
-                Window.Current.Content = rootFrame;
-                rootFrame.Navigate(typeof(RecordListPage));
+                case Accela.WindowsStoreSDK.AccelaSessionStatus.InvalidSession:
+                    break;
+                case Accela.WindowsStoreSDK.AccelaSessionStatus.LoginCancelled:
+                    break;
+                case Accela.WindowsStoreSDK.AccelaSessionStatus.LoginFailed:
+                    break;
+                case Accela.WindowsStoreSDK.AccelaSessionStatus.LoginSucceeded:
+                    NavigateToMain();
+                    break;
+                case Accela.WindowsStoreSDK.AccelaSessionStatus.LogoutSucceeded:
+                    break;
+                default:
+                    break;
             }
-            catch (ArgumentNullException)
-            {
-                md = new MessageDialog(Strings.Login_Field_Empty_Message, Strings.Login_Error_Message_Title);
-            }
-            catch (Exception ex)
-            {
-                var innerErr = ex.InnerException;
-                var msg = innerErr == null ? ex.Message : innerErr.Message;
-                md = new MessageDialog(msg, Strings.Login_Error_Message_Title);
-            }
-            finally
-            {
-                progressBar.IsIndeterminate = false;
-                btnLogin.IsEnabled = true;
-            }
-
-            if (md != null)
-                await md.ShowAsync();
-
         }
+
+        private void NavigateToMain() {
+            var rootFrame = new Frame();
+            Window.Current.Content = rootFrame;
+            rootFrame.Navigate(typeof(RecordListPage));
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            await _loginViewModel.SSOAuthorization();
+        }
+
+        //private async void btnLogin_Click_1(object sender, RoutedEventArgs e)
+        //{
+        //    MessageDialog md = null;
+        //    progressBar.IsIndeterminate = true;
+        //    btnLogin.IsEnabled = false;
+        //    try
+        //    {
+        //        await _loginViewModel.AuthorizationAsync();
+        //        var rootFrame = new Frame();
+        //        Window.Current.Content = rootFrame;
+        //        rootFrame.Navigate(typeof(RecordListPage));
+        //    }
+        //    catch (ArgumentNullException)
+        //    {
+        //        md = new MessageDialog(Strings.Login_Field_Empty_Message, Strings.Login_Error_Message_Title);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        var innerErr = ex.InnerException;
+        //        var msg = innerErr == null ? ex.Message : innerErr.Message;
+        //        md = new MessageDialog(msg, Strings.Login_Error_Message_Title);
+        //    }
+        //    finally
+        //    {
+        //        progressBar.IsIndeterminate = false;
+        //        btnLogin.IsEnabled = true;
+        //    }
+
+        //    if (md != null)
+        //        await md.ShowAsync();
+
+        //}
     }
 }

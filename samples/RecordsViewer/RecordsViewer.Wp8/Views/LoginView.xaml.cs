@@ -29,36 +29,15 @@ namespace RecordsViewer.Views
 
         }
 
-        void LoginView_Loaded(object sender, RoutedEventArgs e)
+        async void LoginView_Loaded(object sender, RoutedEventArgs e)
         {
             App.SettingsViewModel.CheckLocationConsent();
+            await App.LoginService.LoginAsync();
         }
 
         private async void btnLogin_Click_1(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                ShowSystemTrayBar("Logining in...");
-                btnLogin.IsEnabled = false;
-                await App.LoginViewModel.AuthorizationAsync();
-                NavigationService.Navigate(new Uri("/Views/RecordsView.xaml", UriKind.Relative));
-                NavigationService.RemoveBackEntry();
-            }
-            catch (ArgumentNullException)
-            {
-                ShowMessage(Strings.Login_Field_Empty_Message, Strings.Login_Error_Message_Title, MessageBoxButton.OK);
-            }
-            catch (Exception ex)
-            {
-                var innerErr = ex.InnerException;
-                var msg = innerErr == null ? ex.Message : innerErr.Message;
-                ShowMessage(msg, Strings.Login_Error_Message_Title, MessageBoxButton.OK);
-            }
-            finally
-            {
-                HideSystemTrayBar();
-                btnLogin.IsEnabled = true;
-            }
+            await App.LoginService.LoginAsync();
         }
     }
 }

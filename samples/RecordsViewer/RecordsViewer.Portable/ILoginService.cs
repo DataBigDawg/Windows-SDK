@@ -8,7 +8,7 @@ namespace RecordsViewer.Portable
 {
     public interface ILoginService
     {
-        Task LoginAsync(LoginViewModel loginInfo);
+        Task LoginAsync();
 
         void Logout();
     }

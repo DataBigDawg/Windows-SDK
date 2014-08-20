@@ -41,7 +41,7 @@ namespace RecordsViewer.Views
 
             this.MapExtensionsSetup(this.Map);
 
-            this._viewModel = new RecordsMapViewModel(App.RecordsViewModel.RecordLocations);
+            this._viewModel = new RecordsMapViewModel(App.RecordsViewModel.Records);
 
             this.DataContext = this._viewModel;
 
@@ -148,7 +148,7 @@ namespace RecordsViewer.Views
                 ShowSystemTrayBar("Reloading...");
                 await App.RecordsViewModel.LoadRecordsAsync();
 
-                this._viewModel.InitViewModel(App.RecordsViewModel.RecordLocations);
+                this._viewModel.InitViewModel(App.RecordsViewModel.Records);
 
                 this.Dispatcher.BeginInvoke(new Action(this.MapFlightToRecords));
             }

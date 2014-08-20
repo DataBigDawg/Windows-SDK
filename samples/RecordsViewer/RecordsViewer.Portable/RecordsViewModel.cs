@@ -14,35 +14,23 @@ namespace RecordsViewer.Portable
 
         public ObservableCollection<WSRecord> Records { get; private set; }
 
-        public IDictionary<string, WSRecordLocation> RecordLocations { get; private set; }
-
         public RecordsViewModel(IRecordService recordService)
         {
             this._recordService = recordService;
             this.Records = new ObservableCollection<WSRecord>();
-            this.RecordLocations = new Dictionary<string, WSRecordLocation>();
         }
 
         public Task LoadRecordsAsync()
         {
             return Task.Run(() =>
             {
-                var apiPath = "/v4/records";
+                var apiPath = "/v4/records?expand=address";
                 try
                 {
                     var records = _recordService.GetRecordsAsync(apiPath, null).Result;
                     if (records == null)
                         return;
                     Records = new ObservableCollection<WSRecord>(records.OrderByDescending(c => c.OpenedDate));
-
-                    foreach (var record in records)
-                    {
-                        if (!RecordLocations.ContainsKey(record.Id))
-                        {
-                            var location = _recordService.GetRecordLocation(record.Id).Result;
-                            RecordLocations.Add(record.Id, location);
-                        }
-                    }
                 }
                 catch (AggregateException ex)
                 {
