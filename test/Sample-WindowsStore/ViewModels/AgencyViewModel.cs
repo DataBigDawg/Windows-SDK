@@ -27,7 +27,7 @@ namespace Accela.WindowsStore.Sample.ViewModels
     public class AgencyViewModel : ViewModelBase
     {
         private AccelaSDK _shareSdk;
-        private string[] _scopes = new string[] { "records", "inspections" };
+        private string[] _scopes = new string[] { "records" };
 
         private IDataService _dataService;
         private IDisplayMessageService _displayMessageService;
@@ -56,13 +56,9 @@ namespace Accela.WindowsStore.Sample.ViewModels
             _dataService = dataService;
             _displayMessageService = displayMessageService;
 
-            var appId = "635331259526036859";
-            var appSecret = "e26cca2018b44bb6836be0a04d719688";
-            var authHost = "apps-auth.dev.accela.com";
-            var apiHost = "apps-apis.dev.accela.com";
+            var appId = "635442545792218073";
+            var appSecret = "28c6edc56e714078a23a50a4193f348f";
             _shareSdk = new AccelaSDK(appId, appSecret);
-            _shareSdk.ApiHost = apiHost;
-            _shareSdk.OAuthHost = authHost;
             Messenger.Default.Register<CustomMessage>(this, (msg) => ShowResult(msg));
         }
 
@@ -174,38 +170,6 @@ namespace Accela.WindowsStore.Sample.ViewModels
                         _recordTypeValue = type["value"] as string;
                     }
                 }
-                Messenger.Default.Send(new CustomMessage(jsonObj.ToString()));
-            }
-            catch (Exception ex)
-            {
-                _displayMessageService.Show("Error", ex.GetUnderExceptionMessage());
-            }
-        }
-
-        #endregion
-
-        #region GetInspections
-
-        private RelayCommand _getInspectionsCommand;
-        public RelayCommand GetInspectionsCommand
-        {
-            get
-            {
-                return _getInspectionsCommand ??
-                (_getInspectionsCommand = new RelayCommand(() => RunningAction(ExcuteGetInspectionsCommand)));
-            }
-        }
-
-        private async void ExcuteGetInspectionsCommand()
-        {
-            if (!_shareSdk.IsSessionValid())
-            {
-                _displayMessageService.Show("Info", "Not logged in yet.");
-                return;
-            }
-            try
-            {
-                JsonObject jsonObj = await _dataService.GetInspections(_shareSdk);
                 Messenger.Default.Send(new CustomMessage(jsonObj.ToString()));
             }
             catch (Exception ex)
@@ -403,13 +367,11 @@ namespace Accela.WindowsStore.Sample.ViewModels
             }
         }
 
+        /// <summary>
+        /// App can get app settings w/o access token
+        /// </summary>
         private async void ExcuteGetAppSettingsCommand()
         {
-            if (!_shareSdk.IsSessionValid())
-            {
-                _displayMessageService.Show("Info", "Not logged in yet.");
-                return;
-            }
             try
             {
                 JsonObject jsonObj = await _dataService.GetAppSettings(_shareSdk);

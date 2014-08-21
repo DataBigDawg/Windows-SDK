@@ -51,17 +51,10 @@
                     <Button Grid.Column="0" Content="Native Auth" Margin="0,5" Height="50" Command="{Binding NativeLoginCommand, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                     <Button Grid.Column="1" Content="Web Auth"  Margin="0,5" Height="50" Command="{Binding WebLoginCommand, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </Grid>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Content="Get Records" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding GetRecordsCommand, Mode=OneWay}"  />
-                    <Button Grid.Column="1" Content="Get Inspections" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding GetInspectionsCommand, Mode=OneWay}"  />
-                </Grid>
-                <Button Content="Get A Specific Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding GetASpecificRecordCommand, Mode=OneWay}"  />
+                <Button Content="Get Records" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding GetRecordsCommand, Mode=OneWay}"  />
+                <Button Content="Get a Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding GetASpecificRecordCommand, Mode=OneWay}"  />
                 <Button Content="Create Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding CreateRecordCommand, Mode=OneWay}"  />
-                <Button Content="Download Attachment List" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding DownloadAttachmentListCommand, Mode=OneWay}"  />
+                <Button Content="Get Document List in Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding DownloadAttachmentListCommand, Mode=OneWay}"  />
                 <!--<Button Content="Download Attachment" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding DownloadAttachmentCommand, Mode=OneWay}"  />-->
                 <!--<Button Content="Upload Attachment" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding UploadAttachment, Mode=OneWay}"  />-->
                 <Button Content="Get AppSettings" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding GetAppSettingsCommand, Mode=OneWay}"  />

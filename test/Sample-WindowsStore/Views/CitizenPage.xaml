@@ -44,7 +44,6 @@
                 <Button Content="Auth" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding LoginCommand, Mode=OneWay}" />
                 <Button Content="Get Records" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding GetRecordsCommand, Mode=OneWay}"  />
                 <Button Content="Create Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding CreateRecordCommand, Mode=OneWay}"  />
-                <!--<Button Content="Create Record Whit Attachments" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding CreateRecordWidthAttachmentsCommand, Mode=OneWay}"  />-->
                 <Button Content="Search Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding SearchRecordsCommand, Mode=OneWay}"  />
                 <Button Content="Logout" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5" Height="50" Command="{Binding LogoutCommand, Mode=OneWay}"  />
             </StackPanel>

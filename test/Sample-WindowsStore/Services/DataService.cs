@@ -34,23 +34,11 @@ namespace Accela.WindowsStore.Sample.Services
             return sdk.PostAsync(path, jsonData);
         }
 
-        public Task<JsonObject> CreateRecordWithAttachments(AccelaSDK sdk, string recordType)
-        {
-            var path = "v3/a311civicapp/records";
-            var postObject = new
-            {
-                type = new
-                {
-                    value = recordType//"ServiceRequest/Trees and Weeds/Tall Grass and Weeds/NA"
-                }
-            };
-            return null;
-        }
-
         public Task<JsonObject> SearchRecords(AccelaSDK sdk)
         {
+            // search records opened in the last 7 days
             var path = "/v4/search/records";
-            var postJson = "{}";
+            var postJson = "{\"openedDateFrom\":\"" + DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd") + "\"}";
             return sdk.PostAsync(path, postJson);
         }
 
@@ -78,26 +66,12 @@ namespace Accela.WindowsStore.Sample.Services
             return sdk.UploadAttachmentAsync(path, postData);
         }
 
-        public Task<JsonObject> GetInspections(AccelaSDK sdk)
-        {
-            var path = "/v4/inspections";
-            return sdk.GetAsync(path);
-        }
-
-        public Task<JsonObject> CreateInspection(AccelaSDK sdk, string recordId, string inspectionTypeId)
-        {
-            var path = "/v4/inspections/schedule";
-            var postData = new { recordId = new { id = recordId ?? "BPTDEV-14CAP-00000-0002T" }, type = new { id = inspectionTypeId ?? "362" } };
-            return sdk.PostAsync(path, sdk.SerializeJson(postData));
-        }
-
         public Task<byte[]> DownloadDocument(AccelaSDK sdk, string documentId)
         {
             var path = "/v4/documents/{documentId}/download";
             var postData = new { documentId = documentId };
             return sdk.DownloadAttachmentAsync(path, postData);
         }
-
 
         public Task<JsonObject> GetAppSettings(AccelaSDK sdk)
         {
