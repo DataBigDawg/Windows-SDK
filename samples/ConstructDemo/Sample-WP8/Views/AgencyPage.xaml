@@ -1,4 +1,4 @@
-﻿<phone:PhoneApplicationPage
+<phone:PhoneApplicationPage
     x:Class="Accela.WindowsPhone8.Sample.Views.AgencyPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -18,20 +18,20 @@
         <shell:ProgressIndicator IsIndeterminate="{Binding IsRunning}"
                                  IsVisible="{Binding IsRunning}"/>
     </shell:SystemTray.ProgressIndicator>
-    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <!--LayoutRoot ?????????????-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <!--TitlePanel ?????????????-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="AccelaSDK Test Case" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="Agency App" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <!--ContentPanel - 在此处放置其他内容-->
+        <!--ContentPanel - ?????????-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <ScrollViewer >
                 <StackPanel Grid.Column="0" Margin="0">
@@ -43,17 +43,10 @@
                         <Button Grid.Column="0" Content="Native Auth" Command="{Binding NativeLoginCommand, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                         <Button Grid.Column="1" Content="Web Auth"  Command="{Binding WebLoginCommand, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                     </Grid>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Content="Get Records" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding GetRecordsCommand, Mode=OneWay}"  />
-                        <Button Grid.Column="1" Content="Get Inspections" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding GetInspectionsCommand, Mode=OneWay}"  />
-                    </Grid>
-                    <Button Content="Get A Specific Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding GetASpecificRecordCommand, Mode=OneWay}"  />
+                    <Button Content="Get Records" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding GetRecordsCommand, Mode=OneWay}"  />
+                    <Button Content="Get a Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding GetASpecificRecordCommand, Mode=OneWay}"  />
                     <Button Content="Create Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding CreateRecordCommand, Mode=OneWay}"  />
-                    <Button Content="Download Attachment List" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding DownloadAttachmentListCommand, Mode=OneWay}"  />
+                    <Button Content="Download Document List" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding DownloadAttachmentListCommand, Mode=OneWay}"  />
                     <!--<Button Content="Download Attachment" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding DownloadAttachmentCommand, Mode=OneWay}"  />-->
                     <!--<Button Content="Upload Attachment" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding UploadAttachment, Mode=OneWay}"  />-->
                     <Button Content="Get AppSettings" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding GetAppSettingsCommand, Mode=OneWay}"  />

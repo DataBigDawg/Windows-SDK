@@ -20,14 +20,6 @@ namespace Accela.WindowsPhone8.Sample
         /// <returns>电话应用程序的根框架。</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
-        private string _appid, _appsecret;
-
-        public static AccelaSDK ShareSDK { get; private set; }
-
-        public static AccelaSDK A311SDK { get; private set; }
-
-        public static bool IsDeveloper { get; private set; }
-
         /// <summary>
         /// Application 对象的构造函数。
         /// </summary>
@@ -72,28 +64,6 @@ namespace Accela.WindowsPhone8.Sample
         // 此代码在重新激活应用程序时不执行
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            IsDeveloper = true;
-            //AccelaSDK.SetDefaultJsonSerializers(JsonConvert.SerializeObject, JsonConvert.DeserializeObject);
-
-            //Agency
-            _appid = IsDeveloper ? "com.accela.inspector" : "635036789508393117";
-            _appsecret = IsDeveloper ? "2012122222212102" : "dac69ece94084e5487f030a3146c4867";
-            ShareSDK = new AccelaSDK(_appid, _appsecret);
-            ShareSDK.ApiHost = IsDeveloper ? "apps-apis.dev.accela.com" : "apis.accela.com";
-            ShareSDK.OAuthHost = IsDeveloper ? "apps-auth.dev.accela.com" : "auth.accela.com";
-            //ShareSDK.CustomHttpHeaders.Add("x-accela-agency", IsDeveloper ? "BPTDEV" : "ACHIEVO-SACCO");
-
-            ////Citizen A311
-            //_appid = App.IsDeveloper ? "635029121525590692" : "635042799889843982";
-            //_appsecret = App.IsDeveloper ? "5dddd38a56dd45fcaf260d2cc71b7912" : "ec81b6c3901b479cb0f9166ecac7969f";
-            //A311SDK = new AccelaSDK(_appid, _appsecret);
-            //A311SDK.ApiHost = App.IsDeveloper ? "apis.dev.accela.com" : "apis.accela.com";
-            //A311SDK.OAuthHost = App.IsDeveloper ? "auth.dev.accela.com" : "auth.accela.com";
-            //if (App.IsDeveloper)
-            //    A311SDK.CustomHttpHeaders.Add("x-accela-agency", "SACCO");
-            //else
-            //    A311SDK.CustomHttpHeaders.Add("x-accela-agency", "BIGBUCKET");
-
         }
 
 
