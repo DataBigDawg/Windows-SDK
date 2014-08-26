@@ -7,6 +7,8 @@ Accela publishes the Accela SDK for Windows to the NuGet Gallery at https://nuge
 
 ## Usage
 
-<a href="https://developer.accela.com/docs/accela_civic_cloud_platform_development_guide/accp_windows_8_sdk/deploying_the_windows_8_sdk.htm">Getting Started with Windows 8</a>
+To get started, see <a href="https://developer.accela.com/docs/accela_civic_cloud_platform_development_guide/accp_getting_started_with_windows_8\accp_getting_started_with_windows_8.htm">Getting Started with Windows 8</a>.
 
-<a href="https://developer.accela.com/docs/accela_civic_cloud_platform_development_guide/accp_logging_in_with_the_windows_8_sdk/logging_in_with_windows_8.htm">Logging In with Windows 8</a>
+To see examples of how to use the Accela Windows SDK, see the sample projects in the <code>samples</code> folder.
+
+
