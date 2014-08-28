@@ -7,6 +7,7 @@ The ConstructDemo sample is a Windows Phone 8 app that shows both a citizen app 
 * [Accela Construct](https://developer.accela.com/) V4 API.
 
 ### Highlights
-* <code>CitizenViewModel.cs</code> and <code>AgencyViewModel.cs</code> in the <code>ConstructDemo/Sample-WindowsStore/ViewModels/</code> folder show the authentication login code
-* <code>ConstructDemo/Sample-WindowsStore/Services/DataServices.cs</code> show the Construct API calls
+* <code>ConstructDemo/Sample-WindowsStore/ViewModels/CitizenViewModel.cs</code> - shows the authentication login code for a citizen app 
+* <code>ConstructDemo/Sample-WindowsStore/ViewModels/AgencyViewModel.cs</code> - shows the authentication login code for an agency app
+* <code>ConstructDemo/Sample-WindowsStore/Services/DataServices.cs</code> - shows the Construct API calls
 
