@@ -24,13 +24,22 @@ namespace RecordsViewer.Portable
         {
             return Task.Run(() =>
             {
-                var apiPath = "/v4/records?expand=address";
+                var apiPath = "/v4/search/records?expand=addresses";
+                                
                 try
                 {
-                    var records = _recordService.GetRecordsAsync(apiPath, null).Result;
+                    Dictionary<string, object> parameters = new Dictionary<string, object>();
+                    parameters.Add("limit", 10);
+                    parameters.Add("offset", 0);
+                    var records = _recordService.GetRecordsAsync(apiPath, parameters).Result;
                     if (records == null)
                         return;
                     Records = new ObservableCollection<WSRecord>(records.OrderByDescending(c => c.OpenedDate));
+                }
+                catch (Accela.WindowsStoreSDK.AccelaApiException ex)
+                {
+                    if (ex != null)
+                        throw ex;
                 }
                 catch (AggregateException ex)
                 {

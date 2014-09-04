@@ -499,6 +499,16 @@ namespace Accela.WindowsStoreSDK
 
         }
 
+        public static T customizeResponse<T>(JsonObject jsonObj)
+        {
+            if (jsonObj != null && jsonObj.ContainsKey("result"))
+            {
+                JsonArray jasonArray = jsonObj["result"] as JsonArray;
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jasonArray.ToString());
+            }
+            return default(T);
+        }
+
         /// <summary>
         /// The http web response.
         /// </summary>
@@ -910,6 +920,7 @@ namespace Accela.WindowsStoreSDK
         {
             get { return _httpWebResponse; }
         }
+
 
 #if !(SILVERLIGHT || NETFX_CORE)
 

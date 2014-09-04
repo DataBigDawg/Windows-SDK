@@ -32,6 +32,8 @@ namespace RecordsViewer.Views
             LoadRecords();
         }
 
+
+
         public async void LoadRecords()
         {
             try
@@ -40,6 +42,10 @@ namespace RecordsViewer.Views
                 await App.RecordsViewModel.LoadRecordsAsync();
                 this.DataContext = App.RecordsViewModel;
                 loaded = true;
+            }
+            catch (Accela.WindowsStoreSDK.AccelaApiException ex)
+            {
+                ShowMessage("Exception", "Http Status:" + ex.ApiError.status + " Message:" + ex.ApiError.message + " ErrorCode:" + ex.ApiError.code + " TraceId:" + ex.ApiError.traceId, MessageBoxButton.OK);
             }
             catch (AggregateException ex)
             {

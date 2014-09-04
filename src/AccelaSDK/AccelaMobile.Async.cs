@@ -188,6 +188,10 @@ namespace Accela.WindowsStoreSDK
                                 object result = ProcessResponse(httpHelper, responseObject, resultType);
                                 args = new AccelaApiEventArgs(null, false, userState, result);
                             }
+                            catch (AccelaApiException ex)
+                            {
+                                args = new AccelaApiEventArgs(ex, false, userState, null);
+                            }
                             catch (Exception ex)
                             {
                                 args = new AccelaApiEventArgs(ex, false, userState, null);

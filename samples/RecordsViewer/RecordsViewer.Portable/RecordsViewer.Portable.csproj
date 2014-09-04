@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Entities\WSHttpResponse.cs" />
     <Compile Include="Entities\WSValueBase.cs" />
     <Compile Include="ILoginService.cs" />
     <Compile Include="IRecordService.cs" />
@@ -51,7 +52,6 @@
     <Compile Include="NotifyPropertyBase.cs" />
     <Compile Include="Entities\WSAddress.cs" />
     <Compile Include="Entities\WSIdentifierBase.cs" />
-    <Compile Include="Entities\WSRecordsResponse.cs" />
     <Compile Include="Entities\WSRecord.cs" />
     <Compile Include="Entities\WSStatus.cs" />
     <Compile Include="Entities\WSType.cs" />
@@ -64,6 +64,9 @@
     <EmbeddedResource Include="Resources\Strings.zh-CN.resx" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AccelaSDK">
+      <HintPath>..\AccelaSDK\Win8\AccelaSDK.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>

@@ -187,12 +187,12 @@ namespace Accela.WindowsStoreSDK
         /// <param name="agency"></param>
         /// <param name="environment"></param>
         /// <returns></returns>
-#if NATIVE
-        public
-#else
-        internal
-#endif
- async Task Authorize(string username,
+//#if NATIVE
+//        public
+//#else
+//        internal
+//#endif
+public async Task Authorize(string username,
             string password,
             string agency,
             string[] permissions,

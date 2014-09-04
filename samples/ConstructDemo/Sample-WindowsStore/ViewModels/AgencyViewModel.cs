@@ -99,7 +99,7 @@ namespace Accela.WindowsStore.Sample.ViewModels
 
             try
             {
-                await _shareSdk.Authorize("admin", "admin", "BPTDEV", _scopes, AccelaEnvironment.STAGE);
+                await _shareSdk.Authorize("developer", "accela", "ISLANDTON", _scopes, AccelaEnvironment.PROD);
                 Messenger.Default.Send(new CustomMessage("Login Succeeded"));
             }
             catch (Exception ex)
@@ -194,6 +194,7 @@ namespace Accela.WindowsStore.Sample.ViewModels
 
         private async void ExcuteGetASpecificRecordCommand()
         {
+            _recordId = "ABC-00000-PETAL";
             if (!_shareSdk.IsSessionValid())
             {
                 _displayMessageService.Show("Info", "Not logged in yet.");
@@ -209,9 +210,9 @@ namespace Accela.WindowsStore.Sample.ViewModels
                 JsonObject jsonObj = await _dataService.GetRecord(_shareSdk, new[] { _recordId });
                 Messenger.Default.Send(new CustomMessage(jsonObj.ToString()));
             }
-            catch (Exception ex)
+            catch (AccelaApiException ex)
             {
-                _displayMessageService.Show("Error", ex.GetUnderExceptionMessage());
+                _displayMessageService.Show("Status", "Http Status:" + ex.ApiError.status + " Message:" + ex.ApiError.message + " ErrorCode:" + ex.ApiError.code + " TraceId:" + ex.ApiError.traceId);
             }
         }
 

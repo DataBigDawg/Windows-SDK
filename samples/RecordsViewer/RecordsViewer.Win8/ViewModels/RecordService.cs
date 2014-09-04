@@ -24,9 +24,17 @@ namespace RecordsViewer.ViewModels
         {
             return Task.Run(() =>
             {
-                var response = App.SharedSDK.GetAsync(servicePath, @params).Result;
-                var result = JsonConvert.DeserializeObject<WSRecordsResponse>(response.ToString());
-                return result.WSRecords;
+                List<WSRecord> list = new List<WSRecord>();
+                try{
+                    JsonObject jsonObj = App.SharedSDK.PostAsync(servicePath, @params).Result;
+                    list = Accela.WindowsStoreSDK.HttpWebResponseWrapper.customizeResponse<List<WSRecord>>(jsonObj);
+                }
+                catch (Accela.WindowsStoreSDK.AccelaApiException ex)
+                {
+                    if (ex != null)
+                        throw ex;
+                }
+                return list;
             });
         }
     }

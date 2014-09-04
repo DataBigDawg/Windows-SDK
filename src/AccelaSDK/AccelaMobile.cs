@@ -619,7 +619,7 @@ namespace Accela.WindowsStoreSDK
             {
                 object result = null;
 
-                Exception exception = null;
+                AccelaApiException exception = null;
                 var response = httpHelper.HttpWebResponse;
 
                 if (response == null)
@@ -653,7 +653,7 @@ namespace Accela.WindowsStoreSDK
                 {
                     return result;
                 }
-
+                
                 throw exception;
             }
             catch (AccelaApiException)
@@ -669,7 +669,7 @@ namespace Accela.WindowsStoreSDK
             }
         }
 
-        private Exception GetException(HttpHelper httpHelper, object result)
+        private AccelaApiException GetException(HttpHelper httpHelper, object result)
         {
             if (result == null)
                 return null;
@@ -689,7 +689,7 @@ namespace Accela.WindowsStoreSDK
                 {
                     int httpErrorStatus = (int)httpHelper.HttpWebResponse.StatusCode;//int.Parse(responseDict["status"].ToString());
 
-                    string errorMsg = null, errorCode = null, traceId = null;
+                    string errorMsg = null, errorCode = null, traceId = null, more = null;
 
                     AccelaOAuthErrorResult oAuthErrorResult = (AccelaOAuthErrorResult)DeserializeJson(result.ToString(), typeof(AccelaOAuthErrorResult));
                     if (!string.IsNullOrEmpty(oAuthErrorResult.error))
@@ -712,6 +712,8 @@ namespace Accela.WindowsStoreSDK
                         errorCode = errorResult.code;
                         errorMsg = errorResult.message;
                         traceId = errorResult.traceId;
+                        more = errorResult.more;
+                        //resultException = new AccelaApiException("Status:"+ httpErrorStatus + " ErrorCode:" + errorCode + "ErrorMsg:" + errorMsg + "More:" + more + "TraceId:" + traceId)
                         resultException = new AccelaApiException(errorMsg)
                         {
                             ApiError = errorResult,
@@ -720,7 +722,7 @@ namespace Accela.WindowsStoreSDK
                             TraceId = traceId
                         };
                     }
-
+   
                     AccelaSDKLogger.logInfo("AccelaSDK_GetException", resultException, AccelaLogLevel.Error);
 
                     return resultException;
