@@ -194,7 +194,6 @@ namespace Accela.WindowsStore.Sample.ViewModels
 
         private async void ExcuteGetASpecificRecordCommand()
         {
-            _recordId = "ABC-00000-PETAL";
             if (!_shareSdk.IsSessionValid())
             {
                 _displayMessageService.Show("Info", "Not logged in yet.");
