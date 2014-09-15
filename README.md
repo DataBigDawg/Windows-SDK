@@ -11,4 +11,6 @@ To get started, see <a href="https://developer.accela.com/docs/accela_civic_clou
 
 To see examples of how to use the Accela Windows SDK, see the sample projects in the <code>samples</code> folder.
 
+## License
 
+The use of Apache with Accela Windows SDK is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a>
