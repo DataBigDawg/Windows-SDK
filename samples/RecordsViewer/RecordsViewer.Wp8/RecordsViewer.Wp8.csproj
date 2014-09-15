@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Converter\UriConverter.cs" />
     <Compile Include="Entities\RecordCoordinate.cs" />
+    <Compile Include="Entities\RecordSearchCondition.cs" />
     <Compile Include="LocalControls\HeaderedContentControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\RecordService.cs" />
@@ -198,7 +199,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AccelaSDK, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="AccelaSDK, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\AccelaSDK\Wp8\AccelaSDK.dll</HintPath>
     </Reference>

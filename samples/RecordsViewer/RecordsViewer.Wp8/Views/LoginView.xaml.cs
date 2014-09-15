@@ -29,11 +29,23 @@ namespace RecordsViewer.Views
 
         }
 
+        private bool isLogining = false;
+
         async void LoginView_Loaded(object sender, RoutedEventArgs e)
         {
-            App.SettingsViewModel.CheckLocationConsent();
-            await App.LoginService.LoginAsync();
+            if (!isLogining)
+            {
+                isLogining = true;
+                App.SettingsViewModel.CheckLocationConsent();
+                await App.LoginService.LoginAsync();
+                isLogining = false;
+                 if (App.SharedSDK.IsSessionValid()) {
+                      NavigationService.Navigate(new Uri("/Views/RecordsView.xaml", UriKind.Relative));
+                 }
+            }
         }
+
+
 
         private async void btnLogin_Click_1(object sender, RoutedEventArgs e)
         {

@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Accela.WindowsStoreSDK;
+using Newtonsoft.Json;
+using RecordsViewer.Entities;
 using RecordsViewer.Portable;
 using RecordsViewer.Portable.Entities;
 using System;
@@ -19,24 +21,26 @@ namespace RecordsViewer.ViewModels
             });
         }
 
-        public Task<List<WSRecord>> GetRecordsAsync(string servicePath, IDictionary<string, object> @params)
+        public async Task<List<WSRecord>> GetRecordsAsync(string servicePath, IDictionary<string, object> @params)
         {
-            return Task.Run(() =>
+            List<WSRecord> records = null;
+            try
             {
-                List<WSRecord> records = null;
-                try
-                {
-                    var response = App.SharedSDK.GetAsync(servicePath, @params).Result;
-                    var result = JsonConvert.DeserializeObject<WSRecordsResponse>(response.ToString());
-                    records = result.WSRecords;
-                }
-                catch (AggregateException ex)
-                {
-                    if (ex.InnerException != null)
-                        throw ex.InnerException;
-                }
-                return records;
-            });
+                RecordSearchCondition condition = new RecordSearchCondition();
+                condition.RecordId = "14CAP-00000-002JU";
+                string jsonString = JsonConvert.SerializeObject(condition);
+                var response = await App.SharedSDK.PostAsync(servicePath, jsonString);
+
+                var result = JsonConvert.DeserializeObject<WSRecordsResponse>(response.ToString());
+                records = result.WSRecords;
+            }
+            catch (AggregateException ex)
+            {
+                if (ex.InnerException != null)
+                    throw ex.InnerException;
+            }
+
+            return records;
         }
     }
 }

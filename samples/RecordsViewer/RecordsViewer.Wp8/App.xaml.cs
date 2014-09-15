@@ -236,9 +236,11 @@ namespace RecordsViewer
 
         private void InitializeSDK()
         {
-            string appid = "635436839797855367";
-            string appsecret = "761e60d9e9224b278d99cf27c99de1f8";
+            string appid = "com.accela.inspector";
+            string appsecret = "839ffae0ee244cb4b558f252ca84524c";
             SharedSDK = new AccelaSDK(appid, appsecret);
+            SharedSDK.ApiHost = "apps-apis.dev.accela.com";
+            SharedSDK.OAuthHost = "apps-auth.dev.accela.com";
             SharedSDK.SessionChanged += SharedSDK_SessionChanged;
         }
 
@@ -342,7 +344,8 @@ namespace RecordsViewer
         private static SettingsViewModel _settingsViewModel;
         public static SettingsViewModel SettingsViewModel
         {
-            get {
+            get
+            {
                 lock (typeof(App))
                 {
                     if (_settingsViewModel == null)
