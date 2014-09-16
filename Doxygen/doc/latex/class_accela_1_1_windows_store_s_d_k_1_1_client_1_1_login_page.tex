@@ -1,0 +1,103 @@
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page}{\section{Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page Class Reference}
+\label{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page}\index{Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page@{Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page}}
+}
+
+
+A login page for users to do Authentification operation  
+
+
+Inheritance diagram for Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.387856cm]{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a9c58dbd13e48537c3acb037b4c20204a}{Login\+Page} ()
+\begin{DoxyCompactList}\small\item\em Initiatlizes the page by hooking up some event handlers. \end{DoxyCompactList}\item 
+void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a3d5a78699c57a42a54bd22579ae5348e}{Initialize\+Component} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\item 
+void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a3d5a78699c57a42a54bd22579ae5348e}{Initialize\+Component} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a23cab715eac7aa1781f30cf584c5e120}{On\+Navigated\+To} (Navigation\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Initiates the authentication operation by pointing the browser control to the Phone\+Web\+Authentication\+Broker.\+Start\+Uri. If the Phone\+Web\+Authentication\+Broker isn't currently in the middle of an authentication operation, then we immediately navigate back. \end{DoxyCompactList}\item 
+override void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a4781d8f0066098d0f8097a170b28e0f8}{On\+Navigating\+From} (Navigating\+Cancel\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Updates the Phone\+Web\+Authentication\+Broker on the state of the authentication operation. If we navigated back by pressing the back key, then the operation will be canceled. If the browser control successfully completed the operation, signaled by its navigating to the Phone\+Web\+Authentication\+Broker.\+End\+Uri, then we pass the results on. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A login page for users to do Authentification operation 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a9c58dbd13e48537c3acb037b4c20204a}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}!Login\+Page@{Login\+Page}}
+\index{Login\+Page@{Login\+Page}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}}
+\subsubsection[{Login\+Page}]{\setlength{\rightskip}{0pt plus 5cm}Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page.\+Login\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a9c58dbd13e48537c3acb037b4c20204a}
+
+
+Initiatlizes the page by hooking up some event handlers. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a3d5a78699c57a42a54bd22579ae5348e}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}!Initialize\+Component@{Initialize\+Component}}
+\index{Initialize\+Component@{Initialize\+Component}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}}
+\subsubsection[{Initialize\+Component}]{\setlength{\rightskip}{0pt plus 5cm}void Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page.\+Initialize\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a3d5a78699c57a42a54bd22579ae5348e}
+
+
+Initialize\+Component 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a3d5a78699c57a42a54bd22579ae5348e}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}!Initialize\+Component@{Initialize\+Component}}
+\index{Initialize\+Component@{Initialize\+Component}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}}
+\subsubsection[{Initialize\+Component}]{\setlength{\rightskip}{0pt plus 5cm}void Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page.\+Initialize\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a3d5a78699c57a42a54bd22579ae5348e}
+
+
+Initialize\+Component 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a23cab715eac7aa1781f30cf584c5e120}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}!On\+Navigated\+To@{On\+Navigated\+To}}
+\index{On\+Navigated\+To@{On\+Navigated\+To}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}}
+\subsubsection[{On\+Navigated\+To}]{\setlength{\rightskip}{0pt plus 5cm}override void Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page.\+On\+Navigated\+To (
+\begin{DoxyParamCaption}
+\item[{Navigation\+Event\+Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a23cab715eac7aa1781f30cf584c5e120}
+
+
+Initiates the authentication operation by pointing the browser control to the Phone\+Web\+Authentication\+Broker.\+Start\+Uri. If the Phone\+Web\+Authentication\+Broker isn't currently in the middle of an authentication operation, then we immediately navigate back. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a4781d8f0066098d0f8097a170b28e0f8}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}!On\+Navigating\+From@{On\+Navigating\+From}}
+\index{On\+Navigating\+From@{On\+Navigating\+From}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Client\+::\+Login\+Page}}
+\subsubsection[{On\+Navigating\+From}]{\setlength{\rightskip}{0pt plus 5cm}override void Accela.\+Windows\+Store\+S\+D\+K.\+Client.\+Login\+Page.\+On\+Navigating\+From (
+\begin{DoxyParamCaption}
+\item[{Navigating\+Cancel\+Event\+Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_client_1_1_login_page_a4781d8f0066098d0f8097a170b28e0f8}
+
+
+Updates the Phone\+Web\+Authentication\+Broker on the state of the authentication operation. If we navigated back by pressing the back key, then the operation will be canceled. If the browser control successfully completed the operation, signaled by its navigating to the Phone\+Web\+Authentication\+Broker.\+End\+Uri, then we pass the results on. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/eyang/\+Documents/\+Windows-\/\+S\+D\+K-\/\+New/trunk/src/\+Accela\+S\+D\+K-\/\+W\+P8/\+Client/\+Phone/Login\+Page.\+xaml.\+cs\item 
+C\+:/\+Users/eyang/\+Documents/\+Windows-\/\+S\+D\+K-\/\+New/trunk/src/\+Accela\+S\+D\+K-\/\+W\+P8/obj/\+Debug\+\_\+\+Native/\+Client/\+Phone/Login\+Page.\+g.\+cs\item 
+C\+:/\+Users/eyang/\+Documents/\+Windows-\/\+S\+D\+K-\/\+New/trunk/src/\+Accela\+S\+D\+K-\/\+W\+P8/obj/\+Debug\+\_\+\+Native/\+Client/\+Phone/Login\+Page.\+g.\+i.\+cs\end{DoxyCompactItemize}
