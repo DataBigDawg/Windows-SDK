@@ -16,7 +16,9 @@ namespace Accela.WindowsPhone8.Sample.ViewModels
 #else
 namespace Accela.WindowsStore.Sample.ViewModels
 #endif
-{
+{    /// <summary>
+    /// Specify which view modle need to be loaded
+    /// </summary>
     public class ViewModelLocator
     {
         static ViewModelLocator()

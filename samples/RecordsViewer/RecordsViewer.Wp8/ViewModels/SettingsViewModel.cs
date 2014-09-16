@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows;
 
 namespace RecordsViewer.ViewModels
-{
+{   /// <summary>
+    /// SettingsViewModel set and check LocationConset setting
+    /// </summary>
     public class SettingsViewModel : NotifyPropertyBase
     {
         private const String LOCATION_CONSENT = "LocationConsent";
@@ -22,12 +24,21 @@ namespace RecordsViewer.ViewModels
             set { SetProperty<bool>(ref _canUseLocationConsent, value); }
         }
 
+        /// <summary>
+        /// Set LocationConset status to the application settings.
+        /// </summary>
+        /// <param name="status">Boolean value true/false, status used for LocationConsent setting</param>
+        /// <returns></returns>
         public void SaveLocationConsent(bool status)
         {
             IsolatedStorageSettings.ApplicationSettings[LOCATION_CONSENT] = status;
             IsolatedStorageSettings.ApplicationSettings.Save();
         }
 
+        /// <summary>
+        /// Check LocationConset status from the application settings, if not setted, pop up OK/Cancel dialog.
+        /// </summary>
+        /// <returns>Boolean value indicate true/false of the LocationConset setting</returns>
         public bool CheckLocationConsent()
         {
             if (!IsolatedStorageSettings.ApplicationSettings.Contains(LOCATION_CONSENT))

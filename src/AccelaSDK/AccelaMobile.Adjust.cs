@@ -10,6 +10,10 @@ using Accela.WindowsStoreSDK.Client;
 using Windows.Storage;
 using System.IO;
 
+/// <summary>
+/// Contains Accela objects that allow your Windows Phone app to interact with the Accela Construct API and the Civic Platform.
+/// This namespace also includes HTTP and JSON helper objects.
+/// </summary>
 namespace Accela.WindowsStoreSDK
 {
     /// <summary>

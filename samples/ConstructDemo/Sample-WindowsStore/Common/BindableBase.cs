@@ -6,28 +6,28 @@ using Windows.UI.Xaml.Data;
 namespace Accela.WindowsStore.Sample.Common
 {
     /// <summary>
-    /// 用于简化模型的 <see cref="INotifyPropertyChanged"/> 实现。
+    /// Implementation of <see cref="INotifyPropertyChanged"/> to simplify models.
     /// </summary>
     [Windows.Foundation.Metadata.WebHostHidden]
     public abstract class BindableBase : INotifyPropertyChanged
     {
         /// <summary>
-        /// 针对属性更改通知的多播事件。
+        /// Multicast event for property change notifications.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// 检查属性是否已与所需值匹配。仅当需要时才设置
-        /// 该属性并通知侦听器。
+        /// Checks if a property already matches a desired value.  Sets the property and
+        /// notifies listeners only when necessary.
         /// </summary>
-        /// <typeparam name="T">属性的类型。</typeparam>
-        /// <param name="storage">对具有 getter 和 setter 的属性的引用。</param>
-        /// <param name="value">属性的所需值。</param>
-        /// <param name="propertyName">用于通知侦听器的属性的名称。此
-        /// 值是可选的，可以在从支持 CallerMemberName 的编译器调用时
-        /// 自动提供。</param>
-        /// <returns>如果更改了值，则为 true，如果现有值与所需值匹配，
-        /// 则为 false。</returns>
+        /// <typeparam name="T">Type of the property.</typeparam>
+        /// <param name="storage">Reference to a property with both getter and setter.</param>
+        /// <param name="value">Desired value for the property.</param>
+        /// <param name="propertyName">Name of the property used to notify listeners.  This
+        /// value is optional and can be provided automatically when invoked from compilers that
+        /// support CallerMemberName.</param>
+        /// <returns>True if the value was changed, false if the existing value matched the
+        /// desired value.</returns>
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
         {
             if (object.Equals(storage, value)) return false;
@@ -38,11 +38,11 @@ namespace Accela.WindowsStore.Sample.Common
         }
 
         /// <summary>
-        /// 向侦听器通知已更改了某个属性值。
+        /// Notifies listeners that a property value has changed.
         /// </summary>
-        /// <param name="propertyName">用于通知侦听器的属性的名称。此
-        /// 值是可选的，可以在从支持
-        /// <see cref="CallerMemberNameAttribute"/> 的编译器调用时自动提供。</param>
+        /// <param name="propertyName">Name of the property used to notify listeners.  This
+        /// value is optional and can be provided automatically when invoked from compilers
+        /// that support <see cref="CallerMemberNameAttribute"/>.</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             var eventHandler = this.PropertyChanged;

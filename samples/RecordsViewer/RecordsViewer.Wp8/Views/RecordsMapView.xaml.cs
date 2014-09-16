@@ -18,7 +18,9 @@ using RecordsViewer.Portable.Resources;
 using RecordsViewer.Entities;
 
 namespace RecordsViewer.Views
-{
+{   /// <summary>
+    /// Provides view of map showing records pin and able to navigate to each record's detail
+    /// </summary>
     public partial class RecordsMapView : ViewBase
     {
         private readonly RecordsMapViewModel _viewModel;

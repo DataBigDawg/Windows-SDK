@@ -9,7 +9,9 @@ namespace Accela.WindowsPhone8.Sample.Services
 #else
 namespace Accela.WindowsStore.Sample.Services
 #endif
-{
+{   /// <summary>
+    /// Serialize service interface
+    /// </summary>
     public interface ISerializerService
     {
         object Deserialize(Type type, string data);

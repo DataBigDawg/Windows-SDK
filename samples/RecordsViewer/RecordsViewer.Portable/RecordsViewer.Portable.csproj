@@ -35,7 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Entities\WSHttpResponse.cs" />
     <Compile Include="Entities\WSValueBase.cs" />
     <Compile Include="ILoginService.cs" />
     <Compile Include="IRecordService.cs" />

@@ -17,6 +17,9 @@ namespace Accela.WindowsPhone8.Sample.ViewModels
 namespace Accela.WindowsStore.Sample.ViewModels
 #endif
 {
+    /// <summary>
+    /// Main view model with action command for Main page
+    /// </summary>
     public class MainViewModel : ViewModelBase
     {
         private INavigationService _navigationService;

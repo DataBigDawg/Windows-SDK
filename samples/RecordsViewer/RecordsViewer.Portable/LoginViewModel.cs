@@ -6,7 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RecordsViewer.Portable
-{
+{   /// <summary>
+    /// Model class integrated with login service on authorization and logout
+    /// </summary>
     public class LoginViewModel : NotifyPropertyBase
     {
         private ILoginService _loginService;

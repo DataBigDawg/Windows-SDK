@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Accela.WindowsStoreSDK
 {
+    /// <summary>
+    /// Model to store and retrive user information
+    /// </summary>
     internal class NativeUserInfo : BindableBase
     {
         private string _agency;
@@ -16,6 +19,7 @@ namespace Accela.WindowsStoreSDK
         private string _password;
 
         private string _environment;
+
 
         private ObservableCollection<string> _env = new ObservableCollection<string>() { 
             "PROD",
@@ -50,7 +54,9 @@ namespace Accela.WindowsStoreSDK
             get { return _environment; }
             set { SetProperty(ref _environment, value); }
         }
-
+        /// <summary>
+        /// construct method to init the default agency/username/environment 
+        /// </summary>
         public NativeUserInfo()
         {
 #if DEBUG

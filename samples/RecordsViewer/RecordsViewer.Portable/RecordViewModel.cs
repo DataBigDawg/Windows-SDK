@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace RecordsViewer.Portable
 {
+    /// <summary>
+    /// Model class contains items of a record, also with feature of break down record items and load a record by its Id.
+    /// </summary>
     public class RecordViewModel : NotifyPropertyBase
     {
         private IRecordService _recordService;

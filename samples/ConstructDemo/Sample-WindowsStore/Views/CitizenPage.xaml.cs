@@ -15,8 +15,9 @@ using Accela.WindowsStoreSDK;
 
 
 namespace Accela.WindowsStore.Sample
-{
-
+{    /// <summary>
+    /// Citizen page
+    /// </summary>
     public sealed partial class CitizenPage : Accela.WindowsStore.Sample.Common.LayoutAwarePage
     {
         public CitizenPage()

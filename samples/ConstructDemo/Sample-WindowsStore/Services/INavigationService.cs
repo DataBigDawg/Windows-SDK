@@ -9,13 +9,15 @@ namespace Accela.WindowsPhone8.Sample.Services
 #else
 namespace Accela.WindowsStore.Sample.Services
 #endif
-{
+{   /// <summary>
+    /// Navigation service interface
+    /// </summary>
     public interface INavigationService
     {
          bool CanGoBack { get; }
 
         void GoBack();
 
-        void Navigate<TDestinationViewModel>(object parameter = null); 
+        void Navigate<TDestinationViewModel>(object parameter = null);
     }
 }

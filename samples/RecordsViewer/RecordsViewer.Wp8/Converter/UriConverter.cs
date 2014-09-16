@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 
 namespace RecordsViewer.Converter
-{
+{    /// <summary>
+    /// Uri Converter
+    /// </summary>
     public class UriConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+    {   /// <summary>
+        /// Convert uri for searching records API
+        /// </summary>
+        /// <param name="value">Id value, used to search to a specific id record.</param>
+        /// <param name="value">Parameter object, used for the path of the uri.</param>
+        /// <param name="value">Id value, used to search to a specific id record.</param>
+        /// <returns>The objet of the new created uri.</returns>
+        public object Convert(object value, object parameter)
         {
             if (value == null) return value;
             if(parameter==null) return value;
@@ -22,7 +30,7 @@ namespace RecordsViewer.Converter
             return new Uri(relativeUri, UriKind.Relative);
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        public object ConvertBack(object value, Type targetType, object parameter)
         {
             throw new NotImplementedException();
         }

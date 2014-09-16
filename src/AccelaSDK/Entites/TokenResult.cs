@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Accela.WindowsStoreSDK
 {
+    /// <summary>
+    /// Server token result for api
+    /// </summary>
     internal class AccelaTokenResult: AccelaOAuthErrorResult
     {
 

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 
+/// <summary>
+/// Contains Accela objects that allow your Windows Store app to interact with the Accela Construct API and the Civic Platform. 
+/// This namespace also includes HTTP and JSON helper objects.
+/// </summary>
 
 namespace Accela.WindowsStoreSDK
 {
@@ -103,7 +107,7 @@ namespace Accela.WindowsStoreSDK
         {
             LogLevel =
                 //#if DEBUG
- AccelaLogLevel.Info;
+            AccelaLogLevel.Info;
             //#else
             // AccelaLogLevel.None;
             //#endif

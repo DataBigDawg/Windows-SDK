@@ -7,7 +7,7 @@ using System.Text;
 namespace Accela.WindowsStoreSDK
 {
     /// <summary>
-    /// 
+    /// Represents AccelaSDK api download progress changed event args.
     /// </summary>
     public class AccelaDownloadProgressChangedEventArgs : ProgressChangedEventArgs
     {

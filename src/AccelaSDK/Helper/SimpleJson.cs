@@ -1180,13 +1180,16 @@ namespace Accela.WindowsStoreSDK
 
 #endif
     }
-    
+
     [GeneratedCode("simple-json", "1.0.0")]
 #if SIMPLE_JSON_INTERNAL
     internal
 #else
     public
 #endif
+        /// <summary>
+        /// Class provide Serialize/Deserialize interfaces
+        /// </summary>
  interface IJsonSerializerStrategy
     {
         [SuppressMessage("Microsoft.Design", "CA1007:UseGenericsWhereAppropriate", Justification="Need to support .NET 2")]
@@ -1200,6 +1203,10 @@ namespace Accela.WindowsStoreSDK
 #else
     public
 #endif
+        /// <summary>
+        /// Helper class providing Serialize/DeserializeObject feature based on Poco
+        /// </summary>
+        /// <remarks></remarks>
  class PocoJsonSerializerStrategy : IJsonSerializerStrategy
     {
         internal IDictionary<Type, ReflectionUtils.ConstructorDelegate> ConstructorCache;
@@ -1470,7 +1477,7 @@ namespace Accela.WindowsStoreSDK
 #else
     public
 #endif
- class DataContractJsonSerializerStrategy : PocoJsonSerializerStrategy
+ class DataContractJsonSerializerStrategy : DeserializeObject 
     {
         public DataContractJsonSerializerStrategy()
         {
@@ -1542,6 +1549,9 @@ namespace Accela.WindowsStoreSDK
 
 #endif
 
+    /// <summary>
+    ///Contains the ReflectionUtils class.
+    /// </summary>
     namespace Reflection
     {
         // This class is meant to be copied into other libraries. So we want to exclude it from Code Analysis rules

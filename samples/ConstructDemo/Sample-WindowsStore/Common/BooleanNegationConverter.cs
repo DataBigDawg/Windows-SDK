@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Data;
 namespace Accela.WindowsStore.Sample.Common
 {
     /// <summary>
-    /// 从 true 转换为 false 以及进行相反转换的值转换器。
+    /// Convervt from true to false and vice-versa
     /// </summary>
     public sealed class BooleanNegationConverter : IValueConverter
     {

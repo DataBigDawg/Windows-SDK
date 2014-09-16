@@ -11,7 +11,9 @@ using RecordsViewer.Portable;
 using RecordsViewer.Portable.Resources;
 
 namespace RecordsViewer.Views
-{
+{   /// <summary>
+    /// Provides view of login function to applications.
+    /// </summary>
     public partial class LoginView : ViewBase
     {
         public LoginView()

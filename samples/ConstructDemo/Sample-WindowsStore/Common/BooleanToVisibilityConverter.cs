@@ -14,8 +14,8 @@ using Windows.UI.Xaml.Data;
 namespace Accela.WindowsStore.Sample.Common
 {
     /// <summary>
-    /// 将 true 转换为 <see cref="Visibility.Visible"/> 并将 false 转换为
-    /// <see cref="Visibility.Collapsed"/> 的值转换器。
+    /// Convert from true to <see cref="Visibility.Visible"/> and Convert from false to
+    /// <see cref="Visibility.Collapsed"/>
     /// </summary>
     public sealed class BooleanToVisibilityConverter : IValueConverter
     {

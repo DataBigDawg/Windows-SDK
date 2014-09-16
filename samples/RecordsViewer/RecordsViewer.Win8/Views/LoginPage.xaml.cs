@@ -15,7 +15,8 @@ using Windows.UI.Popups;
 using RecordsViewer.Portable;
 using RecordsViewer.Portable.Resources;
 
-// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+
+/// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace RecordsViewer
 {
@@ -71,38 +72,5 @@ namespace RecordsViewer
         {
             await _loginViewModel.SSOAuthorization();
         }
-
-        //private async void btnLogin_Click_1(object sender, RoutedEventArgs e)
-        //{
-        //    MessageDialog md = null;
-        //    progressBar.IsIndeterminate = true;
-        //    btnLogin.IsEnabled = false;
-        //    try
-        //    {
-        //        await _loginViewModel.AuthorizationAsync();
-        //        var rootFrame = new Frame();
-        //        Window.Current.Content = rootFrame;
-        //        rootFrame.Navigate(typeof(RecordListPage));
-        //    }
-        //    catch (ArgumentNullException)
-        //    {
-        //        md = new MessageDialog(Strings.Login_Field_Empty_Message, Strings.Login_Error_Message_Title);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        var innerErr = ex.InnerException;
-        //        var msg = innerErr == null ? ex.Message : innerErr.Message;
-        //        md = new MessageDialog(msg, Strings.Login_Error_Message_Title);
-        //    }
-        //    finally
-        //    {
-        //        progressBar.IsIndeterminate = false;
-        //        btnLogin.IsEnabled = true;
-        //    }
-
-        //    if (md != null)
-        //        await md.ShowAsync();
-
-        //}
     }
 }

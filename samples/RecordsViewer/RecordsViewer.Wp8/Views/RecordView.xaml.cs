@@ -10,7 +10,9 @@ using Microsoft.Phone.Shell;
 using RecordsViewer.Portable;
 
 namespace RecordsViewer.Views
-{
+{   /// <summary>
+    /// Provides view of record detail
+    /// </summary>
     public partial class RecordView : ViewBase
     {
         public RecordView()
