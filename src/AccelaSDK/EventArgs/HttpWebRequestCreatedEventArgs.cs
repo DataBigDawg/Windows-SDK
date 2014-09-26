@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 
 namespace Accela.WindowsStoreSDK
-{
+{   /// <summary>
+    /// Model class to set/get userToken and  <see cref="HttpWebRequestWrapper"/>
+    /// </summary>
     class HttpWebRequestCreatedEventArgs : EventArgs
     {
         private readonly object _userToken;

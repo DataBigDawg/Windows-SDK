@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Accela.WindowsStoreSDK
 {
     /// <summary>
-    /// 
+    /// Conver data and time format
     /// </summary>
     internal static class DateTimeConvertor
     {

@@ -11,12 +11,14 @@ using RecordsViewer.Portable.Resources;
 using System.Windows.Controls.Primitives;
 
 namespace RecordsViewer.Views
-{
+{   /// <summary>
+    /// Provides view of records list from loaded records, and with menu items to show records on the map
+    /// </summary>
     public partial class RecordsView : ViewBase
     {
         bool loaded = false;
 
-        public RecordsView()
+        public RecordsView() 
         {
             InitializeComponent();
             BuildApplicationBar();

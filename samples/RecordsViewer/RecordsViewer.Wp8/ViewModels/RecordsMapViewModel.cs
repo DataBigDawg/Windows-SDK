@@ -13,9 +13,15 @@ using System.Threading.Tasks;
 using System.Windows;
 
 namespace RecordsViewer.ViewModels
-{
+{   /// <summary>
+    /// RecordsMapViewModel set/get records Coordinate, initialize coordinates from records.
+    /// </summary>
     public class RecordsMapViewModel : NotifyPropertyBase
-    {
+    {   /// <summary>
+        /// Construct RecordsMapViewModel initialize records' coordinates
+        /// </summary>
+        /// <param name="records">List of records.</param>
+        /// <returns></returns>
         public RecordsMapViewModel(IList<WSRecord> records)
         {
             this.InitViewModel(records);
@@ -28,7 +34,11 @@ namespace RecordsViewer.ViewModels
             get { return _coordinates; }
             set { SetProperty<ObservableCollection<RecordCoordinate>>(ref _coordinates, value); }
         }
-
+        /// <summary>
+        /// InitViewModel initialize records' coordinates
+        /// </summary>
+        /// <param name="records">List of records.</param>
+        /// <returns></returns>
         public void InitViewModel(IList<WSRecord> records)
         {
             _coordinates = new ObservableCollection<RecordCoordinate>();

@@ -20,7 +20,9 @@ namespace Accela.WindowsStore.Sample.Services
         {
             this.serializer = serializer;
         }
-
+        /// <summary> 
+        /// Deserialize from file to a specific type of instance.
+        /// </summary> 
         public async Task<T> LoadAsync<T>(string fileName)
         {
             var file = await ApplicationData.Current.LocalFolder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
@@ -42,7 +44,9 @@ namespace Accela.WindowsStore.Sample.Services
 
             return data;
         }
-
+        /// <summary> 
+        /// Serialize data instance to file.
+        /// </summary> 
         public async Task SaveAsync(string fileName, object data)
         {
             var file = await ApplicationData.Current.LocalFolder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);

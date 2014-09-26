@@ -9,7 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RecordsViewer.Entities
-{
+{    /// <summary>
+    /// A module class for record's baseic infomation and coordinate
+    /// </summary>
     public class RecordCoordinate : NotifyPropertyBase
     {
         private GeoCoordinate _coordinate;
@@ -23,12 +25,6 @@ namespace RecordsViewer.Entities
             get { return _coordinate; }
             set { SetProperty<GeoCoordinate>(ref _coordinate, value); }
         }
-
-        //public string RecordName
-        //{
-        //    get { return _recordName; }
-        //    set { SetProperty<string>(ref _recordName, value); }
-        //}
 
         public string RecordId
         {

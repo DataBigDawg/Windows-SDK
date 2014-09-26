@@ -9,6 +9,9 @@ using System.Threading;
 
 namespace RecordsViewer.Portable
 {
+    /// <summary>
+    /// Model class integrated with handler for property change
+    /// </summary>
     public abstract class NotifyPropertyBase : INotifyPropertyChanged
     {
 

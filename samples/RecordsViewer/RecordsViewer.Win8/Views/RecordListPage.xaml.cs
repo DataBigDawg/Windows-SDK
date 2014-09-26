@@ -18,7 +18,7 @@ using RecordsViewer.Portable.Entities;
 using System.Threading.Tasks;
 using RecordsViewer.Portable.Resources;
 
-// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+
 
 namespace RecordsViewer
 {

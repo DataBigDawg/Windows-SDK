@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RecordsViewer.ViewModels
-{
+{   /// <summary>
+    /// Provide get a specific Record or Records list function.
+    /// </summary>
     public class RecordService : IRecordService
     {
         public Task<WSRecord> GetRecordAsync(string recordId)

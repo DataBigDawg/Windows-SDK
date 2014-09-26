@@ -9,7 +9,9 @@ namespace Accela.WindowsPhone8.Sample.Services
 #else
 namespace Accela.WindowsStore.Sample.Services
 #endif
-{
+{   /// <summary>
+    /// Storage service interface
+    /// </summary>
     public interface IStorageService
     {
         Task<T> LoadAsync<T>(string fileName);

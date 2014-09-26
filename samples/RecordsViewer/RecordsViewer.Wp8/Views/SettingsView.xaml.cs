@@ -9,7 +9,9 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
 namespace RecordsViewer.Views
-{
+{   /// <summary>
+    /// Provides view of settings
+    /// </summary>
     public partial class SettingsView : PhoneApplicationPage
     {
         public SettingsView()

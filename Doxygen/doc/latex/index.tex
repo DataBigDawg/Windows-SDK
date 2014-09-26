@@ -1,0 +1,26 @@
+\hypertarget{index_intro_sec}{}\section{Introduction}\label{index_intro_sec}
+\href{https://developer.accela.com/docs/accela_construct_api_developers_guide/windows_8_sdk/the_accela_windows_8_sdk.htm}{\tt Accela} S\+D\+K for Windows allows .N\+E\+T developers to add \href{https://developer.accela.com/docs/accela_construct_api_developers_guide/windows_8_sdk/the_accela_windows_8_sdk.htm}{\tt Accela} Automation functionality to your applications designed for for desktop, phones or tablets running Windows 8 operating system. The S\+D\+K includes .N\+E\+T A\+P\+Is that leverages functionality provided by \hyperlink{namespace_accela}{Accela} Cloud services through the R\+E\+S\+T interface. The A\+P\+I primarily provides record and inspection components. The record component accesses record information and allows for simple create of records. The inspection component allows access to inspection data with functions to schedule, reschedule, and cancel.
+
+The A\+P\+I is available in a single Accela\+S\+D\+K dll library. Classes and functions is available in the \hyperlink{namespace_accela_1_1_windows_store_s_d_k}{Accela.\+Windows\+Store\+S\+D\+K} namespace. This namespace prevents naming conflicts with classes defined in your applications or other frameworks you use.
+
+The \href{https://developer.accela.com/docs/accela_construct_api_developers_guide/windows_8_sdk/the_accela_windows_8_sdk.htm}{\tt Accela} Windows S\+D\+K is downloadable from \href{https://www.nuget.org/packages/AccelaSDK/}{\tt Nu\+Get} via Visual Studio Library Package Manager. For details, \href{https://developer.accela.com/docs/accela_construct_api_developers_guide/windows_8_sdk/the_accela_windows_8_sdk.htm}{\tt The Accela Windows 8 S\+D\+K}.\hypertarget{index_install_sec}{}\section{Setting Up Your Windows 8 Project}\label{index_install_sec}
+When creating a Windows/\+Windows Phone project, you will need the Windows 8 or Windows 8.\+1 operating system. Also choose one of the editions of Visual Studio 2012 or Visual Studio 2013.
+
+Make sure you installed the Package Manager Console or Nu\+Get Package Manager. From the Tools menu, select the Package Manager. After the Package Manager Console windows appears, type the command 'Install-\/\+Package Accela\+S\+D\+K'. If it is installed successfully, '\hyperlink{namespace_accela}{Accela} S\+D\+K' will be shown on the references in the Solution Explorer. If you want to build the S\+D\+K using the source code, open the Accela\+S\+D\+K-\/\+Windows\+Store or Accela\+S\+D\+K-\/\+W\+P8 project and build the project. Locate the downloaded Accela\+S\+D\+K.\+dll file and add it to the references on the Solution Explorer in your project.
+
+To start coding with \href{https://developer.accela.com/docs/accela_construct_api_developers_guide/windows_8_sdk/the_accela_windows_8_sdk.htm}{\tt Accela} S\+D\+K, import the namespace\+:
+
+\begin{DoxyVerb}usingAccela.WindowsStoreSDK;
+\end{DoxyVerb}
+
+
+You also need to declare the A\+P\+P I\+D and A\+P\+P Secret values which you received after you registered the windows store A\+P\+P on the \href{https://developer.accela.com/docs/accela_construct_api_developers_guide/windows_8_sdk/the_accela_windows_8_sdk.htm}{\tt Accela\+Developer Portal}.
+
+\begin{DoxyVerb}Public AccelaSDK ShareAccelaSDK { get; private set; }
+
+private string _appId = "";
+private string _appSecret = "";
+
+ShareAccelaSDK = new AccelaSDK(_appid, _appSecret);
+\end{DoxyVerb}
+ 

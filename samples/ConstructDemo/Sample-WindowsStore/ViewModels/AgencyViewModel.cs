@@ -19,11 +19,15 @@ using System.Threading.Tasks;
 using GalaSoft.MvvmLight.Messaging;
 
 #if WINDOWS_PHONE
+
 namespace Accela.WindowsPhone8.Sample.ViewModels
 #else
 namespace Accela.WindowsStore.Sample.ViewModels
 #endif
 {
+    /// <summary>
+    /// Agency view model with action command for Agency page
+    /// </summary>
     public class AgencyViewModel : ViewModelBase
     {
         private AccelaSDK _shareSdk;
@@ -49,7 +53,9 @@ namespace Accela.WindowsStore.Sample.ViewModels
             get { return _resultMsg; }
             set { Set(ref _resultMsg, value); }
         }
-
+        /// <summary>
+        /// Agency View Model constructor
+        /// </summary>
         public AgencyViewModel(IDataService dataService,
                                IDisplayMessageService displayMessageService)
         {
@@ -61,7 +67,9 @@ namespace Accela.WindowsStore.Sample.ViewModels
             _shareSdk = new AccelaSDK(appId, appSecret);
             Messenger.Default.Register<CustomMessage>(this, (msg) => ShowResult(msg));
         }
-
+        /// <summary>
+        /// Display the mesage through message service
+        /// </summary>
         private void ShowResult(CustomMessage msg)
         {
             if (msg != null)

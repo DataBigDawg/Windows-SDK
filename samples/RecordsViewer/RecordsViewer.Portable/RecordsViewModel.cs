@@ -8,6 +8,9 @@ using RecordsViewer.Portable.Entities;
 
 namespace RecordsViewer.Portable
 {
+    /// <summary>
+    /// Model class with record service and records, integrated with get records function.
+    /// </summary>
     public class RecordsViewModel : NotifyPropertyBase
     {
         private IRecordService _recordService;
@@ -19,8 +22,11 @@ namespace RecordsViewer.Portable
             this._recordService = recordService;
             this.Records = new ObservableCollection<WSRecord>();
         }
-
+        /// <summary>
+        /// get the lastest 10 records asynchronously
+        /// </summary>
         public async Task LoadRecordsAsync()
+
         {
             var apiPath = "/v4/search/records?expand=addresses&limit=10&offset=0";
 

@@ -25,6 +25,9 @@ namespace Accela.WindowsPhone8.Sample.ViewModels
 namespace Accela.WindowsStore.Sample.ViewModels
 #endif
 {
+    /// <summary>
+    /// Citizen view model with action command for Citizen page
+    /// </summary>
     public class CitizenViewModel : ViewModelBase
     {
         private AccelaSDK _shareSdk = null;

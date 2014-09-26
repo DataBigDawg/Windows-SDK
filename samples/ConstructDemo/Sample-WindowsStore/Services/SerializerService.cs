@@ -14,6 +14,13 @@ namespace Accela.WindowsStore.Sample.Services
 {
     public class SerializerService : ISerializerService
     {
+        /// <summary> 
+        /// Deserialize from json to a specific type of instance
+        /// </summary> 
+        /// <typeparam name="type">The type of instace deserialize from json.</typeparam> 
+        /// <param name="json">The json string.</param> 
+        /// <returns>The deserialized object.</returns>
+        
         public object Deserialize(Type type, string json)
         {
             var decoded = System.Net.WebUtility.UrlDecode(json);
@@ -30,6 +37,11 @@ namespace Accela.WindowsStore.Sample.Services
             return (T)Deserialize(typeof(T), json);
         }
 
+        /// <summary> 
+        /// Serialize from an instance to Json string
+        /// </summary> 
+        /// <typeparam name="instance">The instace to be serialized to json.</typeparam> 
+        /// <returns>The serialized json string.</returns>
         public string Serialize(object instance)
         {
             if (instance == null)

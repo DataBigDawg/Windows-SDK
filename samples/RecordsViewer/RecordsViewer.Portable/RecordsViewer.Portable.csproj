@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Entities\WSRecordsResponse.cs" />
+<Compile Include="Entities\WSRecordsResponse.cs" />
+
     <Compile Include="Entities\WSValueBase.cs" />
     <Compile Include="ILoginService.cs" />
     <Compile Include="IRecordService.cs" />

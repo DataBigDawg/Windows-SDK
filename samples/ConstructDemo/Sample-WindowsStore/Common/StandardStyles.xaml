@@ -1,12 +1,4 @@
-﻿<!--
-    此文件包含可简化应用程序开发的 XAML 样式。
-
-这些样式不仅很方便，而且是大多数 Visual Studio 项目和项模板必需的。
-删除、重命名或修改这些文件的内容可能导致项目
-无法生成，或一旦添加其他页便无法生成项目。如果需要改变
-这些样式，建议用新名称复制内容并修改
-私有副本。
--->
+﻿
 
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

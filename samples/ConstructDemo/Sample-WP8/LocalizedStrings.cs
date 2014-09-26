@@ -3,7 +3,7 @@
 namespace Accela.WindowsPhone8.Sample
 {
     /// <summary>
-    /// 提供对字符串资源的访问权。
+    /// Supply access to the resources.
     /// </summary>
     public class LocalizedStrings
     {

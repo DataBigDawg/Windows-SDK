@@ -10,7 +10,9 @@ namespace Accela.WindowsPhone8.Sample.Services
 #else
 namespace Accela.WindowsStore.Sample.Services
 #endif
-{
+{   /// <summary>
+    /// Provide web API call interfaces
+    /// </summary>
     public interface IDataService
     {
         Task<JsonObject> GetRecords(AccelaSDK sdk);

@@ -8,10 +8,13 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
+/// <summary>
+/// Contains the LoginPage class which displays the Accela authentication page for the Windows Phone.
+/// </summary>
 namespace Accela.WindowsStoreSDK.Client
 {
     /// <summary>
-    /// 
+    /// A login page for users to do Authentification operation
     /// </summary>
     public partial class LoginPage : PhoneApplicationPage
     {

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using System.Windows;
 
 namespace Accela.WindowsPhone8.Sample.Services
-{
+{   /// <summary>
+    /// Show API response message
+    /// </summary>
     public class DisplayMessageService : IDisplayMessageService
     {
         public void Show(string title, string message)

@@ -1,0 +1,1276 @@
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{\section{Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K Class Reference}
+\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}\index{Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K@{Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K}}
+}
+
+
+\hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K} is the main object of the \hyperlink{namespace_accela}{Accela} S\+D\+K for Windows Store.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_abf56a89a2e02c8eaac6112238750ada4}{Authorize} (string\mbox{[}$\,$\mbox{]} permissions, string agency=null)
+\begin{DoxyCompactList}\small\item\em Authorizes the user of the application with default agency definded in cloud, the login form was wrapped as a native dialog The Login Dialog will be presented for the user to use to login if does not exit the valid token. If the user has authenticated and still has a valid session the the user will be authorized without seeing the Login Dialog The schema of this app M\+U\+S\+T be defined, and handle\+Open\+U\+R\+L M\+U\+S\+T be invoked in the delegate of this app. refer to the method handle\+Open\+U\+R\+L of \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K}. \end{DoxyCompactList}\item 
+async Task \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1f6933990dbc6be44d5c64cafb132ad4}{Authorize} (string username, string password, string agency, string\mbox{[}$\,$\mbox{]} permissions, \hyperlink{namespace_accela_1_1_windows_store_s_d_k_a47577e6208bf1ae5cf34c33d54a3458c}{Accela\+Environment} environment)
+\item 
+bool \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ab6fe0d04720f94233abd4a5b36ca6160}{Is\+Session\+Valid} ()
+\begin{DoxyCompactList}\small\item\em Checks if the session is available. \end{DoxyCompactList}\item 
+void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_adef5f75f233b18fa58ebdfc17cac7202}{Logout} ()
+\begin{DoxyCompactList}\small\item\em Logs off the user from a session. \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_acd3bbc8de0b9ecc370fb751a4b6c74ec}{Get\+Async} (string path)
+\begin{DoxyCompactList}\small\item\em Asynchronous G\+E\+T request \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a6c4bac30ea2fcbdd36635901e1fe79ad}{Get\+Async} (string path, object parameters)
+\begin{DoxyCompactList}\small\item\em Asynchronous G\+E\+T request \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a684dc4f0a3f0e2b1c32fa6d6d408bd02}{Get\+Async} (string path, object parameters, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Asynchronous G\+E\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ad7990bc418c4ef75faee754b1c370738}{Get\+Async$<$ T $>$} (string path)
+\begin{DoxyCompactList}\small\item\em Asynchronous G\+E\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a16eea62a6d665b0b1a160e3f96581418}{Get\+Async$<$ T $>$} (string path, object parameters)
+\begin{DoxyCompactList}\small\item\em Asynchronous G\+E\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af043658055c20c043beb37acd9b47c6a}{Get\+Async$<$ T $>$} (string path, object parameters, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Asynchronous G\+E\+T request \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1bf4e2d60bfcf4e046d3418e3b027ca7}{Post\+Async} (string path)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+O\+S\+T request \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a76a89900c5bd3b2b199361cc80a85a6f}{Post\+Async} (string path, object parameters)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+O\+S\+T request \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1ce65bfdcc46c001eed8e2d6a9b279e4}{Post\+Async} (string path, string json\+String, I\+List$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} $>$ files)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+O\+S\+T request \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_afbaf4ac886f4262ecae31fd2be939dfe}{Post\+Async} (string path, \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} json, I\+List$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} $>$ files)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+O\+S\+T request \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a7faf8a8bc52f00f703d5f8a6200914b7}{Post\+Async} (string path, object parameters, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+O\+S\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af3721b6f4238003f798277bdf92dd069}{Post\+Async$<$ T $>$} (string path)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+O\+S\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af779d65e80889ec2bb8e219939b9235c}{Post\+Async$<$ T $>$} (string path, object parameters)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+O\+S\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a78d57c2d6e4a1833c8edfd83f6e5f4c7}{Post\+Async$<$ T $>$} (string path, object parameters, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+O\+S\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a02c59d94e7cb07b4c43fb2f31bc517e9}{Put\+Async$<$ T $>$} (string path, object parameters)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+U\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a81aa603d4f9d14eed159ae219aa6b980}{Put\+Async$<$ T $>$} (string path, object parameters, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+U\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af36035a41d27afc717b97434d4c8c6f4}{Put\+Async$<$ T $>$} (string path, object parameters, object user\+State, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+U\+T request \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a9c550cc37a21893a9e955dc3132c2801}{Put\+Async} (string path, object parameters)
+\begin{DoxyCompactList}\small\item\em Asynchronous P\+U\+T request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a168bc682b6c33043b51f10e652ef78d9}{Delete\+Async$<$ T $>$} (string path)
+\begin{DoxyCompactList}\small\item\em Asynchronous Delete request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aef49e735651aea50041566d2b8af37c1}{Delete\+Async$<$ T $>$} (string path, object parameters)
+\begin{DoxyCompactList}\small\item\em Asynchronous Delete request \end{DoxyCompactList}\item 
+Task$<$ T $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ab08e47944a9bc82841e529d7528088dc}{Delete\+Async$<$ T $>$} (string path, object parameters, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Asynchronous Delete request \end{DoxyCompactList}\item 
+async Task \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a5482d2b82d65b574e14cb3d5a8a5e3c0}{Download\+Attachment\+Async} (string path, object url\+Params, string file\+Path)
+\begin{DoxyCompactList}\small\item\em Asynchronous request Download documents \end{DoxyCompactList}\item 
+async Task \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a178b95916771905fca981cef2a6732fd}{Download\+Attachment\+Async} (string path, object url\+Params, Storage\+Folder file\+Folder, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Asynchronous request Download documents \end{DoxyCompactList}\item 
+async Task \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a608a2caabfe60cdaeadcca6aeac82db3}{Download\+Attachment\+Async} (string path, object url\+Params, Storage\+File file)
+\begin{DoxyCompactList}\small\item\em Asynchronous request Download documents \end{DoxyCompactList}\item 
+async Task \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a96b22f6ec59dbd302d8e60a4bb4abe46}{Download\+Attachment\+Async} (string path, object url\+Params, Cancellation\+Token cancellation\+Token, Storage\+File file)
+\begin{DoxyCompactList}\small\item\em Asynchronous request Download documents \end{DoxyCompactList}\item 
+Task$<$ byte\mbox{[}$\,$\mbox{]}$>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aaaaceac2c50a4d7621cca94f8ee53d8e}{Download\+Attachment\+Async} (string path)
+\begin{DoxyCompactList}\small\item\em Asynchronous request Download documents \end{DoxyCompactList}\item 
+Task$<$ byte\mbox{[}$\,$\mbox{]}$>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a46090e22a41728d80b6fd9d4ca66dfa2}{Download\+Attachment\+Async} (string path, object url\+Params)
+\begin{DoxyCompactList}\small\item\em Asynchronous request Download documents \end{DoxyCompactList}\item 
+Task$<$ byte\mbox{[}$\,$\mbox{]}$>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a06860c7b804461ba133a52abba67df30}{Download\+Attachment\+Async} (string path, object url\+Params, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Asynchronous request Download documents \end{DoxyCompactList}\item 
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aa201a490241bfab7f98499b6494e4a04}{Task$<$ byte\mbox{[}$\,$\mbox{]}$>$ {\bfseries Download\+Attachment\+Async} (string path, I\+Dictionary$<$ string, object $>$ url\+Params, string post\+Json, Cancellation\+Token cancellation\+Token)}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aa201a490241bfab7f98499b6494e4a04}
+
+\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a53ce8cfe1435725fffafe02061903bda}{Upload\+Attachment\+Async} (string path, object parameters)
+\begin{DoxyCompactList}\small\item\em Uploads a stream file represented by an \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} object as an asynchronous operation. \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a7fd56ed340142efb5a4ff527e7f17025}{Upload\+Attachment\+Async} (string path, object parameters, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Uploads a stream file represented by an \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} object as an asynchronous operation. \end{DoxyCompactList}\item 
+Task$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_json_object}{Json\+Object} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aad9f2e5a9f8f59692fb78cbf3d51de6d}{Upload\+Attachment\+Async} (string path, object parameters, Cancellation\+Token cancellation\+Token, I\+Progress$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_upload_progress_changed_event_args}{Accela\+Upload\+Progress\+Changed\+Event\+Args} $>$ upload\+Progress)
+\begin{DoxyCompactList}\small\item\em Uploads a stream file represented by an \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} object as an asynchronous operation. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aade4b134681bbbbce609dff6a8570861}{Cancel\+Async} ()
+\begin{DoxyCompactList}\small\item\em Cancels asynchronous requests. \end{DoxyCompactList}\item 
+\hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aeac8520fb6530fe77307348052b45991}{Accela\+S\+D\+K} (String app\+Id, String app\+Secret)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K} \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a96130b809777f1c7deb843e4ec7bd1ba}{Default\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Get a default instance of the current class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ae0bd11ec759b8dc478fa44aad20b4b93}{On\+Upload\+Progress\+Changed} (\hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_upload_progress_changed_event_args}{Accela\+Upload\+Progress\+Changed\+Event\+Args} args)
+\begin{DoxyCompactList}\small\item\em Raise On\+Upload\+Progress\+Completed event handler. \end{DoxyCompactList}\item 
+void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a46d55ff85ac1fec986eccefcdbbf6a6b}{On\+Download\+Progress\+Changed} (\hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_download_progress_changed_event_args}{Accela\+Download\+Progress\+Changed\+Event\+Args} args)
+\begin{DoxyCompactList}\small\item\em Raise On\+Download\+Progress\+Completed event handler. \end{DoxyCompactList}\item 
+void \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aaa98096c1e2d72925e31c82811828e33}{On\+Put\+Completed} (\hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_api_event_args}{Accela\+Api\+Event\+Args} args)
+\begin{DoxyCompactList}\small\item\em Raise On\+Put\+Completed event handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_accela_1_1_windows_store_s_d_k_a47577e6208bf1ae5cf34c33d54a3458c}{Accela\+Environment} \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a221dbc93b89afce140331e5fb1c15f2e}{Environment}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get or set \hyperlink{namespace_accela}{Accela} S\+D\+K Environment. \end{DoxyCompactList}\item 
+String \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a42012431f452bd32e2806be3aef3e389}{O\+Auth\+Host}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get or set authentication server host. \end{DoxyCompactList}\item 
+String \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a8de4a0f60f1178e43293b9ed48b57271}{Api\+Host}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get or set R\+E\+S\+T A\+P\+I server host. \end{DoxyCompactList}\item 
+I\+Dictionary$<$ string, string $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a378a3fb27bfe1b0014ae78d32f1c7a25}{Custom\+Http\+Headers}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get or set a custom H\+T\+T\+P request header. \end{DoxyCompactList}\item 
+String \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a3bb7550f63c8b3ccfae3be07fc0cb2e0}{App\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the app id. \end{DoxyCompactList}\item 
+String \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a42815597dbd6134fcff3fcbdc69294a3}{App\+Secret}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the app secret. \end{DoxyCompactList}\item 
+String \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a75e5baf9170d9a86c10d0607e0336071}{Agency}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the agency name. \end{DoxyCompactList}\item 
+Func$<$ object, string $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aa1e3cffaada3d7a8a17dc9a3fbba48a7}{Serialize\+Json}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Serialize object to json. \end{DoxyCompactList}\item 
+Func$<$ string, Type, object $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a43023d85ca7f52d794f8eb3637d1d4ae}{Deserialize\+Json}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Deserialize json to object. \end{DoxyCompactList}\item 
+static \hyperlink{namespace_accela_1_1_windows_store_s_d_k_aaf389cdbcc309b77e2fabfcd0844454b}{Accela\+Log\+Level} \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a690dc07789f17f0d5a18c9497f28bf13}{Log\+Level}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get or Set log display of relevant levels \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler\\*
+$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_session_event_args}{Accela\+Session\+Event\+Args} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a9217603b8d65f3b1424073df8c69dd1d}{Session\+Changed}
+\begin{DoxyCompactList}\small\item\em Gets or sets the event that will be called during user authentication. \end{DoxyCompactList}\item 
+Event\+Handler$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_api_event_args}{Accela\+Api\+Event\+Args} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a592b561cd868b1bedef095647a9b1b93}{Get\+Completed}
+\begin{DoxyCompactList}\small\item\em Event handler for get completion. \end{DoxyCompactList}\item 
+Event\+Handler$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_api_event_args}{Accela\+Api\+Event\+Args} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_abb051213f540d79972279d61a9f69304}{Post\+Completed}
+\begin{DoxyCompactList}\small\item\em Event handler for post completion. \end{DoxyCompactList}\item 
+Event\+Handler$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_api_event_args}{Accela\+Api\+Event\+Args} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aee12c0ad198a72d8b917f2e953e87157}{Delete\+Completed}
+\begin{DoxyCompactList}\small\item\em Event handler for delete completion. \end{DoxyCompactList}\item 
+Event\+Handler$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_api_event_args}{Accela\+Api\+Event\+Args} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aed2d9e7a18c0e4dcb3cd1178883596eb}{Put\+Completed}
+\begin{DoxyCompactList}\small\item\em Event handler for put completion. \end{DoxyCompactList}\item 
+Event\+Handler\\*
+$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_upload_progress_changed_event_args}{Accela\+Upload\+Progress\+Changed\+Event\+Args} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a724988be0528fd8b906ef1bdd49571d7}{Upload\+Progress\+Changed}
+\begin{DoxyCompactList}\small\item\em Event handler for upload progress changed. \end{DoxyCompactList}\item 
+Event\+Handler\\*
+$<$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_download_progress_changed_event_args}{Accela\+Download\+Progress\+Changed\+Event\+Args} $>$ \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aa6cf2bc41f9604cb30881e19196fcfdc}{Download\+Progress\+Changed}
+\begin{DoxyCompactList}\small\item\em Event handler for download progress changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K} is the main object of the \hyperlink{namespace_accela}{Accela} S\+D\+K for Windows Store. 
+
+\hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K} is the main object of the \hyperlink{namespace_accela}{Accela} S\+D\+K for Windows. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aeac8520fb6530fe77307348052b45991}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Accela\+S\+D\+K@{Accela\+S\+D\+K}}
+\index{Accela\+S\+D\+K@{Accela\+S\+D\+K}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Accela\+S\+D\+K}]{\setlength{\rightskip}{0pt plus 5cm}Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Accela\+S\+D\+K (
+\begin{DoxyParamCaption}
+\item[{String}]{app\+Id, }
+\item[{String}]{app\+Secret}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aeac8520fb6530fe77307348052b45991}
+
+
+Initializes a new instance of the \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app\+Id} & The Accele Mobile application id. it is created and listed in \href{https://developer.accela.com/ApplicationList/index}{\tt https\+://developer.\+accela.\+com/\+Application\+List/index} \\
+\hline
+{\em app\+Secret} & App secret generated in Developer Portal\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_abf56a89a2e02c8eaac6112238750ada4}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Authorize@{Authorize}}
+\index{Authorize@{Authorize}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Authorize}]{\setlength{\rightskip}{0pt plus 5cm}async Task Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Authorize (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{permissions, }
+\item[{string}]{agency = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_abf56a89a2e02c8eaac6112238750ada4}
+
+
+Authorizes the user of the application with default agency definded in cloud, the login form was wrapped as a native dialog The Login Dialog will be presented for the user to use to login if does not exit the valid token. If the user has authenticated and still has a valid session the the user will be authorized without seeing the Login Dialog The schema of this app M\+U\+S\+T be defined, and handle\+Open\+U\+R\+L M\+U\+S\+T be invoked in the delegate of this app. refer to the method handle\+Open\+U\+R\+L of \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em permissions} & resources list to be accessed. refer to the Scope in \href{https://developer.accela.com/Resource/ApisAbout}{\tt https\+://developer.\+accela.\+com/\+Resource/\+Apis\+About}\\
+\hline
+{\em agency} & default agency name for the citizen App\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1f6933990dbc6be44d5c64cafb132ad4}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Authorize@{Authorize}}
+\index{Authorize@{Authorize}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Authorize}]{\setlength{\rightskip}{0pt plus 5cm}async Task Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Authorize (
+\begin{DoxyParamCaption}
+\item[{string}]{username, }
+\item[{string}]{password, }
+\item[{string}]{agency, }
+\item[{string\mbox{[}$\,$\mbox{]}}]{permissions, }
+\item[{{\bf Accela\+Environment}}]{environment}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1f6933990dbc6be44d5c64cafb132ad4}
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \\
+\hline
+{\em password} & \\
+\hline
+{\em permissions} & \\
+\hline
+{\em agency} & \\
+\hline
+{\em environment} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aade4b134681bbbbce609dff6a8570861}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Cancel\+Async@{Cancel\+Async}}
+\index{Cancel\+Async@{Cancel\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Cancel\+Async}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Cancel\+Async (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aade4b134681bbbbce609dff6a8570861}
+
+
+Cancels asynchronous requests. 
+
+Does not cancel requests created using X\+Task\+Async methods. \hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a96130b809777f1c7deb843e4ec7bd1ba}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Default\+Instance@{Default\+Instance}}
+\index{Default\+Instance@{Default\+Instance}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Default\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Accela\+S\+D\+K} Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Default\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a96130b809777f1c7deb843e4ec7bd1ba}
+
+
+Get a default instance of the current class. 
+
+\begin{DoxyReturn}{Returns}
+An initialized \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k}{Accela\+S\+D\+K} instance
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a168bc682b6c33043b51f10e652ef78d9}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Delete\+Async$<$ T $>$@{Delete\+Async$<$ T $>$}}
+\index{Delete\+Async$<$ T $>$@{Delete\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Delete\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Delete\+Async$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a168bc682b6c33043b51f10e652ef78d9}
+
+
+Asynchronous Delete request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aef49e735651aea50041566d2b8af37c1}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Delete\+Async$<$ T $>$@{Delete\+Async$<$ T $>$}}
+\index{Delete\+Async$<$ T $>$@{Delete\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Delete\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Delete\+Async$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aef49e735651aea50041566d2b8af37c1}
+
+
+Asynchronous Delete request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ab08e47944a9bc82841e529d7528088dc}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Delete\+Async$<$ T $>$@{Delete\+Async$<$ T $>$}}
+\index{Delete\+Async$<$ T $>$@{Delete\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Delete\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Delete\+Async$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ab08e47944a9bc82841e529d7528088dc}
+
+
+Asynchronous Delete request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a5482d2b82d65b574e14cb3d5a8a5e3c0}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Download\+Attachment\+Async@{Download\+Attachment\+Async}}
+\index{Download\+Attachment\+Async@{Download\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Download\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}async Task Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Download\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{url\+Params, }
+\item[{string}]{file\+Path}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a5482d2b82d65b574e14cb3d5a8a5e3c0}
+
+
+Asynchronous request Download documents 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em url\+Params} & Request parameters\\
+\hline
+{\em file\+Path} & The path of the file to get a Storage\+File to represent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Download Attachment Task
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a178b95916771905fca981cef2a6732fd}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Download\+Attachment\+Async@{Download\+Attachment\+Async}}
+\index{Download\+Attachment\+Async@{Download\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Download\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}async Task Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Download\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{url\+Params, }
+\item[{Storage\+Folder}]{file\+Folder, }
+\item[{string}]{file\+Name}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a178b95916771905fca981cef2a6732fd}
+
+
+Asynchronous request Download documents 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em url\+Params} & Request parameters\\
+\hline
+{\em file\+Folder} & The file-\/system path of the folder to retrieve\\
+\hline
+{\em file\+Name} & The desired name of the file to create.\+If there is an existing file in the current folder that already has the specified desired\+Name, the specified Creation\+Collision\+Option determines how Windows responds to the conflict.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Download Attachment Task
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a608a2caabfe60cdaeadcca6aeac82db3}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Download\+Attachment\+Async@{Download\+Attachment\+Async}}
+\index{Download\+Attachment\+Async@{Download\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Download\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}async Task Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Download\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{url\+Params, }
+\item[{Storage\+File}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a608a2caabfe60cdaeadcca6aeac82db3}
+
+
+Asynchronous request Download documents 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em url\+Params} & Request parameters\\
+\hline
+{\em file} & File as a Storage\+File \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Download Attachment Task
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a96b22f6ec59dbd302d8e60a4bb4abe46}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Download\+Attachment\+Async@{Download\+Attachment\+Async}}
+\index{Download\+Attachment\+Async@{Download\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Download\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}async Task Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Download\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{url\+Params, }
+\item[{Cancellation\+Token}]{cancellation\+Token, }
+\item[{Storage\+File}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a96b22f6ec59dbd302d8e60a4bb4abe46}
+
+
+Asynchronous request Download documents 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em url\+Params} & Request parameters\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+{\em file} & File as a Storage\+File\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Download Attachment Task
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aaaaceac2c50a4d7621cca94f8ee53d8e}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Download\+Attachment\+Async@{Download\+Attachment\+Async}}
+\index{Download\+Attachment\+Async@{Download\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Download\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$byte\mbox{[}$\,$\mbox{]}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Download\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aaaaceac2c50a4d7621cca94f8ee53d8e}
+
+
+Asynchronous request Download documents 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the byte stream of the download file
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a46090e22a41728d80b6fd9d4ca66dfa2}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Download\+Attachment\+Async@{Download\+Attachment\+Async}}
+\index{Download\+Attachment\+Async@{Download\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Download\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$byte\mbox{[}$\,$\mbox{]}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Download\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{url\+Params}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a46090e22a41728d80b6fd9d4ca66dfa2}
+
+
+Asynchronous request Download documents 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em url\+Params} & Request parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the byte stream of the download file
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a06860c7b804461ba133a52abba67df30}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Download\+Attachment\+Async@{Download\+Attachment\+Async}}
+\index{Download\+Attachment\+Async@{Download\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Download\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$byte\mbox{[}$\,$\mbox{]}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Download\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{url\+Params, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a06860c7b804461ba133a52abba67df30}
+
+
+Asynchronous request Download documents 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em url\+Params} & Request parameters\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the byte stream of the download file
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_acd3bbc8de0b9ecc370fb751a4b6c74ec}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Get\+Async@{Get\+Async}}
+\index{Get\+Async@{Get\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Get\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Get\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_acd3bbc8de0b9ecc370fb751a4b6c74ec}
+
+
+Asynchronous G\+E\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a6c4bac30ea2fcbdd36635901e1fe79ad}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Get\+Async@{Get\+Async}}
+\index{Get\+Async@{Get\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Get\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Get\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a6c4bac30ea2fcbdd36635901e1fe79ad}
+
+
+Asynchronous G\+E\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a684dc4f0a3f0e2b1c32fa6d6d408bd02}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Get\+Async@{Get\+Async}}
+\index{Get\+Async@{Get\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Get\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Get\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a684dc4f0a3f0e2b1c32fa6d6d408bd02}
+
+
+Asynchronous G\+E\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ad7990bc418c4ef75faee754b1c370738}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Get\+Async$<$ T $>$@{Get\+Async$<$ T $>$}}
+\index{Get\+Async$<$ T $>$@{Get\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Get\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Get\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ad7990bc418c4ef75faee754b1c370738}
+
+
+Asynchronous G\+E\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a16eea62a6d665b0b1a160e3f96581418}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Get\+Async$<$ T $>$@{Get\+Async$<$ T $>$}}
+\index{Get\+Async$<$ T $>$@{Get\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Get\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Get\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a16eea62a6d665b0b1a160e3f96581418}
+
+
+Asynchronous G\+E\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af043658055c20c043beb37acd9b47c6a}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Get\+Async$<$ T $>$@{Get\+Async$<$ T $>$}}
+\index{Get\+Async$<$ T $>$@{Get\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Get\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Get\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af043658055c20c043beb37acd9b47c6a}
+
+
+Asynchronous G\+E\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ab6fe0d04720f94233abd4a5b36ca6160}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Is\+Session\+Valid@{Is\+Session\+Valid}}
+\index{Is\+Session\+Valid@{Is\+Session\+Valid}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Is\+Session\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Is\+Session\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ab6fe0d04720f94233abd4a5b36ca6160}
+
+
+Checks if the session is available. 
+
+\begin{DoxyReturn}{Returns}
+True if the session is valid, False if it is invalid.
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_adef5f75f233b18fa58ebdfc17cac7202}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Logout@{Logout}}
+\index{Logout@{Logout}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Logout}]{\setlength{\rightskip}{0pt plus 5cm}void Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Logout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_adef5f75f233b18fa58ebdfc17cac7202}
+
+
+Logs off the user from a session. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a46d55ff85ac1fec986eccefcdbbf6a6b}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!On\+Download\+Progress\+Changed@{On\+Download\+Progress\+Changed}}
+\index{On\+Download\+Progress\+Changed@{On\+Download\+Progress\+Changed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{On\+Download\+Progress\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+On\+Download\+Progress\+Changed (
+\begin{DoxyParamCaption}
+\item[{{\bf Accela\+Download\+Progress\+Changed\+Event\+Args}}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a46d55ff85ac1fec986eccefcdbbf6a6b}
+
+
+Raise On\+Download\+Progress\+Completed event handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_api_event_args}{Accela\+Api\+Event\+Args}.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aaa98096c1e2d72925e31c82811828e33}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!On\+Put\+Completed@{On\+Put\+Completed}}
+\index{On\+Put\+Completed@{On\+Put\+Completed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{On\+Put\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}void Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+On\+Put\+Completed (
+\begin{DoxyParamCaption}
+\item[{{\bf Accela\+Api\+Event\+Args}}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aaa98096c1e2d72925e31c82811828e33}
+
+
+Raise On\+Put\+Completed event handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_api_event_args}{Accela\+Api\+Event\+Args}.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ae0bd11ec759b8dc478fa44aad20b4b93}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!On\+Upload\+Progress\+Changed@{On\+Upload\+Progress\+Changed}}
+\index{On\+Upload\+Progress\+Changed@{On\+Upload\+Progress\+Changed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{On\+Upload\+Progress\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+On\+Upload\+Progress\+Changed (
+\begin{DoxyParamCaption}
+\item[{{\bf Accela\+Upload\+Progress\+Changed\+Event\+Args}}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_ae0bd11ec759b8dc478fa44aad20b4b93}
+
+
+Raise On\+Upload\+Progress\+Completed event handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_api_event_args}{Accela\+Api\+Event\+Args}.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1bf4e2d60bfcf4e046d3418e3b027ca7}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Async@{Post\+Async}}
+\index{Post\+Async@{Post\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1bf4e2d60bfcf4e046d3418e3b027ca7}
+
+
+Asynchronous P\+O\+S\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a76a89900c5bd3b2b199361cc80a85a6f}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Async@{Post\+Async}}
+\index{Post\+Async@{Post\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a76a89900c5bd3b2b199361cc80a85a6f}
+
+
+Asynchronous P\+O\+S\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1ce65bfdcc46c001eed8e2d6a9b279e4}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Async@{Post\+Async}}
+\index{Post\+Async@{Post\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{string}]{json\+String, }
+\item[{I\+List$<$ {\bf Accela\+Media\+Stream} $>$}]{files}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a1ce65bfdcc46c001eed8e2d6a9b279e4}
+
+
+Asynchronous P\+O\+S\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em json\+String} & J\+S\+O\+N format string\\
+\hline
+{\em files} & Upload files\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_afbaf4ac886f4262ecae31fd2be939dfe}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Async@{Post\+Async}}
+\index{Post\+Async@{Post\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{{\bf Json\+Object}}]{json, }
+\item[{I\+List$<$ {\bf Accela\+Media\+Stream} $>$}]{files}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_afbaf4ac886f4262ecae31fd2be939dfe}
+
+
+Asynchronous P\+O\+S\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em json} & J\+S\+O\+N object\\
+\hline
+{\em files} & Upload files\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a7faf8a8bc52f00f703d5f8a6200914b7}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Async@{Post\+Async}}
+\index{Post\+Async@{Post\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a7faf8a8bc52f00f703d5f8a6200914b7}
+
+
+Asynchronous P\+O\+S\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af3721b6f4238003f798277bdf92dd069}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Async$<$ T $>$@{Post\+Async$<$ T $>$}}
+\index{Post\+Async$<$ T $>$@{Post\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af3721b6f4238003f798277bdf92dd069}
+
+
+Asynchronous P\+O\+S\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af779d65e80889ec2bb8e219939b9235c}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Async$<$ T $>$@{Post\+Async$<$ T $>$}}
+\index{Post\+Async$<$ T $>$@{Post\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af779d65e80889ec2bb8e219939b9235c}
+
+
+Asynchronous P\+O\+S\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a78d57c2d6e4a1833c8edfd83f6e5f4c7}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Async$<$ T $>$@{Post\+Async$<$ T $>$}}
+\index{Post\+Async$<$ T $>$@{Post\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a78d57c2d6e4a1833c8edfd83f6e5f4c7}
+
+
+Asynchronous P\+O\+S\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a9c550cc37a21893a9e955dc3132c2801}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Put\+Async@{Put\+Async}}
+\index{Put\+Async@{Put\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Put\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Put\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a9c550cc37a21893a9e955dc3132c2801}
+
+
+Asynchronous P\+U\+T request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a02c59d94e7cb07b4c43fb2f31bc517e9}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Put\+Async$<$ T $>$@{Put\+Async$<$ T $>$}}
+\index{Put\+Async$<$ T $>$@{Put\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Put\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Put\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a02c59d94e7cb07b4c43fb2f31bc517e9}
+
+
+Asynchronous P\+U\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a81aa603d4f9d14eed159ae219aa6b980}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Put\+Async$<$ T $>$@{Put\+Async$<$ T $>$}}
+\index{Put\+Async$<$ T $>$@{Put\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Put\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Put\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a81aa603d4f9d14eed159ae219aa6b980}
+
+
+Asynchronous P\+U\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af36035a41d27afc717b97434d4c8c6f4}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Put\+Async$<$ T $>$@{Put\+Async$<$ T $>$}}
+\index{Put\+Async$<$ T $>$@{Put\+Async$<$ T $>$}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Put\+Async$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}Task$<$T$>$ {\bf Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Put\+Async}$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{object}]{user\+State, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_af36035a41d27afc717b97434d4c8c6f4}
+
+
+Asynchronous P\+U\+T request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of dynamic result to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & Request parameters\\
+\hline
+{\em user\+State} & User State\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reutrn T result.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a53ce8cfe1435725fffafe02061903bda}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Upload\+Attachment\+Async@{Upload\+Attachment\+Async}}
+\index{Upload\+Attachment\+Async@{Upload\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Upload\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Upload\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a53ce8cfe1435725fffafe02061903bda}
+
+
+Uploads a stream file represented by an \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} object as an asynchronous operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} objects\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a7fd56ed340142efb5a4ff527e7f17025}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Upload\+Attachment\+Async@{Upload\+Attachment\+Async}}
+\index{Upload\+Attachment\+Async@{Upload\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Upload\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Upload\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{Cancellation\+Token}]{cancellation\+Token}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a7fd56ed340142efb5a4ff527e7f17025}
+
+
+Uploads a stream file represented by an \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} object as an asynchronous operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} objects\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aad9f2e5a9f8f59692fb78cbf3d51de6d}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Upload\+Attachment\+Async@{Upload\+Attachment\+Async}}
+\index{Upload\+Attachment\+Async@{Upload\+Attachment\+Async}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Upload\+Attachment\+Async}]{\setlength{\rightskip}{0pt plus 5cm}Task$<${\bf Json\+Object}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Upload\+Attachment\+Async (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{object}]{parameters, }
+\item[{Cancellation\+Token}]{cancellation\+Token, }
+\item[{I\+Progress$<$ {\bf Accela\+Upload\+Progress\+Changed\+Event\+Args} $>$}]{upload\+Progress}
+\end{DoxyParamCaption}
+)}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aad9f2e5a9f8f59692fb78cbf3d51de6d}
+
+
+Uploads a stream file represented by an \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} object as an asynchronous operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & R\+E\+S\+T A\+P\+I path\\
+\hline
+{\em parameters} & \hyperlink{class_accela_1_1_windows_store_s_d_k_1_1_accela_media_stream}{Accela\+Media\+Stream} objects\\
+\hline
+{\em cancellation\+Token} & Whether or not notice of cancellation request.\\
+\hline
+{\em upload\+Progress} & Defines a provider for progress updates.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N object results
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a75e5baf9170d9a86c10d0607e0336071}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Agency@{Agency}}
+\index{Agency@{Agency}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Agency}]{\setlength{\rightskip}{0pt plus 5cm}String Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Agency\hspace{0.3cm}{\ttfamily [get]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a75e5baf9170d9a86c10d0607e0336071}
+
+
+Gets or sets the agency name. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a8de4a0f60f1178e43293b9ed48b57271}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Api\+Host@{Api\+Host}}
+\index{Api\+Host@{Api\+Host}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Api\+Host}]{\setlength{\rightskip}{0pt plus 5cm}String Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Api\+Host\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a8de4a0f60f1178e43293b9ed48b57271}
+
+
+Get or set R\+E\+S\+T A\+P\+I server host. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a3bb7550f63c8b3ccfae3be07fc0cb2e0}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!App\+Id@{App\+Id}}
+\index{App\+Id@{App\+Id}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{App\+Id}]{\setlength{\rightskip}{0pt plus 5cm}String Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+App\+Id\hspace{0.3cm}{\ttfamily [get]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a3bb7550f63c8b3ccfae3be07fc0cb2e0}
+
+
+Gets or sets the app id. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a42815597dbd6134fcff3fcbdc69294a3}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!App\+Secret@{App\+Secret}}
+\index{App\+Secret@{App\+Secret}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{App\+Secret}]{\setlength{\rightskip}{0pt plus 5cm}String Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+App\+Secret\hspace{0.3cm}{\ttfamily [get]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a42815597dbd6134fcff3fcbdc69294a3}
+
+
+Gets or sets the app secret. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a378a3fb27bfe1b0014ae78d32f1c7a25}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Custom\+Http\+Headers@{Custom\+Http\+Headers}}
+\index{Custom\+Http\+Headers@{Custom\+Http\+Headers}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Custom\+Http\+Headers}]{\setlength{\rightskip}{0pt plus 5cm}I\+Dictionary$<$string, string$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Custom\+Http\+Headers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a378a3fb27bfe1b0014ae78d32f1c7a25}
+
+
+Get or set a custom H\+T\+T\+P request header. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a43023d85ca7f52d794f8eb3637d1d4ae}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Deserialize\+Json@{Deserialize\+Json}}
+\index{Deserialize\+Json@{Deserialize\+Json}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Deserialize\+Json}]{\setlength{\rightskip}{0pt plus 5cm}Func$<$string, Type, object$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Deserialize\+Json\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a43023d85ca7f52d794f8eb3637d1d4ae}
+
+
+Deserialize json to object. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a221dbc93b89afce140331e5fb1c15f2e}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Environment@{Environment}}
+\index{Environment@{Environment}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Environment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Accela\+Environment} Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Environment\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a221dbc93b89afce140331e5fb1c15f2e}
+
+
+Get or set \hyperlink{namespace_accela}{Accela} S\+D\+K Environment. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a690dc07789f17f0d5a18c9497f28bf13}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Log\+Level@{Log\+Level}}
+\index{Log\+Level@{Log\+Level}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Log\+Level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Accela\+Log\+Level} Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Log\+Level\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a690dc07789f17f0d5a18c9497f28bf13}
+
+
+Get or Set log display of relevant levels 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a42012431f452bd32e2806be3aef3e389}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!O\+Auth\+Host@{O\+Auth\+Host}}
+\index{O\+Auth\+Host@{O\+Auth\+Host}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{O\+Auth\+Host}]{\setlength{\rightskip}{0pt plus 5cm}String Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+O\+Auth\+Host\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a42012431f452bd32e2806be3aef3e389}
+
+
+Get or set authentication server host. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aa1e3cffaada3d7a8a17dc9a3fbba48a7}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Serialize\+Json@{Serialize\+Json}}
+\index{Serialize\+Json@{Serialize\+Json}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Serialize\+Json}]{\setlength{\rightskip}{0pt plus 5cm}Func$<$object, string$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Serialize\+Json\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aa1e3cffaada3d7a8a17dc9a3fbba48a7}
+
+
+Serialize object to json. 
+
+
+
+\subsection{Event Documentation}
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aee12c0ad198a72d8b917f2e953e87157}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Delete\+Completed@{Delete\+Completed}}
+\index{Delete\+Completed@{Delete\+Completed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Delete\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Handler$<${\bf Accela\+Api\+Event\+Args}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Delete\+Completed}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aee12c0ad198a72d8b917f2e953e87157}
+
+
+Event handler for delete completion. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aa6cf2bc41f9604cb30881e19196fcfdc}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Download\+Progress\+Changed@{Download\+Progress\+Changed}}
+\index{Download\+Progress\+Changed@{Download\+Progress\+Changed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Download\+Progress\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Handler$<${\bf Accela\+Download\+Progress\+Changed\+Event\+Args}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Download\+Progress\+Changed}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aa6cf2bc41f9604cb30881e19196fcfdc}
+
+
+Event handler for download progress changed. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a592b561cd868b1bedef095647a9b1b93}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Get\+Completed@{Get\+Completed}}
+\index{Get\+Completed@{Get\+Completed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Get\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Handler$<${\bf Accela\+Api\+Event\+Args}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Get\+Completed}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a592b561cd868b1bedef095647a9b1b93}
+
+
+Event handler for get completion. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_abb051213f540d79972279d61a9f69304}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Post\+Completed@{Post\+Completed}}
+\index{Post\+Completed@{Post\+Completed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Post\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Handler$<${\bf Accela\+Api\+Event\+Args}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Post\+Completed}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_abb051213f540d79972279d61a9f69304}
+
+
+Event handler for post completion. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aed2d9e7a18c0e4dcb3cd1178883596eb}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Put\+Completed@{Put\+Completed}}
+\index{Put\+Completed@{Put\+Completed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Put\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Handler$<${\bf Accela\+Api\+Event\+Args}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Put\+Completed}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_aed2d9e7a18c0e4dcb3cd1178883596eb}
+
+
+Event handler for put completion. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a9217603b8d65f3b1424073df8c69dd1d}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Session\+Changed@{Session\+Changed}}
+\index{Session\+Changed@{Session\+Changed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Session\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Handler$<${\bf Accela\+Session\+Event\+Args}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Session\+Changed}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a9217603b8d65f3b1424073df8c69dd1d}
+
+
+Gets or sets the event that will be called during user authentication. 
+
+\hypertarget{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a724988be0528fd8b906ef1bdd49571d7}{\index{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}!Upload\+Progress\+Changed@{Upload\+Progress\+Changed}}
+\index{Upload\+Progress\+Changed@{Upload\+Progress\+Changed}!Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K@{Accela\+::\+Windows\+Store\+S\+D\+K\+::\+Accela\+S\+D\+K}}
+\subsubsection[{Upload\+Progress\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}Event\+Handler$<${\bf Accela\+Upload\+Progress\+Changed\+Event\+Args}$>$ Accela.\+Windows\+Store\+S\+D\+K.\+Accela\+S\+D\+K.\+Upload\+Progress\+Changed}}\label{class_accela_1_1_windows_store_s_d_k_1_1_accela_s_d_k_a724988be0528fd8b906ef1bdd49571d7}
+
+
+Event handler for upload progress changed. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/eyang/\+Documents/\+Windows-\/\+S\+D\+K-\/\+New/trunk/src/\+Accela\+S\+D\+K/Accela\+Mobile.\+Adjust.\+cs\item 
+C\+:/\+Users/eyang/\+Documents/\+Windows-\/\+S\+D\+K-\/\+New/trunk/src/\+Accela\+S\+D\+K/Accela\+Mobile.\+Async.\+cs\item 
+C\+:/\+Users/eyang/\+Documents/\+Windows-\/\+S\+D\+K-\/\+New/trunk/src/\+Accela\+S\+D\+K/Accela\+Mobile.\+cs\item 
+C\+:/\+Users/eyang/\+Documents/\+Windows-\/\+S\+D\+K-\/\+New/trunk/src/\+Accela\+S\+D\+K/Accela\+Mobile.\+Async.\+Tasks.\+cs\end{DoxyCompactItemize}

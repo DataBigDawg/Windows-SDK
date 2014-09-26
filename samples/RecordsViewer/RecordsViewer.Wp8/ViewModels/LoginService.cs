@@ -7,7 +7,9 @@ using RecordsViewer.Portable;
 using Accela.WindowsStoreSDK;
 
 namespace RecordsViewer.ViewModels
-{
+{    /// <summary>
+    /// Provide Login and Logout functions.
+    /// </summary>
     public class LoginService : ILoginService
     {
         public void Logout()

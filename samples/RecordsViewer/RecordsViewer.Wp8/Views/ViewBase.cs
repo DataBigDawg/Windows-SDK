@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows;
 
 namespace RecordsViewer.Views
-{
+{   /// <summary>
+    /// Provides basic default view features
+    /// </summary>
     public class ViewBase : PhoneApplicationPage
     {
         private ProgressIndicator _progressIndicator;

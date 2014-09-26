@@ -1,24 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="9cdce227-b3ed-482f-a238-bc4600693e3c" Publisher="CN=carver" Version="1.0.0.0" />
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="9cdce227-b3ed-482f-a238-bc4600693e3c" Publisher="CN=carver" Version="1.1.0.0" />
   <Properties>
     <DisplayName>RecordsViewer</DisplayName>
     <PublisherDisplayName>carver</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
-    <OSMinVersion>6.2.1</OSMinVersion>
-    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
   </Prerequisites>
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="RecordsViewer.App">
-      <VisualElements DisplayName="RecordsViewer" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="RecordsViewer" ForegroundText="light" BackgroundColor="#3E8DF8">
-        <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
-      </VisualElements>
+      <m2:VisualElements DisplayName="RecordsViewer" Description="RecordsViewer" BackgroundColor="#3E8DF8" ForegroundText="light" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png">
+        <m2:DefaultTile>
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      </m2:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
