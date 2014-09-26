@@ -236,11 +236,11 @@ namespace RecordsViewer
 
         private void InitializeSDK()
         {
-            string appid = "com.accela.inspector";
-            string appsecret = "839ffae0ee244cb4b558f252ca84524c";
+            string appid = "635436839797855367";
+            string appsecret = "761e60d9e9224b278d99cf27c99de1f8";
             SharedSDK = new AccelaSDK(appid, appsecret);
-            SharedSDK.ApiHost = "apps-apis.dev.accela.com";
-            SharedSDK.OAuthHost = "apps-auth.dev.accela.com";
+            SharedSDK.ApiHost = "apps-apis.accela.com";
+            SharedSDK.OAuthHost = "apps-auth.accela.com";
             SharedSDK.SessionChanged += SharedSDK_SessionChanged;
         }
 
