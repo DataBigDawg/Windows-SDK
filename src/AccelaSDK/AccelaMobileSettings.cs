@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 using System.Reflection;
-using Accela.WindowsStoreSDK.Helper;
 using System.Runtime.Serialization.Json;
 using System.IO;
 
@@ -138,7 +137,7 @@ namespace Accela.WindowsStoreSDK
         public static AccelaTokenResult ReadTokenSetting(string appId, string appSecret)
         {
 #if !(SILVERLIGHT || WINDOWS_PHONE)
-            string settings = FileHelper.GetTextFromFile(appId, SETTING_FILE);
+            string settings = Accela.WindowsStoreSDK.Helper.FileHelper.GetTextFromFile(appId, SETTING_FILE);
 
             if (!string.IsNullOrWhiteSpace(settings))
             {
@@ -186,7 +185,7 @@ namespace Accela.WindowsStoreSDK
             settings.Add(STORAGESETTING_TOKEN_NAME, SimpleJson.SerializeObject(info));
             settings.Add(STORAGESETTING_APIID_NAME, appId);
             settings.Add(STORAGESETTING_APISECRET_NAME, appSecret);
-            FileHelper.SaveTextToFile(appId, SETTING_FILE, SimpleJson.SerializeObject(settings));
+            Accela.WindowsStoreSDK.Helper.FileHelper.SaveTextToFile(appId, SETTING_FILE, SimpleJson.SerializeObject(settings));
 #else
             var settings = new Dictionary<string, object>();
             settings.Add(STORAGESETTING_APIID_NAME, appId);
@@ -200,7 +199,7 @@ namespace Accela.WindowsStoreSDK
         public static void RemoveTokenSetting(string appId, string appSecret)
         {
 #if !(SILVERLIGHT || WINDOWS_PHONE)
-            FileHelper.DeleteFile(appId, SETTING_FILE);
+            Accela.WindowsStoreSDK.Helper.FileHelper.DeleteFile(appId, SETTING_FILE);
 #else
             IsolatedStorageSettings.ApplicationSettings.Remove(STORAGESETTING_NAME + appId);
 #endif
