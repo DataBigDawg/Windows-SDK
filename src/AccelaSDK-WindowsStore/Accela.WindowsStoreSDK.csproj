@@ -176,6 +176,7 @@
     <Compile Include="Design\PopControl.cs" />
     <Compile Include="Design\ViewModel\AgencyNativeViewModel.cs" />
     <Compile Include="Helper\DeviceInfoHelper.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
