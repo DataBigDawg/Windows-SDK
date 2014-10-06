@@ -11,5 +11,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("Accela Inc.")]
 [assembly: AssemblyProduct("AccelaSDK")]
 [assembly: AssemblyCopyright("Copyright ©  2014, Accela Inc.")]
-[assembly: AssemblyVersion("4.0.0")]
+[assembly: AssemblyVersion("4.0.3")]
 [assembly: ComVisible(false)]
