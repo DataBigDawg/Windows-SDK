@@ -40,10 +40,11 @@ namespace RecordsViewer.Views
                 isLogining = true;
                 App.SettingsViewModel.CheckLocationConsent();
                 await App.LoginService.LoginAsync();
-                isLogining = false;
-                 if (App.SharedSDK.IsSessionValid()) {
-                      NavigationService.Navigate(new Uri("/Views/RecordsView.xaml", UriKind.Relative));
-                 }
+                if (App.SharedSDK.IsSessionValid())
+                {
+                    isLogining = false;
+                    NavigationService.Navigate(new Uri("/Views/RecordsView.xaml", UriKind.Relative));
+                }
             }
         }
 
