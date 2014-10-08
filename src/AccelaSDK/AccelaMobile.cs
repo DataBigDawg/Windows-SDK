@@ -236,7 +236,7 @@ namespace Accela.WindowsStoreSDK
 
         }
 
-        private async Task<AccelaTokenResult> GetToken(string code = null, bool isRefresh = false)
+        private async Task<AccelaTokenResult> GetToken(string code = null, bool isRefresh = false, string refreshToken = null)
         {
             if (!this._isNativeAuthorization && code == null)
                 throw new ArgumentNullException("code");
@@ -266,7 +266,7 @@ namespace Accela.WindowsStoreSDK
             }
             else
             {
-                param.refresh_token = _tokenInfo.refresh_token;
+                param.refresh_token = refreshToken;
             }
 
             var tokenResult = await this.PostAsync<AccelaTokenResult>(AccelaSettings.AM_PATH_ACCESS_TOKEN, param);

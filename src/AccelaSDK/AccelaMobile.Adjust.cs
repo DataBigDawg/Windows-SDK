@@ -208,16 +208,11 @@ namespace Accela.WindowsStoreSDK
         /// <param name="agency"></param>
         /// <param name="environment"></param>
         /// <returns></returns>
-//#if NATIVE
-//        public
-//#else
-//        internal
-//#endif
-public async Task Authorize(string username,
-            string password,
-            string agency,
-            string[] permissions,
-            AccelaEnvironment environment)
+        public async Task Authorize(string username,
+                    string password,
+                    string agency,
+                    string[] permissions,
+                    AccelaEnvironment environment)
         {
             if (string.IsNullOrEmpty(username)) throw new ArgumentNullException("username");
             if (string.IsNullOrEmpty(password)) throw new ArgumentNullException("password");
@@ -247,6 +242,26 @@ public async Task Authorize(string username,
             {
                 OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginFailed, exception));
             }
+        }
+
+        /// <summary>
+        /// Access tokens have a limited lifetime and, 
+        /// in some cases, an application needs access to an API beyond the lifetime of a single access token. 
+        /// When this is the case, your application can obtain a new access token using the refresh token.
+        /// Access tokens have a limited lifetime and, in some cases, 
+        /// an application needs access to an API beyond the lifetime of a single access token. 
+        /// When this is the case, your application can obtain a new access token using the refresh token.
+        /// </summary>
+        /// <returns></returns>
+        public async Task<bool> ReAuthorize()
+        {
+            var localToken = AccelaSettings.ReadTokenSetting(this.AppId, this.AppSecret);
+            if (localToken != null)
+            {
+                this._tokenInfo = await GetToken(isRefresh: true, refreshToken: localToken.refresh_token);
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
