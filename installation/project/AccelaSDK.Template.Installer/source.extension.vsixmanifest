@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="Accela SDK Projects Template..39544D39-489B-4FBB-9930-D655F9AC9E59" Version="4.0.2" Language="en-US" Publisher="Accela, Inc." />
+    <DisplayName>Accela SDK Projects Template</DisplayName>
+    <Description xml:space="preserve">Accela SDK Projects Templates(A311, Agency, Citizen)</Description>
+    <MoreInfo>http://www.accela.com/support</MoreInfo>
+    <License>License.rtf</License>
+    <Tags>AccelaSDK</Tags>
+  </Metadata>
+  <Installation AllUsers="true">
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Ultimate" />
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.VSWinExpress" />
+    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.VPDExpress" />
+  </Installation>
+  <Dependencies>
+    <Dependency d:Source="Project" d:ProjectName="AccelaSDK.Win8" d:InstallSource="Embed" d:VsixSubPath="SDK" Location="|AccelaSDK.Win8;VSIXContainerProjectOutputGroup|" DisplayName="|AccelaSDK.Win8;VSIXNameProjectOutputGroup|" Id="|AccelaSDK.Win8;VSIXIdentifierProjectOutputGroup|" />
+    <Dependency d:Source="Project" d:ProjectName="AccelaSDK.Wp8" d:InstallSource="Embed" d:VsixSubPath="SDK" Location="|AccelaSDK.Wp8;VSIXContainerProjectOutputGroup|" DisplayName="|AccelaSDK.Wp8;VSIXNameProjectOutputGroup|" Id="|AccelaSDK.Wp8;VSIXIdentifierProjectOutputGroup|" />
+    <Dependency d:Source="Project" d:ProjectName="AccelaSDK.Wp8_1" d:InstallSource="Embed" d:VsixSubPath="SDK" Location="|AccelaSDK.Wp8_1;VSIXContainerProjectOutputGroup|" DisplayName="|AccelaSDK.Wp8_1;VSIXNameProjectOutputGroup|" Id="|AccelaSDK.Wp8_1;VSIXIdentifierProjectOutputGroup|" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="AccelaSDK.Template.Wizard" d:VsixSubPath="Wizard" Path="|AccelaSDK.Template.Wizard|" AssemblyName="|AccelaSDK.Template.Wizard;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="AccelaSDK.Template.A311.Wp8" d:TargetPath="|AccelaSDK.Template.A311.Wp8;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="AccelaSDK.Template.Agency.Wp8" d:TargetPath="|AccelaSDK.Template.Agency.Wp8;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="AccelaSDK.Template.Citizen.Wp8" d:TargetPath="|AccelaSDK.Template.Citizen.Wp8;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="AccelaSDK.Template.A311.Win8" d:TargetPath="|AccelaSDK.Template.A311.Win8;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="AccelaSDK.Template.Agency.Win8" d:TargetPath="|AccelaSDK.Template.Agency.Win8;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="AccelaSDK.Template.Citizen.Win8" d:TargetPath="|AccelaSDK.Template.Citizen.Win8;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+  </Assets>
+</PackageManifest>

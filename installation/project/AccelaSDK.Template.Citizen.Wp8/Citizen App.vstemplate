@@ -1,0 +1,48 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Citizen App</Name>
+    <Description>This template provides a starting point for Accela Citizen App. it provides the basic functionalities that allow public user to create request or report issue and view previously submitted requests etc .</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Accela.Citizen.App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <TemplateID>539e252f-6081-4f90-a8f7-8ab2ca33e114</TemplateID>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Accela.Citizen.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="LocalizedStrings.cs">LocalizedStrings.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="MainPage.xaml">MainPage.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml.cs">MainPage.xaml.cs</ProjectItem>
+
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\AlignmentGrid.png">AlignmentGrid.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\ApplicationIcon.png">ApplicationIcon.png</ProjectItem>
+      
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\Tiles\FlipCycleTileLarge.png">FlipCycleTileLarge.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\Tiles\FlipCycleTileMedium.png">FlipCycleTileMedium.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\Tiles\FlipCycleTileSmall.png">FlipCycleTileSmall.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\Tiles\IconicTileMediumLarge.png">IconicTileMediumLarge.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\Tiles\IconicTileSmall.png">IconicTileSmall.png</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AppManifest.xml">AppManifest.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\WMAppManifest.xml">WMAppManifest.xml</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true" TargetFileName="Resources\AppResources.resx">AppResources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Resources\AppResources.Designer.cs">AppResources.Designer.cs</ProjectItem>
+
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Accela.Mobile.CustomWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e3f24760489af7f0</Assembly>
+    <FullClassName>Accela.Mobile.CustomWizard.Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

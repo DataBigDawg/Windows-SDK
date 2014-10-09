@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FileList
+  DisplayName="Accela SDK for Windows Phone 8"
+  ProductFamilyName="Accela SDK"
+  MinVSVersion="11.0"
+  CopyRedistToSubDirectory="AccelaSDK"
+  TargetFramework="WindowsPhone,Version=v8.0"
+  SupportPrefer32Bit ="true"
+  SupportsMultipleVersions="Error"
+  MoreInfo="http://www.accela.com/support/">
+  <File Reference="AccelaSDK.dll">
+    <ContainsControls>False</ContainsControls>
+  </File>
+</FileList>

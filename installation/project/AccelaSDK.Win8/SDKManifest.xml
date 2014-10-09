@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FileList
+  DisplayName="Accela SDK for Windows Store"
+  ProductFamilyName="Accela SDK"
+  MinVSVersion="11.0"
+  AppliesTo="WindowsAppContainer"
+  SupportsMultipleVersions="Error"
+  MoreInfo="http://www.accela.com/support/">
+</FileList>
