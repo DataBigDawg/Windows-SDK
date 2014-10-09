@@ -210,7 +210,7 @@ namespace Accela.WindowsStoreSDK
         /// <param name="agency"></param>
         /// <param name="environment"></param>
         /// <returns></returns>
-        public async Task Authorize(string username,
+        public async Task<bool> Authorize(string username,
                     string password,
                     string agency,
                     string[] permissions,
@@ -234,6 +234,7 @@ namespace Accela.WindowsStoreSDK
             {
                 AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, _tokenInfo);
                 OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginSucceeded));
+                return true;
             }
             else
             {
@@ -244,6 +245,7 @@ namespace Accela.WindowsStoreSDK
             {
                 OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginFailed, exception));
             }
+            return false;
         }
 
         /// <summary>
