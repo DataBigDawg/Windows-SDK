@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>AccelaSDK</id>
+        <version>4.0.2.0</version>
+        <title>Accela SDK for Windows 8 &amp; Windows Phone 8</title>
+        <authors>Accela Inc.</authors>
+        <owners />
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+      <description>Accela SDK for Windows 8 &amp; Windows Phone 8</description>
+      <!--<description></description>-->
+      <releaseNotes>
+        Accela SDK for Windows 8 &amp; Windows Phone 8
+
+        Version: 4.0.1.0
+        -Support Refresh Token.
+        
+        Version: 4.0.1.0
+        -Fixed some bugs.
+        
+        Version: 4.0.0.0
+        -Support V4 API.
+
+        Version: 3.0.2.1
+        -Fixed some bugs.
+
+        Version: 3.0.2.0
+        -Increase the Windows Phone 8 SDK
+
+        Version: 3.0.1.3
+        -Fixed some bugs.
+
+        Version: 3.0.1.2
+        -Add new overloading method for 'PostAsync(path, jsonString, files)'
+
+        Version: 3.0.1.1
+        -Confirm token validity in 'IsSessionValid' method.
+        -Fixed some bugs.
+
+        Version: 3.0.1.0
+        -Modify the value of the enumeration type 'AccelaSDKSessionStatus'.
+
+        Version: 3.0.0.1
+        -Changed the login logic.
+      </releaseNotes>
+        <language>en-US</language>
+        <tags>AccelaSDK</tags>
+    </metadata>  
+    <files>
+        <file src="..\..\AccelaMobileSDK\bin\Release\Win8\AccelaSDK\Themes\**" target="lib\netcore45\AccelaSDK\Themes\" />
+        <file src="..\..\AccelaMobileSDK\bin\Release\Win8\AccelaSDK.dll" target="lib\netcore45\AccelaSDK.dll" />
+        <file src="..\..\AccelaMobileSDK\bin\Release\Win8\AccelaSDK.pri" target="lib\netcore45\AccelaSDK.pri" />
+        <file src="..\..\AccelaMobileSDK\bin\Release\Win8\AccelaSDK.xml" target="lib\netcore45\AccelaSDK.xml" />
+        <file src="..\..\AccelaMobileSDK\bin\Release\Wp8\AccelaSDK.dll" target="lib\wp8\AccelaSDK.dll" />
+        <file src="..\..\AccelaMobileSDK\bin\Release\Wp8\AccelaSDK.xml" target="lib\wp8\AccelaSDK.xml" />
+    </files>
+</package>
