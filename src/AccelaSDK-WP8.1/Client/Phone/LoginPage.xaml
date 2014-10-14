@@ -1,0 +1,14 @@
+﻿<Page
+    x:Class="Accela.WindowsStoreSDK.Client.Phone.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AccelaSDK_WP8._1.Client.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <WebView x:Name="browserControl" />
+    </Grid>
+</Page>

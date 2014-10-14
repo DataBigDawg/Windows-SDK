@@ -18,6 +18,7 @@
   <Dependencies>
     <Dependency d:Source="Project" d:ProjectName="AccelaSDK.Win8" d:InstallSource="Embed" d:VsixSubPath="SDK" Location="|AccelaSDK.Win8;VSIXContainerProjectOutputGroup|" DisplayName="|AccelaSDK.Win8;VSIXNameProjectOutputGroup|" Id="|AccelaSDK.Win8;VSIXIdentifierProjectOutputGroup|" />
     <Dependency d:Source="Project" d:ProjectName="AccelaSDK.Wp8" d:InstallSource="Embed" d:VsixSubPath="SDK" Location="|AccelaSDK.Wp8;VSIXContainerProjectOutputGroup|" DisplayName="|AccelaSDK.Wp8;VSIXNameProjectOutputGroup|" Id="|AccelaSDK.Wp8;VSIXIdentifierProjectOutputGroup|" />
+    <Dependency d:Source="Project" d:ProjectName="AccelaSDK.Win8_1" d:InstallSource="Embed" d:VsixSubPath="SDK" Location="|AccelaSDK.Win8_1;VSIXContainerProjectOutputGroup|" DisplayName="|AccelaSDK.Win8_1;VSIXNameProjectOutputGroup|" Id="|AccelaSDK.Win8_1;VSIXIdentifierProjectOutputGroup|" />
     <Dependency d:Source="Project" d:ProjectName="AccelaSDK.Wp8_1" d:InstallSource="Embed" d:VsixSubPath="SDK" Location="|AccelaSDK.Wp8_1;VSIXContainerProjectOutputGroup|" DisplayName="|AccelaSDK.Wp8_1;VSIXNameProjectOutputGroup|" Id="|AccelaSDK.Wp8_1;VSIXIdentifierProjectOutputGroup|" />
   </Dependencies>
   <Assets>

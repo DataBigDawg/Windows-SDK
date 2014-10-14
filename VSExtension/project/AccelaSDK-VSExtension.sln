@@ -37,6 +37,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccelaSDK.Win8_1", "AccelaS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccelaSDK.Wp8_1", "AccelaSDK.Wp8_1\AccelaSDK.Wp8_1.csproj", "{743D8571-E188-4F82-B4A2-4288B7D87CE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccelaSDK.NuGet", "AccelaSDK.NuGet", "{82723E05-C5A9-4E22-A9DE-03E73FA3FA36}"
+	ProjectSection(SolutionItems) = preProject
+		AccelaSDK.NuGet\AccelaSDK.nuspec = AccelaSDK.NuGet\AccelaSDK.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{1CC6A08E-CE3E-4FC3-ABDC-AB9E50528E46}"
+	ProjectSection(SolutionItems) = preProject
+		AccelaSDK.NuGet\Assets\NuGet.exe = AccelaSDK.NuGet\Assets\NuGet.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,5 +118,6 @@ Global
 		{23F54E5E-9CCB-452B-8286-D692D089A479} = {39C6A161-14F1-4CCE-9F7F-5E385A6EAB61}
 		{F2598F91-B0DF-43DB-858C-0501F979904F} = {14F372F0-C359-4E5A-8B3C-9F0A9DC1832D}
 		{743D8571-E188-4F82-B4A2-4288B7D87CE8} = {14F372F0-C359-4E5A-8B3C-9F0A9DC1832D}
+		{1CC6A08E-CE3E-4FC3-ABDC-AB9E50528E46} = {82723E05-C5A9-4E22-A9DE-03E73FA3FA36}
 	EndGlobalSection
 EndGlobal

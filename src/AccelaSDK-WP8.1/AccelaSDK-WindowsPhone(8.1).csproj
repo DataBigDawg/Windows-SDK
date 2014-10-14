@@ -1,26 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0D94E5DD-AEA9-4E06-B0C5-91E084C5DD9D}</ProjectGuid>
+    <ProjectGuid>{FA52E164-BF06-4115-8749-D743524F3646}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Accela.WindowsStoreSDK</RootNamespace>
     <AssemblyName>AccelaSDK</AssemblyName>
-    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NETFX_CORE;SIMPLE_JSON_INTERNAL;FLUENTHTTP_URLENCODING;SIMPLE_JSON_DYNAMIC;NATIVE;</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_PHONE_APP;SIMPLE_JSON_INTERNAL;FLUENTHTTP_URLENCODING;SIMPLE_JSON_DYNAMIC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\AccelaSDK.XML</DocumentationFile>
@@ -29,7 +31,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;SIMPLE_JSON_INTERNAL;FLUENTHTTP_URLENCODING;SIMPLE_JSON_DYNAMIC;NATIVE;</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP;SIMPLE_JSON_INTERNAL;FLUENTHTTP_URLENCODING;SIMPLE_JSON_DYNAMIC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\AccelaSDK.XML</DocumentationFile>
@@ -41,6 +43,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AccelaSDK-WP8\Client\Phone\PhoneWebAuthentication.cs">
+      <Link>Client\Phone\PhoneWebAuthentication.cs</Link>
+    </Compile>
     <Compile Include="..\AccelaSDK\AccelaMobile.Adjust.cs">
       <Link>AccelaMobile.Adjust.cs</Link>
       <DependentUpon>AccelaMobile.cs</DependentUpon>
@@ -59,7 +64,7 @@
     <Compile Include="..\AccelaSDK\AccelaMobileLogger.cs">
       <Link>AccelaMobileLogger.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\AccelaMobileOAuthResult.cs">
+    <Compile Include="..\accelasdk\AccelaMobileOAuthResult.cs">
       <Link>Entites\AccelaMobileOAuthResult.cs</Link>
     </Compile>
     <Compile Include="..\AccelaSDK\AccelaMobileSettings.cs">
@@ -71,13 +76,13 @@
     <Compile Include="..\AccelaSDK\DateTimeConvertor.cs">
       <Link>DateTimeConvertor.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\Entites\AccelaMobileMediaStream.cs">
+    <Compile Include="..\accelasdk\entites\AccelaMobileMediaStream.cs">
       <Link>Entites\AccelaMobileMediaStream.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\Entites\ErrorResult.cs">
+    <Compile Include="..\accelasdk\entites\ErrorResult.cs">
       <Link>Entites\ErrorResult.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\Entites\TokenResult.cs">
+    <Compile Include="..\accelasdk\entites\TokenResult.cs">
       <Link>Entites\TokenResult.cs</Link>
     </Compile>
     <Compile Include="..\AccelaSDK\EventArgs\AccelaMobileApiEventArgs.cs">
@@ -85,73 +90,64 @@
     </Compile>
     <Compile Include="..\AccelaSDK\EventArgs\AccelaMobileDownloadProgressChangedEventArgs.cs">
       <Link>EventArgs\AccelaMobileDownloadProgressChangedEventArgs.cs</Link>
-      <DependentUpon>AccelaMobileApiEventArgs.cs</DependentUpon>
     </Compile>
     <Compile Include="..\AccelaSDK\EventArgs\AccelaMobileSessionEventArgs.cs">
       <Link>EventArgs\AccelaMobileSessionEventArgs.cs</Link>
-      <DependentUpon>AccelaMobileApiEventArgs.cs</DependentUpon>
     </Compile>
     <Compile Include="..\AccelaSDK\EventArgs\AccelaMobileUploadProgressChangedEventArgs.cs">
       <Link>EventArgs\AccelaMobileUploadProgressChangedEventArgs.cs</Link>
-      <DependentUpon>AccelaMobileApiEventArgs.cs</DependentUpon>
     </Compile>
     <Compile Include="..\AccelaSDK\EventArgs\HttpWebRequestCreatedEventArgs.cs">
       <Link>EventArgs\HttpWebRequestCreatedEventArgs.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\Exception\AccelaMobileApiException.cs">
+    <Compile Include="..\accelasdk\exception\AccelaMobileApiException.cs">
       <Link>Exception\AccelaMobileApiException.cs</Link>
     </Compile>
     <Compile Include="..\AccelaSDK\Exception\AccelaMobileOAuthException.cs">
       <Link>Exception\AccelaMobileOAuthException.cs</Link>
-      <DependentUpon>AccelaMobileApiException.cs</DependentUpon>
     </Compile>
-    <Compile Include="..\AccelaSDK\Extensions\ObjectExtensions.cs">
+    <Compile Include="..\accelasdk\extensions\ObjectExtensions.cs">
       <Link>Extensions\ObjectExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\Extensions\TaskExtensions.cs">
+    <Compile Include="..\accelasdk\extensions\TaskExtensions.cs">
       <Link>Extensions\TaskExtensions.cs</Link>
     </Compile>
     <Compile Include="..\AccelaSDK\Helper\FileHelper.cs">
       <Link>Helper\FileHelper.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\Helper\HttpHelper.cs">
+    <Compile Include="..\accelasdk\helper\HttpHelper.cs">
       <Link>Helper\HttpHelper.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\Helper\SimpleJson.cs">
+    <Compile Include="..\accelasdk\helper\SimpleJson.cs">
       <Link>Helper\SimpleJson.cs</Link>
     </Compile>
-    <Compile Include="..\AccelaSDK\Helper\UrlHelper.cs">
+    <Compile Include="..\accelasdk\helper\UrlHelper.cs">
       <Link>Helper\UrlHelper.cs</Link>
     </Compile>
     <Compile Include="..\AccelaSDK\HttpMethod.cs">
       <Link>HttpMethod.cs</Link>
     </Compile>
-    <Compile Include="Design\AgencyNativeControl.cs" />
-    <Compile Include="Design\BindableBase.cs" />
-    <Compile Include="Design\DelegateCommand.cs" />
-    <Compile Include="Design\Model\NativeUserInfo.cs" />
-    <Compile Include="Design\PopControl.cs" />
-    <Compile Include="Design\ViewModel\AgencyNativeViewModel.cs" />
-    <Compile Include="Helper\DeviceInfoHelper.cs" />
+    <Compile Include="Client\Phone\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <None Include="..\AccelaSDK\packages.config">
+      <Link>packages.config</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="AccelaMobile.pfx" />
+    <Page Include="Client\Phone\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
-  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
-    <VisualStudioVersion>11.0</VisualStudioVersion>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>AccelaMobile.pfx</AssemblyOriginatorKeyFile>
+  <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,7 +15,6 @@
   * DEALINGS IN THE SOFTWARE. 
   * 
   */
-using Microsoft.Phone.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +22,16 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+#if !WINDOWS_PHONE_APP
+using Microsoft.Phone.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Windows.Threading;
+#else
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Accela.WindowsStoreSDK.Client.Phone;
+#endif
 
 namespace Accela.WindowsStoreSDK.Client
 {
@@ -92,9 +98,11 @@ namespace Accela.WindowsStoreSDK.Client
             {
                 throw new NotImplementedException("This method does not support authentication options other than 'None'.");
             }
-
+#if !WINDOWS_PHONE_APP
             PhoneApplicationFrame rootFrame = Application.Current.RootVisual as PhoneApplicationFrame;
-
+#else 
+            Frame rootFrame = Window.Current.Content as Frame;
+#endif
             if (rootFrame == null)
             {
                 throw new InvalidOperationException();
@@ -105,8 +113,11 @@ namespace Accela.WindowsStoreSDK.Client
             WebAuthenticationBroker.AuthenticationInProgress = true;
 
             // Navigate to the login page.
+#if !WINDOWS_PHONE_APP
             rootFrame.Navigate(new Uri("/AccelaSDK;component/Client/Phone/LoginPage.xaml", UriKind.Relative));
-
+#else
+            rootFrame.Navigate(typeof(LoginPage));
+#endif
             Task<WebAuthenticationResult> task = Task<WebAuthenticationResult>.Factory.StartNew(() =>
             {
                 authenticateFinishedEvent.WaitOne();

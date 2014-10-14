@@ -64,33 +64,43 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\debug\AccelaSDK.dll">
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Debug\AccelaSDK.dll">
       <Link>References\Debug\neutral\AccelaSDK.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\debug\AccelaSDK.pdb">
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Debug\AccelaSDK.pdb">
       <Link>References\Debug\neutral\AccelaSDK.pdb</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\debug\AccelaSDK.XML">
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Debug\AccelaSDK.XML">
       <Link>Redist\Debug\neutral\AccelaSDK.XML</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\release\AccelaSDK.dll">
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Debug\AccelaSDK.xr.xml">
+      <Link>Redist\Debug\neutral\AccelaSDK.xr.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Release\AccelaSDK.dll">
       <Link>References\Retail\neutral\AccelaSDK.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\release\AccelaSDK.pdb">
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Release\AccelaSDK.pdb">
       <Link>References\Retail\neutral\AccelaSDK.pdb</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\release\AccelaSDK.XML">
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Release\AccelaSDK.XML">
       <Link>Redist\Retail\neutral\AccelaSDK.XML</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Release\AccelaSDK.xr.xml">
+      <Link>Redist\Retail\neutral\AccelaSDK.xr.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -99,17 +109,27 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\debug\AccelaSDK.pri">
+    <Content Include="SDKManifest.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Debug\AccelaSDK.pri">
       <Link>Redist\Debug\neutral\AccelaSDK.pri</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\release\AccelaSDK.pri">
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Debug\Themes\Generic.xbf">
+      <Link>Redist\Debug\neutral\Themes\Generic.xbf</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Release\AccelaSDK.pri">
       <Link>Redist\Retail\neutral\AccelaSDK.pri</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="SDKManifest.xml">
+    <Content Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\bin\Release\Themes\Generic.xbf">
+      <Link>Redist\Retail\neutral\Themes\Generic.xbf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -141,24 +161,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\debug\themes\Generic.xaml">
-      <Link>Redist\Debug\neutral\Themes\Generic.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\..\..\src\accelasdk-windowsstore\bin\release\themes\Generic.xaml">
-      <Link>Redist\Retail\neutral\Themes\Generic.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -132,9 +132,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\AccelaSDK\AccelaMobile.pfx">
-      <Link>AccelaMobile.pfx</Link>
-    </None>
     <None Include="..\AccelaSDK\packages.config">
       <Link>packages.config</Link>
     </None>
@@ -146,9 +143,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\AccelaSDK\Apache-license-2.0.txt">
+    <None Include="..\AccelaSDK\Apache-license-2.0.txt">
       <Link>Apache-license-2.0.txt</Link>
-    </Content>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
