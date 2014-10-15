@@ -43,6 +43,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AccelaSDK-WindowsStore\Helper\EncryptHelper.cs">
+      <Link>Helper\EncryptHelper.cs</Link>
+    </Compile>
     <Compile Include="..\AccelaSDK-WP8\Client\Phone\PhoneWebAuthentication.cs">
       <Link>Client\Phone\PhoneWebAuthentication.cs</Link>
     </Compile>
