@@ -39,6 +39,7 @@
     <None Include="..\AccelaSDK\Apache-license-2.0.txt">
       <Link>Apache-license-2.0.txt</Link>
     </None>
+    <None Include="AccelaMobile.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\AccelaSDK\AccelaMobile.Adjust.cs">
@@ -141,9 +142,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="AccelaMobile.pfx" />
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
@@ -151,7 +149,8 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>AccelaMobile.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
