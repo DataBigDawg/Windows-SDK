@@ -17,6 +17,7 @@
   */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -28,6 +29,7 @@ namespace Accela.WindowsStoreSDK
     /// <summary>
     /// This class will process file related operation.
     /// </summary>
+    [EditorBrowsable(EditorBrowsableState.Never)]
     public class FileHelper
     {
         private static Dictionary<string, SemaphoreSlim> lockArray = new Dictionary<string, SemaphoreSlim>();

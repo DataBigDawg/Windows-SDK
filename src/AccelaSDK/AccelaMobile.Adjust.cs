@@ -259,6 +259,7 @@ namespace Accela.WindowsStoreSDK
             if (localToken != null)
             {
                 this._tokenInfo = await GetToken(isRefresh: true, refreshToken: localToken.refresh_token);
+                AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, _tokenInfo);
                 return true;
             }
             return false;
