@@ -27,20 +27,32 @@ using Windows.Storage;
 using System.Reflection;
 using System.Runtime.Serialization.Json;
 using System.IO;
+using System.ComponentModel;
 
 namespace Accela.WindowsStoreSDK
 {
     /// <summary>
     /// accela settings
     /// </summary>
+    [EditorBrowsable(EditorBrowsableState.Never)]
     internal class AccelaSettings
     {
+#if !(SILVERLIGHT || WINDOWS_PHONE)
+        public AccelaTokenResult Token { get; set; }
+
+        public String AppId { get; set; }
+
+        public String AppSecret { get; set; }
+
+        public String Environment { get; set; }
+#endif
+
         #region const
         /// <summary>
         /// accela sdk name
         /// </summary>
         public const String AM_SDK_NAME =
-#if !(SILVERLIGHT || WINDOWS_PHONE)
+#if !(SILVERLIGHT || WINDOWS_PHONE || WINDOWS_PHONE_APP)
  "Accela SDK for Windows Store";
 #else
  "Accela SDK for Windows Phone";
@@ -104,6 +116,7 @@ namespace Accela.WindowsStoreSDK
         /// </summary>
         public const int REQUEST_TIMEOUT_WITHATTACHMENTS = 300 * 1000;
 
+#if (SILVERLIGHT || WINDOWS_PHONE)
         /// <summary>
         /// setting name
         /// </summary>
@@ -112,12 +125,14 @@ namespace Accela.WindowsStoreSDK
         /// <summary>
         /// setting api id name
         /// </summary>
-        private const String STORAGESETTING_APIID_NAME = "api_id";
+        private const String STORAGESETTING_APPID_NAME = "api_id";
 
         /// <summary>
         /// setting api secret name
         /// </summary>
-        private const String STORAGESETTING_APISECRET_NAME = "api_secret";
+        private const String STORAGESETTING_APPSECRET_NAME = "api_secret";
+
+        private const String STORAGESETTING_APPENVIRONMENT = "environment";
 
         /// <summary>
         /// setting token name
@@ -136,7 +151,7 @@ namespace Accela.WindowsStoreSDK
         /// setting expires in name
         /// </summary>
         private const String STORAGESETTING_TOKEN_EXPIRESIN_NAME = "expires_in";
-
+#endif
         /// <summary>
         /// Setting file name
         /// </summary>
@@ -151,30 +166,20 @@ namespace Accela.WindowsStoreSDK
         /// <param name="appId"></param>
         /// <param name="appSecret"></param>
         /// <returns></returns>
-        public static AccelaTokenResult ReadTokenSetting(string appId, string appSecret)
+        public static AccelaTokenResult ReadTokenSetting(string appId, string appSecret, out string environment)
         {
+            environment = null;
 #if !(SILVERLIGHT || WINDOWS_PHONE)
             string settings = Accela.WindowsStoreSDK.FileHelper.GetTextFromFile(appId, SETTING_FILE);
             settings = Accela.WindowsStoreSDK.EncryptHelper.Decrypt(settings);
 
             if (!string.IsNullOrWhiteSpace(settings))
             {
-                Dictionary<string, string> settingsObject = null;
-                var bytes = Encoding.Unicode.GetBytes(settings);
-                using (MemoryStream stream = new MemoryStream(bytes))
+                var settingsObject = SimpleJson.DeserializeObject<AccelaSettings>(settings);
+                environment = settingsObject.Environment;
+                if (appId == settingsObject.AppId && appSecret == settingsObject.AppSecret)
                 {
-                    var serializer = new DataContractJsonSerializer(typeof(Dictionary<string, string>));
-                    settingsObject = (Dictionary<string, string>)serializer.ReadObject(stream);
-                }
-
-                if (settingsObject != null && settingsObject.Count > 0)
-                {
-                    var tmpId = settingsObject[STORAGESETTING_APIID_NAME];
-                    var tmpSecret = settingsObject[STORAGESETTING_APISECRET_NAME];
-                    if (appId == tmpId && appSecret == tmpSecret)
-                    {
-                        return SimpleJson.DeserializeObject<AccelaTokenResult>(settingsObject[STORAGESETTING_TOKEN_NAME]);
-                    }
+                    return settingsObject.Token;
                 }
             }
 #else
@@ -185,10 +190,13 @@ namespace Accela.WindowsStoreSDK
 
                 string tmpId = string.Empty,
                     tmpSecret = string.Empty;
-                if (settings.ContainsKey(STORAGESETTING_APIID_NAME))
-                    tmpId = (string)settings[STORAGESETTING_APIID_NAME];
-                if (settings.ContainsKey(STORAGESETTING_APISECRET_NAME))
-                    tmpSecret = (string)settings[STORAGESETTING_APISECRET_NAME];
+
+                if (settings.ContainsKey(STORAGESETTING_APPID_NAME))
+                    tmpId = (string)settings[STORAGESETTING_APPID_NAME];
+                if (settings.ContainsKey(STORAGESETTING_APPSECRET_NAME))
+                    tmpSecret = (string)settings[STORAGESETTING_APPSECRET_NAME];
+                if(settings.ContainsKey(STORAGESETTING_APPENVIRONMENT))
+                    environment = (string)settings[STORAGESETTING_APPENVIRONMENT];
 
                 if (appId == tmpId && appSecret == tmpSecret &&
                     settings.ContainsKey(STORAGESETTING_TOKEN_NAME))
@@ -197,6 +205,7 @@ namespace Accela.WindowsStoreSDK
                 }
             }
 #endif
+
             return null;
         }
 
@@ -206,33 +215,23 @@ namespace Accela.WindowsStoreSDK
         /// <param name="appId"></param>
         /// <param name="appSecret"></param>
         /// <param name="info"></param>
-        public static void SaveTokenSetting(string appId, string appSecret, AccelaTokenResult info)
+        public static void SaveTokenSetting(string appId, string appSecret, string environment, AccelaTokenResult info)
         {
 #if !(SILVERLIGHT || WINDOWS_PHONE)
-            Dictionary<string, string> settings = new Dictionary<string, string>();
-            settings.Add(STORAGESETTING_TOKEN_NAME, SimpleJson.SerializeObject(info));
-            settings.Add(STORAGESETTING_APIID_NAME, appId);
-            settings.Add(STORAGESETTING_APISECRET_NAME, appSecret);
-
-            string content = null;
-            using (MemoryStream stream = new MemoryStream())
-            {
-                var serializer = new DataContractJsonSerializer(settings.GetType());
-                serializer.WriteObject(stream, settings);
-                stream.Position = 0;
-                using (StreamReader reader = new StreamReader(stream))
-                {
-                    content = reader.ReadToEnd();
-                }
-            }
-
+            AccelaSettings settings = new AccelaSettings();
+            settings.AppId = appId;
+            settings.AppSecret = appSecret;
+            settings.Token = info;
+            settings.Environment = environment;
+            string content = SimpleJson.SerializeObject(settings);
             content = Accela.WindowsStoreSDK.EncryptHelper.Encrypt(content);
             FileHelper.SaveTextToFile(appId, SETTING_FILE, content);
 #else
             var settings = new Dictionary<string, object>();
-            settings.Add(STORAGESETTING_APIID_NAME, appId);
-            settings.Add(STORAGESETTING_APISECRET_NAME, appSecret);
+            settings.Add(STORAGESETTING_APPID_NAME, appId);
+            settings.Add(STORAGESETTING_APPSECRET_NAME, appSecret);
             settings.Add(STORAGESETTING_TOKEN_NAME, info);
+            settings.Add(STORAGESETTING_APPENVIRONMENT, environment);
             IsolatedStorageSettings.ApplicationSettings[STORAGESETTING_NAME + appId] = SimpleJson.SerializeObject(settings);
             IsolatedStorageSettings.ApplicationSettings.Save();
 #endif

@@ -108,6 +108,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\..\..\src\AccelaSDK-WindowsStore%288.1%29\AccelaSDK-WindowsStore%288.1%29.csproj">
+      <Project>{dd05b804-b786-4dba-b652-5df25d95cabc}</Project>
+      <Name>AccelaSDK-WindowsStore%288.1%29</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RecordsViewer.Portable\RecordsViewer.Portable.csproj">
       <Project>{f7135bc8-e148-41de-b470-a1994f85ccd1}</Project>
       <Name>RecordsViewer.Portable</Name>
@@ -185,10 +189,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AccelaSDK, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\AccelaSDK\Win8\AccelaSDK.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
     </Reference>

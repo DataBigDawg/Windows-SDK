@@ -171,7 +171,7 @@ namespace Accela.WindowsStoreSDK
                     this._tokenInfo = await this.GetToken(code: oAuthResult.Code, isRefresh: false);
                     if (this._tokenInfo != null)
                     {
-                        AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, _tokenInfo);
+                        AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, this.Environment.ToString(), _tokenInfo);
                         OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginSucceeded));
                     }
                     else
@@ -230,7 +230,7 @@ namespace Accela.WindowsStoreSDK
             this._tokenInfo = await this.GetToken();
             if (this._tokenInfo != null)
             {
-                AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, _tokenInfo);
+                AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, this.Environment.ToString(), _tokenInfo);
                 OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginSucceeded));
             }
             else
@@ -255,11 +255,13 @@ namespace Accela.WindowsStoreSDK
         /// <returns></returns>
         public async Task<bool> ReAuthorize()
         {
-            var localToken = AccelaSettings.ReadTokenSetting(this.AppId, this.AppSecret);
+            string environment;
+            var localToken = AccelaSettings.ReadTokenSetting(this.AppId, this.AppSecret, out environment);
             if (localToken != null)
             {
+                this.Environment = (AccelaEnvironment)Enum.Parse(typeof(AccelaEnvironment), environment);
                 this._tokenInfo = await GetToken(isRefresh: true, refreshToken: localToken.refresh_token);
-                AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, _tokenInfo);
+                AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, this.Environment.ToString(), _tokenInfo);
                 return true;
             }
             return false;
@@ -273,9 +275,11 @@ namespace Accela.WindowsStoreSDK
         {
             if (this._tokenInfo == null)
             {
-                this._tokenInfo = AccelaSettings.ReadTokenSetting(AppId, AppSecret);
+                string environment;
+                this._tokenInfo = AccelaSettings.ReadTokenSetting(AppId, AppSecret, out environment);
                 if (_tokenInfo == null)
                     return false;
+                this.Environment = (AccelaEnvironment)Enum.Parse(typeof(AccelaEnvironment), environment);
             }
             if (_tokenInfo.expires_time < DateTime.Now)
             {

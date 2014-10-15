@@ -159,7 +159,12 @@ namespace Accela.WindowsStoreSDK
 
             this.AppSecret = appSecret;
 
-            this._tokenInfo = AccelaSettings.ReadTokenSetting(appId, appSecret);
+            string environment;
+            var localToken = AccelaSettings.ReadTokenSetting(this.AppId, this.AppSecret, out environment);
+            if (!string.IsNullOrEmpty(environment))
+            {
+                this.Environment = (AccelaEnvironment)Enum.Parse(typeof(AccelaEnvironment), environment);
+            }
         }
 
 
@@ -606,14 +611,15 @@ namespace Accela.WindowsStoreSDK
 
             request.Headers["x-accela-appversion"] = AccelaSettings.AM_SDK_VERSION;
 
-#if ( WINDOWS_PHONE)
+#if (WINDOWS_PHONE)
             request.Headers["x-accela-appplatform"] = String.Format("{0}|{1}|{2}", System.Environment.OSVersion.Platform,
                                                                                    System.Environment.OSVersion.Version,
                                                                                    Microsoft.Phone.Info.DeviceStatus.DeviceName);
 #else
-            request.Headers["x-accela-appplatform"] = String.Format("{0}|{1}|{2}", "Windows",
-                                                                                   "8.0",
-                                                                                   "Windows Device");
+            var deviceInfo = new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation();
+            request.Headers["x-accela-appplatform"] = String.Format("{0}|{1}|{2}", deviceInfo.OperatingSystem,
+                                                                                   deviceInfo.SystemManufacturer,
+                                                                                   deviceInfo.SystemProductName);
 #endif
 
 
