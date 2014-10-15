@@ -39,7 +39,14 @@ namespace RecordsViewer
             _loginViewModel = new LoginViewModel(App.LoginService);
             this.DataContext = _loginViewModel;
             App.SharedSDK.SessionChanged += SharedSDK_SessionChanged;
-            await _loginViewModel.SSOAuthorization();
+            if (!App.SharedSDK.IsSessionValid())
+            {
+                await _loginViewModel.SSOAuthorization();
+            }
+            else
+            {
+                NavigateToMain();
+            }
         }
 
         void SharedSDK_SessionChanged(object sender, Accela.WindowsStoreSDK.AccelaSessionEventArgs e)
@@ -62,7 +69,8 @@ namespace RecordsViewer
             }
         }
 
-        private void NavigateToMain() {
+        private void NavigateToMain()
+        {
             var rootFrame = new Frame();
             Window.Current.Content = rootFrame;
             rootFrame.Navigate(typeof(RecordListPage));

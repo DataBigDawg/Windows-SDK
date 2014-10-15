@@ -159,12 +159,22 @@ namespace Accela.WindowsStoreSDK
 
             if (!string.IsNullOrWhiteSpace(settings))
             {
-                var settingsObject = SimpleJson.DeserializeObject<Dictionary<string, string>>(settings);
-                var tmpId = settingsObject[STORAGESETTING_APIID_NAME];
-                var tmpSecret = settingsObject[STORAGESETTING_APISECRET_NAME];
-                if (appId == tmpId && appSecret == tmpSecret)
+                Dictionary<string, string> settingsObject = null;
+                var bytes = Encoding.Unicode.GetBytes(settings);
+                using (MemoryStream stream = new MemoryStream(bytes))
                 {
-                    return SimpleJson.DeserializeObject<AccelaTokenResult>(settingsObject[STORAGESETTING_TOKEN_NAME]);
+                    var serializer = new DataContractJsonSerializer(typeof(Dictionary<string, string>));
+                    settingsObject = (Dictionary<string, string>)serializer.ReadObject(stream);
+                }
+
+                if (settingsObject != null && settingsObject.Count > 0)
+                {
+                    var tmpId = settingsObject[STORAGESETTING_APIID_NAME];
+                    var tmpSecret = settingsObject[STORAGESETTING_APISECRET_NAME];
+                    if (appId == tmpId && appSecret == tmpSecret)
+                    {
+                        return SimpleJson.DeserializeObject<AccelaTokenResult>(settingsObject[STORAGESETTING_TOKEN_NAME]);
+                    }
                 }
             }
 #else
@@ -203,7 +213,20 @@ namespace Accela.WindowsStoreSDK
             settings.Add(STORAGESETTING_TOKEN_NAME, SimpleJson.SerializeObject(info));
             settings.Add(STORAGESETTING_APIID_NAME, appId);
             settings.Add(STORAGESETTING_APISECRET_NAME, appSecret);
-            string content = Accela.WindowsStoreSDK.EncryptHelper.Encrypt(SimpleJson.SerializeObject(settings));
+
+            string content = null;
+            using (MemoryStream stream = new MemoryStream())
+            {
+                var serializer = new DataContractJsonSerializer(settings.GetType());
+                serializer.WriteObject(stream, settings);
+                stream.Position = 0;
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    content = reader.ReadToEnd();
+                }
+            }
+
+            content = Accela.WindowsStoreSDK.EncryptHelper.Encrypt(content);
             FileHelper.SaveTextToFile(appId, SETTING_FILE, content);
 #else
             var settings = new Dictionary<string, object>();

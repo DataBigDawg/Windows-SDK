@@ -34,20 +34,33 @@ namespace RecordsViewer.ViewModels
         /// <returns>An asynchronnous operation based on record list</returns>
         public Task<List<WSRecord>> GetRecordsAsync(string servicePath, IDictionary<string, object> @params)
         {
-            return Task.Run(() =>
+            return Task.Run(async () =>
             {
-                List<WSRecord> list = new List<WSRecord>();
-                try{
-                    JsonObject jsonObj = App.SharedSDK.PostAsync(servicePath, @params).Result;
-                    list = Accela.WindowsStoreSDK.HttpWebResponseWrapper.customizeResponse<List<WSRecord>>(jsonObj);
-                }
-                catch (Accela.WindowsStoreSDK.AccelaApiException ex)
+                List<WSRecord> records = null;
+                try
                 {
-                    if (ex != null)
-                        throw ex;
+                    RecordSearchCondition condition = new RecordSearchCondition();
+                    condition.RecordId = "14RES-00000-00006";
+                    string jsonString = JsonConvert.SerializeObject(condition);
+                    var response = await App.SharedSDK.PostAsync(servicePath, jsonString);
+
+                    var result = JsonConvert.DeserializeObject<WSRecordsResponse>(response.ToString());
+                    records = result.WSRecords;
                 }
-                return list;
+                catch (AggregateException ex)
+                {
+                    if (ex.InnerException != null)
+                        throw ex.InnerException;
+                }
+
+                return records;
             });
+        }
+
+        public class RecordSearchCondition
+        {
+            [JsonProperty(PropertyName = "id")]
+            public string RecordId { get; set; }
         }
     }
 }

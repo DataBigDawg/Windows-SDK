@@ -35,6 +35,8 @@ namespace Accela.WindowsStoreSDK
         /// <returns>return encrypt string</returns>
         public static string Encrypt(string clearString)
         {
+            if (clearString == null)
+                return null;
             string encryptedString = "";
             Task task = Task.Run(async () =>
             {
@@ -56,6 +58,8 @@ namespace Accela.WindowsStoreSDK
         /// <returns>return descrypt string</returns>
         public static string Decrypt(string encryptedString)
         {
+            if (encryptedString == null)
+                return null;
             string clearString = "";
             Task task = Task.Run(async () =>
             {
