@@ -56,7 +56,7 @@ namespace Accela.WindowsStoreSDK
 #if WINDOWS_PHONE
                 new AssemblyName(Assembly.GetExecutingAssembly().FullName);
 #else
-                new AssemblyName(typeof(AccelaSettings).GetTypeInfo().Assembly.FullName);
+ new AssemblyName(typeof(AccelaSettings).GetTypeInfo().Assembly.FullName);
 #endif
                 return assemblyName.Version.ToString();
             }
@@ -155,6 +155,7 @@ namespace Accela.WindowsStoreSDK
         {
 #if !(SILVERLIGHT || WINDOWS_PHONE)
             string settings = Accela.WindowsStoreSDK.FileHelper.GetTextFromFile(appId, SETTING_FILE);
+            settings = Accela.WindowsStoreSDK.EncryptHelper.Decrypt(settings);
 
             if (!string.IsNullOrWhiteSpace(settings))
             {
@@ -202,7 +203,8 @@ namespace Accela.WindowsStoreSDK
             settings.Add(STORAGESETTING_TOKEN_NAME, SimpleJson.SerializeObject(info));
             settings.Add(STORAGESETTING_APIID_NAME, appId);
             settings.Add(STORAGESETTING_APISECRET_NAME, appSecret);
-            FileHelper.SaveTextToFile(appId, SETTING_FILE, SimpleJson.SerializeObject(settings));
+            string content = Accela.WindowsStoreSDK.EncryptHelper.Encrypt(SimpleJson.SerializeObject(settings));
+            FileHelper.SaveTextToFile(appId, SETTING_FILE, content);
 #else
             var settings = new Dictionary<string, object>();
             settings.Add(STORAGESETTING_APIID_NAME, appId);

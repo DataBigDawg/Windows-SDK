@@ -39,7 +39,6 @@
     <None Include="..\AccelaSDK\Apache-license-2.0.txt">
       <Link>Apache-license-2.0.txt</Link>
     </None>
-    <None Include="AccelaMobile.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\AccelaSDK\AccelaMobile.Adjust.cs">
@@ -134,6 +133,7 @@
     <Compile Include="Design\PopControl.cs" />
     <Compile Include="Design\ViewModel\AgencyNativeViewModel.cs" />
     <Compile Include="Helper\DeviceInfoHelper.cs" />
+    <Compile Include="Helper\EncryptHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,10 +146,11 @@
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>AccelaMobile.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
