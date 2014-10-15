@@ -243,7 +243,7 @@ namespace Accela.WindowsStoreSDK
 
         private async Task<AccelaTokenResult> GetToken(string code = null, bool isRefresh = false, string refreshToken = null)
         {
-            if (!this._isNativeAuthorization && code == null)
+            if (!this._isNativeAuthorization && code == null && !isRefresh) 
                 throw new ArgumentNullException("code");
 
             dynamic param = new ExpandoObject();
