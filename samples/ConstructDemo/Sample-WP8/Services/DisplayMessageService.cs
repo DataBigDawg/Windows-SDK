@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Accela.WindowsPhone8.Sample.Services
+namespace Accela.WindowsPhone.Sample.Services
 {   /// <summary>
     /// Show API response message
     /// </summary>

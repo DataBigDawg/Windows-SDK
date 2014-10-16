@@ -1,7 +1,7 @@
-﻿#if WINDOWS_PHONE
-using Accela.WindowsPhone8.Sample.Extensions;
-using Accela.WindowsPhone8.Sample.Services;
-using Accela.WindowsPhone8.Sample.Models;
+﻿#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+using Accela.WindowsPhone.Sample.Extensions;
+using Accela.WindowsPhone.Sample.Services;
+using Accela.WindowsPhone.Sample.Models;
 #else
 using Accela.WindowsStore.Sample.Extensions;
 using Accela.WindowsStore.Sample.Services;
@@ -18,9 +18,9 @@ using System.Text;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight.Messaging;
 
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
 
-namespace Accela.WindowsPhone8.Sample.ViewModels
+namespace Accela.WindowsPhone.Sample.ViewModels
 #else
 namespace Accela.WindowsStore.Sample.ViewModels
 #endif
@@ -74,7 +74,7 @@ namespace Accela.WindowsStore.Sample.ViewModels
         {
             if (msg != null)
             {
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
                 _displayMessageService.Show(msg.Title, msg.Message);
 #else
                 ResultMsg = msg.Message;
@@ -107,8 +107,10 @@ namespace Accela.WindowsStore.Sample.ViewModels
 
             try
             {
-                await _shareSdk.Authorize("developer", "accela", "ISLANDTON", _scopes, AccelaEnvironment.PROD);
-                Messenger.Default.Send(new CustomMessage("Login Succeeded"));
+                if (await _shareSdk.Authorize("developer", "accela", "ISLANDTON", _scopes, AccelaEnvironment.PROD))
+                {
+                    Messenger.Default.Send(new CustomMessage("Login Succeeded"));
+                }
             }
             catch (Exception ex)
             {
@@ -133,8 +135,10 @@ namespace Accela.WindowsStore.Sample.ViewModels
         {
             try
             {
-                await _shareSdk.Authorize(_scopes);
-                Messenger.Default.Send(new CustomMessage("Login Succeeded"));
+                if (await _shareSdk.Authorize(_scopes)) 
+                { 
+                    Messenger.Default.Send(new CustomMessage("Login Succeeded"));
+                }
             }
             catch (FileNotFoundException) { }
             catch (Exception ex)

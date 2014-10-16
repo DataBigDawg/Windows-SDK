@@ -1,4 +1,10 @@
-﻿using Accela.WindowsStore.Sample.ViewModels;
+﻿#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+using Accela.WindowsPhone.Sample.ViewModels;
+using Accela.WindowsPhone.Sample.Views;
+#else
+using Accela.WindowsStore.Sample.ViewModels;
+using Accela.WindowsStore.Sample.Views;
+#endif
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +13,11 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+namespace Accela.WindowsPhone.Sample.Services
+#else
 namespace Accela.WindowsStore.Sample.Services
+#endif
 {
     public class NavigationService : INavigationService
     {

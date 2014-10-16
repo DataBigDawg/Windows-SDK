@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+namespace Accela.WindowsPhone.Sample.Services
+#else
 namespace Accela.WindowsStore.Sample.Services
+#endif
 {
     public class DisplayMessageService : IDisplayMessageService
     {

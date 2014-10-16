@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Accela.WindowsPhone8.Sample.Resources
+namespace Accela.WindowsPhone.Sample.Resources
 {
     using System;
 
@@ -45,7 +45,7 @@ namespace Accela.WindowsPhone8.Sample.Resources
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Accela.WindowsPhone8.Sample.Resources.AppResources", typeof(AppResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Accela.WindowsPhone.Sample.Resources.AppResources", typeof(AppResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

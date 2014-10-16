@@ -1,5 +1,5 @@
-﻿#if WINDOWS_PHONE
-using Accela.WindowsPhone8.Sample.Services;
+﻿#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+using Accela.WindowsPhone.Sample.Services;
 #else
 using Accela.WindowsStore.Sample.Services;
 #endif
@@ -11,8 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-#if WINDOWS_PHONE
-namespace Accela.WindowsPhone8.Sample.ViewModels
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+namespace Accela.WindowsPhone.Sample.ViewModels
 #else
 namespace Accela.WindowsStore.Sample.ViewModels
 #endif

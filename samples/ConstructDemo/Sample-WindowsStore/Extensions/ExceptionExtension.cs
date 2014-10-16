@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP 
 
-namespace Accela.WindowsPhone8.Sample.Extensions
+namespace Accela.WindowsPhone.Sample.Extensions
 #else
 namespace Accela.WindowsStore.Sample.Extensions
 #endif

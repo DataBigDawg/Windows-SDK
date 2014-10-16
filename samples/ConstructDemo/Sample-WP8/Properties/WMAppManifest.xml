@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="zh-CN" />
-  <App xmlns="" ProductID="{19d528c0-b6cc-41f7-bfea-ae11eb258511}" Title="Accela.WindowsPhone8.Sample" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Accela.WindowsPhone8.Sample author" Description="Sample description" Publisher="Accela.WindowsPhone8.Sample" PublisherID="{888e6df0-a396-47c4-a771-555633aa9262}">
+  <App xmlns="" ProductID="{19d528c0-b6cc-41f7-bfea-ae11eb258511}" Title="Accela.WindowsPhone.Sample" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Accela.WindowsPhone.Sample author" Description="Sample description" Publisher="Accela.WindowsPhone.Sample" PublisherID="{888e6df0-a396-47c4-a771-555633aa9262}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -13,12 +13,12 @@
       <DefaultTask Name="_default" NavigationPage="Views/MainPage.xaml" />
     </Tasks>
     <Tokens>
-      <PrimaryToken TokenID="Accela.WindowsPhone8.SampleToken" TaskName="_default">
+      <PrimaryToken TokenID="Accela.WindowsPhone.SampleToken" TaskName="_default">
         <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>Accela.WindowsPhone8.Sample</Title>
+          <Title>Accela.WindowsPhone.Sample</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>

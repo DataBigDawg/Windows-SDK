@@ -6,11 +6,11 @@ using System.Resources;
 // 有关程序集的常规信息通过下列特性集 
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Accela.WindowsPhone8.Sample")]
+[assembly: AssemblyTitle("Accela.WindowsPhone.Sample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Accela.WindowsPhone8.Sample")]
+[assembly: AssemblyProduct("Accela.WindowsPhone.Sample")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

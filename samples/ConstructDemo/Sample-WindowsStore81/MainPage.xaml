@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="Accela.WindowsStore.Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Accela.WindowsStore.Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Citizen App" Width="200" Height="60" Margin="0,5" 
+                    Command="{Binding CitizenAppCommand, Mode=OneWay}"/>
+            <Button Content="Agency App" Width="200" Height="60" Margin="0,5" 
+                    Command="{Binding AgencyAppCommand, Mode=OneWay}" />
+        </StackPanel>
+    </Grid>
+</Page>

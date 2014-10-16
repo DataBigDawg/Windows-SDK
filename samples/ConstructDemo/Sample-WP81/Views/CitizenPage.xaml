@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Accela.WindowsPhone.Sample.Views.CitizenPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Accela.WindowsPhone.Sample.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Citizen, Source={StaticResource Locator}}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="AccelaSDK Test Case" FontSize="15"/>
+            <TextBlock Text="Citizen App" FontSize="40"/>
+        </StackPanel>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer>
+                <StackPanel >
+                    <Button Content="Auth" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding LoginCommand, Mode=OneWay}" />
+                    <Button Content="Get Records" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding GetRecordsCommand, Mode=OneWay}"  />
+                    <Button Content="Create Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding CreateRecordCommand, Mode=OneWay}"  />
+                    <!--<Button Content="Create Record Whit Attachments" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding CreateRecordWidthAttachmentsCommand, Mode=OneWay}"  />-->
+                    <Button Content="Search Record" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding SearchRecordsCommand, Mode=OneWay}"  />
+                    <Button Content="Logout" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding LogoutCommand, Mode=OneWay}"  />
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

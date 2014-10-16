@@ -6,11 +6,11 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using Accela.WindowsPhone8.Sample.Resources;
+using Accela.WindowsPhone.Sample.Resources;
 using Accela.WindowsStoreSDK;
 using Newtonsoft.Json;
 
-namespace Accela.WindowsPhone8.Sample
+namespace Accela.WindowsPhone.Sample
 {
     public partial class App : Application
     {

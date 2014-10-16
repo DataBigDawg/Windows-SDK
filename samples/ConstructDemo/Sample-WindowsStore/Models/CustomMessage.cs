@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-#if WINDOWS_PHONE
-namespace Accela.WindowsPhone8.Sample.Models
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+namespace Accela.WindowsPhone.Sample.Models
 #else
 namespace Accela.WindowsStore.Sample.Models
 #endif

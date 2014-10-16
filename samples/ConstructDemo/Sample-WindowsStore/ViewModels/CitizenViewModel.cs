@@ -1,7 +1,7 @@
-﻿#if WINDOWS_PHONE
-using Accela.WindowsPhone8.Sample.Models;
-using Accela.WindowsPhone8.Sample.Services;
-using Accela.WindowsPhone8.Sample.Extensions;
+﻿#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+using Accela.WindowsPhone.Sample.Models;
+using Accela.WindowsPhone.Sample.Services;
+using Accela.WindowsPhone.Sample.Extensions;
 #else
 using Accela.WindowsStore.Sample.Models;
 using Accela.WindowsStore.Sample.Services;
@@ -19,8 +19,8 @@ using System.Threading.Tasks;
 
 using System.IO;
 
-#if WINDOWS_PHONE
-namespace Accela.WindowsPhone8.Sample.ViewModels
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
+namespace Accela.WindowsPhone.Sample.ViewModels
 #else
 namespace Accela.WindowsStore.Sample.ViewModels
 #endif
@@ -69,7 +69,7 @@ namespace Accela.WindowsStore.Sample.ViewModels
         {
             if (msg != null)
             {
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
                 _displayMessageService.Show(msg.Title, msg.Message);
 #else
                 ResultMsg = msg.Message;
@@ -101,8 +101,10 @@ namespace Accela.WindowsStore.Sample.ViewModels
             var scopes = new string[] { "records" };
             try
             {
-                await _shareSdk.Authorize(scopes, "ISLANDTON");
-                Messenger.Default.Send(new CustomMessage("Login Succeeded"));
+                if (await _shareSdk.Authorize(scopes, "ISLANDTON"))
+                {
+                    Messenger.Default.Send(new CustomMessage("Login Succeeded"));
+                }
 
             }
             catch (FileNotFoundException)

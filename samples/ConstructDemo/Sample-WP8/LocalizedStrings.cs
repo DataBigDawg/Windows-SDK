@@ -1,6 +1,6 @@
-﻿using Accela.WindowsPhone8.Sample.Resources;
+﻿using Accela.WindowsPhone.Sample.Resources;
 
-namespace Accela.WindowsPhone8.Sample
+namespace Accela.WindowsPhone.Sample
 {
     /// <summary>
     /// Supply access to the resources.

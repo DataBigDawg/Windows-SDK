@@ -1,14 +1,14 @@
 ﻿<Application
-    x:Class="Accela.WindowsPhone8.Sample.App"
+    x:Class="Accela.WindowsPhone.Sample.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
-    xmlns:vm="clr-namespace:Accela.WindowsPhone8.Sample.ViewModels">
+    xmlns:vm="clr-namespace:Accela.WindowsPhone.Sample.ViewModels">
 
     <!--应用程序资源-->
     <Application.Resources>
-        <local:LocalizedStrings xmlns:local="clr-namespace:Accela.WindowsPhone8.Sample" x:Key="LocalizedStrings"/>
+        <local:LocalizedStrings xmlns:local="clr-namespace:Accela.WindowsPhone.Sample" x:Key="LocalizedStrings"/>
         <!--Global View Model Locator-->
         <vm:ViewModelLocator x:Key="Locator" />
     </Application.Resources>

@@ -8,7 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace Accela.WindowsPhone8.Sample.Views
+namespace Accela.WindowsPhone.Sample.Views
 {
     public partial class AgencyPage : PhoneApplicationPage
     {

@@ -1,4 +1,4 @@
-﻿using Accela.WindowsPhone8.Sample.ViewModels;
+﻿using Accela.WindowsPhone.Sample.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Windows.Navigation;
 
 
 
-namespace Accela.WindowsPhone8.Sample.Services
+namespace Accela.WindowsPhone.Sample.Services
 {
     public class NavigationService : INavigationService
     {
