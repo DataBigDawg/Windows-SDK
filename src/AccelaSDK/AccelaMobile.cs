@@ -616,10 +616,16 @@ namespace Accela.WindowsStoreSDK
                                                                                    System.Environment.OSVersion.Version,
                                                                                    Microsoft.Phone.Info.DeviceStatus.DeviceName);
 #else
+                                                                                
             var deviceInfo = new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation();
             request.Headers["x-accela-appplatform"] = String.Format("{0}|{1}|{2}", deviceInfo.OperatingSystem,
-                                                                                   deviceInfo.SystemManufacturer,
+#if (WINDOWS_APP || WINDOWS_PHONE_APP)
+                                                                                    "8.1",
+#else
+                                                                                    "8",
+#endif
                                                                                    deviceInfo.SystemProductName);
+               
 #endif
 
 

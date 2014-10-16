@@ -141,7 +141,7 @@ namespace Accela.WindowsStoreSDK
         /// <param name="permissions">resources list to be accessed. refer to the Scope in https://developer.accela.com/Resource/ApisAbout</param>
         /// <param name="agency">default agency name for the citizen App</param>
         /// <returns></returns>
-        public async Task Authorize(string[] permissions, string agency = null)
+        public async Task<bool> Authorize(string[] permissions, string agency = null)
         {
 
             this._isNativeAuthorization = false;
@@ -173,6 +173,7 @@ namespace Accela.WindowsStoreSDK
                     {
                         AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, this.Environment.ToString(), _tokenInfo);
                         OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginSucceeded));
+                        return true;
                     }
                     else
                     {
@@ -197,6 +198,7 @@ namespace Accela.WindowsStoreSDK
             {
                 OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginFailed, exception));
             }
+            return false;
         }
 
         /// <summary>
@@ -208,7 +210,7 @@ namespace Accela.WindowsStoreSDK
         /// <param name="agency"></param>
         /// <param name="environment"></param>
         /// <returns></returns>
-        public async Task Authorize(string username,
+        public async Task<bool> Authorize(string username,
                     string password,
                     string agency,
                     string[] permissions,
@@ -232,6 +234,7 @@ namespace Accela.WindowsStoreSDK
             {
                 AccelaSettings.SaveTokenSetting(this.AppId, this.AppSecret, this.Environment.ToString(), _tokenInfo);
                 OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginSucceeded));
+                return true;
             }
             else
             {
@@ -242,6 +245,7 @@ namespace Accela.WindowsStoreSDK
             {
                 OnSessionChanged(new AccelaSessionEventArgs(AccelaSessionStatus.LoginFailed, exception));
             }
+            return false;
         }
 
         /// <summary>

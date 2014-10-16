@@ -166,7 +166,6 @@ namespace Accela.WindowsStoreSDK
 
                     if (folder != null)
                     {
-                        folder = await localFolder.CreateFolderAsync(folderName);
                         try
                         {
                             StorageFile file = await folder.GetFileAsync(fileName);

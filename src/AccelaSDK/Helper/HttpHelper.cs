@@ -1388,7 +1388,7 @@ namespace Accela.WindowsStoreSDK
         /// <returns>The url decoded string.</returns>
         public static string UrlDecode(string s)
         {
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE 
 			return System.Net.HttpUtility.UrlDecode(s);
 #elif SILVERLIGHT
 			return System.Windows.Browser.HttpUtility.UrlDecode(s);
@@ -1800,7 +1800,7 @@ namespace Accela.WindowsStoreSDK
         /// <returns>The html decoded string.</returns>
         public static string HtmlDecode(string s)
         {
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || WINDOWS_PHONE_APP
 			return System.Net.HttpUtility.HtmlDecode(s);
 #elif SILVERLIGHT
 			return System.Windows.Browser.HttpUtility.HtmlDecode(s);
