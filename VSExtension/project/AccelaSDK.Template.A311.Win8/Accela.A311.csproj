@@ -135,7 +135,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="AccelaSDK, Version=4.0.2">
+    <SDKReference Include="AccelaSDK, Version=4.0.2.1">
       <Name>Accela SDK for Windows Store apps</Name>
     </SDKReference>
   </ItemGroup>

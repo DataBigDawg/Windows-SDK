@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="Accela SDK Projects Template..39544D39-489B-4FBB-9930-D655F9AC9E59" Version="4.0.2" Language="en-US" Publisher="Accela, Inc." />
+    <Identity Id="Accela SDK Projects Template..39544D39-489B-4FBB-9930-D655F9AC9E59" Version="4.0.2.1" Language="en-US" Publisher="Accela, Inc." />
     <DisplayName>Accela SDK Projects Template</DisplayName>
     <Description xml:space="preserve">Accela SDK Projects Templates(A311, Agency, Citizen)</Description>
     <MoreInfo>http://www.accela.com/support</MoreInfo>
