@@ -40,7 +40,7 @@ namespace RecordsViewer.ViewModels
                 try
                 {
                     RecordSearchCondition condition = new RecordSearchCondition();
-                    condition.RecordId = "14RES-00000-00006";
+                    condition.RecordId = "14CAP-00000-000HX";
                     string jsonString = JsonConvert.SerializeObject(condition);
                     var response = await App.SharedSDK.PostAsync(servicePath, jsonString);
 
